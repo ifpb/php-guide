@@ -1,0 +1,8 @@
+
+>>>Thu, 08 Feb 2018 23:53:02 +0000
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=63 time=78.1 ms
+
+--- 8.8.8.8 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 78.189/78.189/78.189/0.000 ms
