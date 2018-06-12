@@ -1,4 +1,4 @@
-# PHP - Web
+# PHP Web
 
 - [HTTP Methods](#http-methods)
   - [$_GET](#_get)
