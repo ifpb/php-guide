@@ -8,7 +8,7 @@
 * MySQL
 * PHP
 
-## Vagrant Image
+## Vagrant
 ---
 
 * Provider: [Virtual Box](https://www.virtualbox.org)
@@ -33,16 +33,32 @@ end
 
 [../script/lamp-install.sh](https://github.com/ifpb/php-guide/blob/master/script/lamp-install.sh)
 
-## Install
+## How to use LAMP VM
 ---
 
 ```sh
 $ wget https://github.com/ifpb/php-guide/blob/master/lamp/lamp.zip?raw=true
+```
+
+```sh
 $ unzip lamp.zip
 $ cd lamp
+```
+
+```sh
 $ vagrant up
-$ vagrant ssh
-$ exit
-$ vagrant suspend
+```
+
+```sh
 $ curl -i http://localhost:8080/php/phpinfo/
+```
+
+```sh
+$ vagrant ssh
+$ uname -a
+$ exit
+```
+
+```sh
+$ vagrant suspend
 ```
