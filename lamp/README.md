@@ -1,6 +1,6 @@
 # LAMP Server
 
-## Arquiteture
+## Stack
 ---
 
 * Linux
@@ -31,7 +31,7 @@ end
 
 ### Provision
 
-[../script/lamp-install.sh](../script/lamp-install.sh)
+[../script/lamp-install.sh](https://github.com/ifpb/php-guide/blob/master/script/lamp-install.sh)
 
 ## Install
 ---
