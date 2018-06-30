@@ -38,6 +38,7 @@ end
 
 ```sh
 $ wget https://github.com/ifpb/php-guide/blob/master/lamp/lamp.zip?raw=true
+$ curl https://github.com/ifpb/php-guide/blob/master/lamp/lamp.zip?raw=true --output lamp.zip
 ```
 
 ```sh
@@ -49,6 +50,11 @@ $ cd lamp
 $ vagrant up
 ```
 
+```sh
+$ vagrant status
+```
+
+[http://localhost:8080/php/phpinfo/](http://localhost:8080/php/phpinfo/):
 ```sh
 $ curl -i http://localhost:8080/php/phpinfo/
 ```
