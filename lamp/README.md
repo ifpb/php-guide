@@ -58,17 +58,24 @@ $ vagrant up
 $ vagrant status
 ```
 
-### Checking PHP and Apache Configuration
-[http://localhost:8080/php/phpinfo/](http://localhost:8080/php/phpinfo/):
-```sh
-$ curl -i http://localhost:8080/php/phpinfo/
-```
-
 ### Connecting to VM via SSH
 ```sh
 $ vagrant ssh
 $ uname -a
 $ exit
+```
+
+### Checking PHP and Apache Configuration
+
+```sh
+$ vagrant ssh
+$ php -i
+$ php -m
+```
+
+[http://localhost:8080/php/phpinfo/](http://localhost:8080/php/phpinfo/) ([phpinfo()](http://php.net/manual/en/function.phpinfo.php)):
+```sh
+$ curl -i http://localhost:8080/php/phpinfo/
 ```
 
 ### Connecting to VM via SSH and running PHP code (Interactive shell)
