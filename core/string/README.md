@@ -136,6 +136,7 @@ EOD;
 ```
 
 ## [String Functions](http://php.net/manual/en/book.strings.php)
+---
 
 ### explode()
 

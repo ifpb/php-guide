@@ -60,7 +60,7 @@ var_dump($post->toHMTL()); //=> string(78) "<div><h1>Lorem ipsum dolor</h1><p>Nu
 ## [Visibility](http://php.net/manual/en/language.oop5.visibility.php)
 ---
 
-Visibility: public, protected, private
+Visibility: `public`, `protected`, `private`
 
 ```php
 class Post {
@@ -153,6 +153,7 @@ var_dump($student->hello()); //=> string(20) tring(13) "Hello: fulano"
 ```
 
 ### [Traits](http://php.net/manual/en/language.oop5.traits.php)
+---
 
 <img src="assets/object-util-randomize-calculator.svg" alt="Point Object" width="700">
 
