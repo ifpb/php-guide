@@ -4,13 +4,13 @@ skinparam monochrome true
 hide circle
 
 class Person {
-    _name: String
+    name: String
     constructor(name: String)
     hello(): String
 }
 
 class Student {
-    _id: String
+    id: String
     constructor(name: String, id: String)
 }
 
