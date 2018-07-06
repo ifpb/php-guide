@@ -26,7 +26,7 @@ C = \frac{F - 32}{1.8}
  -->
 ![](assets/celsius2fahrenheit.png)
 
-#### Option 1
+### Option 1
 
 ```php
 $fahrenheit = 50;
@@ -36,7 +36,7 @@ var_dump($celsius);   //=> float(32.222222222222)
 
 ![](assets/celsius2fahrenheit1.svg)
 
-#### Option 2
+### Option 2
 
 ```php
 // grouping operator
@@ -231,6 +231,7 @@ var_dump("1 programador"+"1 computador" == "2 passos para o paraíso"); //=> boo
 var_dump("1 programador"+"1 computador" === (int)"2 passos paraíso");  //=> bool(true)
 ```
 
+References:
 * [PHP type comparison tables](http://php.net/manual/en/types.comparisons.php)
 
 ## [Ternary Operator](http://php.net/manual/en/language.operators.comparison.php#language.operators.comparison.ternary)
@@ -255,10 +256,11 @@ var_dump($result);     //=> int(0)
 
 ```php
 $values = [1, 2, 3];
-
 $result = $values[3];  //=> PHP Notice:  Undefined offset: 3
-var_dump($result);     //=> NULL
+```
 
+```php
+$values = [1, 2, 3];
 $result = @$values[3];
 var_dump($result);     //=> NULL
 ```
@@ -400,6 +402,7 @@ var_dump([1, 2] !== [3]); //=> bool(true)
 
 
 ## [Type Operators](http://php.net/manual/en/language.operators.type.php)
+---
 
 ### Types: `(int)`, `(float)`, `(string)`, `(array)`, `(object)`, `(bool)`
 ```php
@@ -415,6 +418,7 @@ var_dump($a instanceof MyClass); //=> bool(true)
 ``` 
 
 ## [Operators List](http://php.net/manual/en/language.operators.precedence.php)
+---
 
 | Operator type | Operators |
 |-|-|
@@ -437,5 +441,5 @@ var_dump($a instanceof MyClass); //=> bool(true)
 
 `clone`, `new`, `instanceof`, `<`, `<=`, `>`, `>=`, `==`, `!=`, `===`, `!==`:
 ```php
-var_dump(1 < 2 > 1); //=> PHP Parse error:  syntax error, unexpected '>'
+1 < 2 > 1; //=> PHP Parse error:  syntax error, unexpected '>'
 ```
