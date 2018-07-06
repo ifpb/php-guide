@@ -1,8 +1,10 @@
 # Function
 
 - [Definition](#definition)
+- [Case insensitive](#case-insensitive)
 - [Scope](#scope)
 - [Override](#override)
+- [Recursion](#recursion)
 - [Default argument values](#default-argument-values)
 - [Passing by reference](#passing-by-reference)
 - [Variable-length argument lists](#variable-length-argument-lists)
@@ -16,6 +18,18 @@ function soma($a, $b) {
   return $a+$b;
 }
 
+var_dump(soma(1));       //=> int(1)
+var_dump(soma(1, 2));    //=> int(3)
+var_dump(soma(1, 2, 3)); //=> int(3)
+```
+
+## Case insensitive
+---
+```php
+function soma($a, $b) {
+  return $a+$b;
+}
+
 var_dump(soma(1, 2)); //=> int(3)
 var_dump(Soma(1, 2)); //=> int(3)
 var_dump(SOMA(1, 2)); //=> int(3)
@@ -23,6 +37,16 @@ var_dump(SOMA(1, 2)); //=> int(3)
 
 ## Scope
 ---
+
+```php
+$name = 'fulano';
+
+function hello() {
+  return "Hello $name"; //=> Notice: Undefined variable: name
+}
+
+var_dump(hello());      //=> string(6) "Hello "
+```
 
 ```php
 $name = 'fulano';
@@ -47,6 +71,16 @@ function soma($a, $b, $c) {
   return $a + $b;
 }
 //=> PHP Fatal error:  Cannot redeclare soma()
+```
+
+## Recursion
+---
+```php
+function factorial($n) {
+  return $n == 0 ? 1 : $n * factorial($n - 1);
+}
+
+var_dump(factorial(4)); //=> int(24)
 ```
 
 ## Default argument values
