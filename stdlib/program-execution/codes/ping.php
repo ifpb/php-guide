@@ -1,4 +1,5 @@
 <?php
+
   // get host
   $host = $_GET['host'] ?? null;
 
@@ -16,3 +17,4 @@
   header('Content-type: application/json; charset=UTF-8');
   echo $json;
 
+?>

@@ -14,4 +14,5 @@
   file_put_contents('ping.log', "${log}\n>>>${time}\n${ping}");
 
   echo file_get_contents('ping.log');
-
+?>
+</pre>
