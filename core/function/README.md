@@ -5,6 +5,7 @@
 - [Override](#override)
 - [Default argument values](#default-argument-values)
 - [Passing by reference](#passing-by-reference)
+- [Variable-length argument lists](#variable-length-argument-lists)
 - [Scalar type declarations & typed param](#scalar-type-declarations--typed param)
 - [Callback](#callback)
 
@@ -39,15 +40,13 @@ var_dump(hello()); //=> string(12) "Hello fulano"
 
 ```php
 function soma($a, $b) {
-  return $a+$b;
+  return $a + $b;
 }
 
 function soma($a, $b, $c) {
-  return $a+$b;
+  return $a + $b;
 }
 //=> PHP Fatal error:  Cannot redeclare soma()
-
-var_dump(soma(1, 2, 3)); //=> int(3)
 ```
 
 ## Default argument values
@@ -73,13 +72,28 @@ function add($a) {
 var_dump($num);         //=> int(10)
 var_dump(add($num));    //=> int(11)
 var_dump($num);         //=> int(10)
+```
 
+```php
+$num = 10;
 function addref(&$a) {
   return ++$a;
 }
 var_dump($num);         //=> int(10)
 var_dump(addref($num)); //=> int(11)
-var_dump($num);         //=> int(10)
+var_dump($num);         //=> int(11)
+```
+
+## Variable-length argument lists
+---
+
+```php
+function somation(...$values) {
+  return array_sum($values);
+}
+
+var_dump(somation(1, 2));       //=> int(3)
+var_dump(somation(1, 2, 3, 4)); //=> int(10)
 ```
 
 ## Scalar type declarations & typed param

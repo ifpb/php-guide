@@ -1,4 +1,4 @@
-# [Number]()
+# Number
 
 - [Integer](#integer)
 - [Float](#float)

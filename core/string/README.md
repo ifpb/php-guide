@@ -4,6 +4,9 @@
 - [Double Quoted](#double-quoted)
 - [Heredoc Syntax](#heredoc-syntax)
 - [Nowdoc Syntax](#nowdoc-syntax)
+- [String Functions](#string-functions)
+  - [explode()](#explode)
+  - [implode()](#implode)
 
 ## Single Quoted
 ---
@@ -109,9 +112,11 @@ $variable = <<<EOD
 Hello $name
 EOD;
 //=> PHP Parse error:  syntax error, unexpected '<<' (T_SL) in php
-````
+```
 
-### Nowdoc Syntax
+## Nowdoc Syntax
+---
+
 ```php
 
 $variable = <<<'EOD'
@@ -128,4 +133,35 @@ $variable = <<<'EOD'
 Hello $name
 EOD;
 //=> Parse error: syntax error, unexpected '<<' (T_SL) in php
+```
+
+## [String Functions](http://php.net/manual/en/book.strings.php)
+
+### explode()
+
+```php
+$name = "fulano, sicrano";
+$names = explode(", ", $names);
+var_dump($names);
+//=>
+// array(2) {
+//   [0]=>
+//   string(6) "fulano"
+//   [1]=>
+//   string(7) "sicrano"
+// }
+```
+
+### implode()
+
+```php
+$names = ['fulano', 'sicrano'];
+$names = implode(', ', $names);
+var_dump($names); //=> string(15) "fulano, sicrano"
+```
+
+### strlen()
+
+```php
+var_dump(strlen('lorem')); //=> int(5)
 ```

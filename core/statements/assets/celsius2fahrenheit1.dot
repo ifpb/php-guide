@@ -1,0 +1,16 @@
+graph graphname {
+  // let celsius = fahrenheit - 32 / 1.8
+  a[label="="]
+  b[label="celcius"]
+  c[label="-"]
+  d[label="fahrenheit"]
+  e[label="/"]
+  f[label="32"]
+  g[label="1.8"]
+  a -- b;
+  a -- c;
+  c -- e;
+  c -- d;
+  e -- f;
+  e -- g;
+}

@@ -1,4 +1,4 @@
-# [Boolean]()
+# [Boolean](http://php.net/manual/en/language.types.boolean.php)
 
 ```php
 $variable = true;

@@ -1,0 +1,18 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam monochrome true
+hide circle
+
+class Person {
+    _name: String
+    constructor(name: String)
+    hello(): String
+}
+
+class Student {
+    _id: String
+    constructor(name: String, id: String)
+}
+
+Person <|-- Student
+@enduml

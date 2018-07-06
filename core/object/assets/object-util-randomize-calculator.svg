@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="198px" preserveAspectRatio="none" style="width:591px;height:198px;" version="1.1" viewBox="0 0 591 198" width="591px" zoomAndPan="magnify"><defs><filter height="300%" id="fw1cxrn9ols8b" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--class CalculatorMixin--><rect fill="#F8F8F8" filter="url(#fw1cxrn9ols8b)" height="66.043" id="CalculatorMixin" style="stroke: #383838; stroke-width: 1.5;" width="248" x="6" y="8"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="87" x="86.5" y="24.6016">CalculatorMixin</text><line style="stroke: #383838; stroke-width: 1.5;" x1="7" x2="253" y1="32.1328" y2="32.1328"/><line style="stroke: #383838; stroke-width: 1.5;" x1="7" x2="253" y1="40.1328" y2="40.1328"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="218" x="12" y="54.7676">addition(a: Number, b: Number): Number</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="236" x="12" y="67.7227">subtraction(a: Number, b: Number): Number</text><!--class RandomizerMixin--><rect fill="#F8F8F8" filter="url(#fw1cxrn9ols8b)" height="66.043" id="RandomizerMixin" style="stroke: #383838; stroke-width: 1.5;" width="291" x="289.5" y="8"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="100" x="385" y="24.6016">RandomizerMixin</text><line style="stroke: #383838; stroke-width: 1.5;" x1="290.5" x2="579.5" y1="32.1328" y2="32.1328"/><line style="stroke: #383838; stroke-width: 1.5;" x1="290.5" x2="579.5" y1="40.1328" y2="40.1328"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="99" x="295.5" y="54.7676">random(): Number</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="279" x="295.5" y="67.7227">randomRange(min: Number, max: Number): Number</text><!--class Util--><rect fill="#F8F8F8" filter="url(#fw1cxrn9ols8b)" height="53.0879" id="Util" style="stroke: #383838; stroke-width: 1.5;" width="259" x="152.5" y="134"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="18" x="273" y="150.6016">Util</text><line style="stroke: #383838; stroke-width: 1.5;" x1="153.5" x2="410.5" y1="158.1328" y2="158.1328"/><line style="stroke: #383838; stroke-width: 1.5;" x1="153.5" x2="410.5" y1="166.1328" y2="166.1328"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="247" x="158.5" y="180.7676">multiplication(a: Number, b: Number): Number</text><!--link CalculatorMixin to Util--><path d="M188.0841,86.6648 C208.3448,102.5934 230.4068,119.9382 248.0538,133.812 " fill="none" id="CalculatorMixin-Util" style="stroke: #383838; stroke-width: 1.0;"/><polygon fill="none" points="183.7369,92.1514,172.3405,74.2874,192.3896,81.1455,183.7369,92.1514" style="stroke: #383838; stroke-width: 1.0;"/><!--link RandomizerMixin to Util--><path d="M376.5337,86.6648 C356.1398,102.5934 333.9327,119.9382 316.1695,133.812 " fill="none" id="RandomizerMixin-Util" style="stroke: #383838; stroke-width: 1.0;"/><polygon fill="none" points="372.3101,81.0816,392.381,74.2874,380.9277,92.1151,372.3101,81.0816" style="stroke: #383838; stroke-width: 1.0;"/><!--
+@startuml
+skinparam classAttributeIconSize 0
+skinparam monochrome true
+hide circle
+
+class CalculatorMixin {
+    addition(a: Number, b: Number): Number
+    subtraction(a: Number, b: Number): Number
+}
+
+class RandomizerMixin {
+    random(): Number
+    randomRange(min: Number, max: Number): Number
+}
+
+class Util {
+    multiplication(a: Number, b: Number): Number
+}
+
+CalculatorMixin <|- - Util
+RandomizerMixin <|- - Util
+@enduml
+
+PlantUML version 1.2017.20(Mon Dec 11 13:57:05 BRT 2017)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_101-b13
+Operating System: Mac OS X
+OS Version: 10.13.4
+Default Encoding: US-ASCII
+Language: en
+Country: US
+--></g></svg>

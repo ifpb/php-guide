@@ -1,0 +1,11 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam monochrome true
+hide circle
+
+class Address {
+    ip: String
+    mask: String
+    constructor(name: String, mask: String)
+}
+@enduml

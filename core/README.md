@@ -3,25 +3,27 @@
 ## Contents
 ---
 
-- [Variable](variable.md)
-- [Boolean](boolean.md)
-- [Number](number.md)
-- [String](string.md)
-- [Array](array.md)
-- [Operator](operator.md)
-- [Statement](statement.md)
-- [Function](function.md)
+- [Variable](variable/)
+- [Expression and Operator](expression-and-operator/)
+- [Statement](statements/)
+- [Function](function/)
+- [Namespaces]()
+- [Errors]()
+- [Exceptions]()
+- [Generator]()
+- Types:
+  - Scalar:
+    - [Boolean](boolean/)
+    - [Integer](number/#integer)
+    - [Float](number/#float)
+    - [String](string/)
+  - Compound:
+    - [Array](array/)
+    - [Object](object/) ([json](json/))
+  - Special:
+    - [Null](null/)
 
 ## References
 ---
 - [Manual do php.net](http://php.net/manual/en/)
   - [Language Reference](http://php.net/manual/en/langref.php)
-
-<!-- 
-  TODO
-  Object
-  Namespaces
-  Errors
-  Exceptions
-  phpunit
--->

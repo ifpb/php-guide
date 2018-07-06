@@ -1,0 +1,12 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam monochrome true
+hide circle
+
+class Person {
+    name: String
+    email: String
+    constructor(name: String, email: String)
+    toHTML(): String
+}
+@enduml

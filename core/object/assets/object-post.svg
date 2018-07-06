@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="85px" preserveAspectRatio="none" style="width:88px;height:85px;" version="1.1" viewBox="0 0 88 85" width="88px" zoomAndPan="magnify"><defs><filter height="300%" id="fvgzs0u6tfht2" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--class Post--><rect fill="#F8F8F8" filter="url(#fvgzs0u6tfht2)" height="66.043" id="Post" style="stroke: #383838; stroke-width: 1.5;" width="71" x="6" y="8"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="24" x="29.5" y="24.6016">Post</text><line style="stroke: #383838; stroke-width: 1.5;" x1="7" x2="76" y1="32.1328" y2="32.1328"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="58" x="12" y="46.7676">title: String</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="59" x="12" y="59.7227">text: String</text><line style="stroke: #383838; stroke-width: 1.5;" x1="7" x2="76" y1="66.043" y2="66.043"/><!--
+@startuml
+skinparam classAttributeIconSize 0
+skinparam monochrome true
+hide circle
+
+class Post {
+    title: String
+    text: String
+}
+@enduml
+
+PlantUML version 1.2017.15(Mon Jul 03 13:45:34 BRT 2017)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_101-b13
+Operating System: Mac OS X
+OS Version: 10.13
+Default Encoding: US-ASCII
+Language: en
+Country: US
+--></g></svg>

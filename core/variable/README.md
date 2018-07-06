@@ -7,12 +7,14 @@
 - [Constante](#constante)
 - [Variable Variables](#variable-variables)
 - [Variable from array](#variable-from-array)
-- [Passing value by value or reference](#passing-value-by-value-or-reference)
+- [Passing by value or Passing by reference](#passing-by-value-or-passing-by-reference)
 - [Predefined Variables](#predefined-variables)
 - [Magic constants](#magic-constants)
 
 ## Definition
 ---
+
+### Scalar Types
 
 ```php
 $variable;
@@ -22,6 +24,8 @@ print($variable);    //=> 10
 echo($variable);     //=> 10
 echo $variable;      //=> 10
 ```
+
+### Compound Types
 
 ```php
 $variable = [1, 2, 3];
@@ -45,11 +49,7 @@ echo($variable);  //=> Notice: Array to string conversion in php
 `[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*`
 ```php
 $Variable = 10;
-echo $Variable;
-
 $_variable = 10;
-echo $_variable;
-
 $1variable = 10; //=> PHP Parse error
 ```
 
@@ -70,11 +70,12 @@ echo $variable; //=> fulano
 ```php
 $variable = 10;
 $Variable = 'fulano';
+
 echo $variable; //=> 10
 echo $Variable; //=> fulano
 ```
 
-## Constante
+## Constant
 ---
 
 ```php
@@ -82,7 +83,12 @@ define('VARIABLE', 10);
 echo VARIABLE; //=> 10
 ```
 
-## Variable Variables
+```php
+const VARIABLE = 10;
+echo VARIABLE; //=> 10
+```
+
+## Variable variables
 ---
 
 ```php
@@ -113,6 +119,8 @@ echo $name;  //=> fulano
 echo $email; //=> fulano@email
 ```
 
+### Valid extract
+
 ```php
 $params = ['name' => 'fulano', 'email' => 'fulano@email'];
 extract($params);
@@ -129,6 +137,8 @@ echo $name;  //=> fulano
 echo $email; //=> fulano@email
 ```
 
+### Invalid extract
+
 ```php
 $params = ['10' => 'fulano', '20' => 'fulano@email'];
 extract($params);
@@ -141,59 +151,49 @@ print_r(get_defined_vars());
 echo $10; //=> PHP Parse error:  syntax error, unexpected '10' (T_LNUMBER), expecting variable (T_VARIABLE) or '{' or '$' in php
 ```
 
-## Passing value by value or reference
+## Passing by value or Passing by reference
 ---
 
-```php
-$var1 = "test";
-
-$var2 = $var1;
-$var2 = "new test";
-
-$var3 = &$var2;
-$var3 = "final test";
-
-print ("var1: $var1, var2: $var2, var3: $var3"); 
-//=> var1: test, var2: final test, var3: final test
-````
+### Scalar Types
 
 ```php
- //=>
-//Array
-//(
-//  [name] => fulano
-//  [email] => fulano@email
-//)
+$name1 = "test";
 
-$params2 = $params;
-$params2['name'] = 'sicrano';
-print_r($params);
-//=>
-//Array
-//(
-//  [name] => fulano
-//  [email] => fulano@email
-//)
+// Passing by value
+$name2 = $name1;
+$name2 = "new test";
 
-$params3 = &$params;
-$params3['name'] = 'sicrano';
-print_r($params);
-//=>
-//Array
-//(
-//  [name] => sicrano
-//  [email] => fulano@email
-//)
+// Passing by reference
+$name3 = &$name2;
+$name3 = "final test";
+
+print ("name1: $name1, name2: $name2, name3: $name3"); 
+//=> name1: test, name2: final test, name3: final test
 ```
+
+### Compound Types (Array)
+
+```php
+$person = ['name' => 'fulano', 'email' => 'fulano@email'];
+
+// Passing by value
+$person2 = $person;
+$person2['name'] = 'sicrano';
+echo $person['name']; //=> fulano  
+
+// Passing by reference
+$person3 = &$person;
+$person3['name'] = 'sicrano';
+print_r($person);
+echo $person['name']; //=> sicrano  
+```
+
+### Compound Types (Object)
+
+#### Passing by reference
 
 ```php
 $myCar = new stdClass;
-print_r($myCar);
-//=>
-// stdClass Object
-// (
-// )
-
 $myCar->engine = 'Nice Engine';
 $myCar->numberOfDoors = 4;
 $myCar->howFast = 150;
@@ -219,6 +219,7 @@ print_r($myCar);
 // )
 ```
 
+#### Passing by value (clone)
 ```php
 class Car {
   public $engine;
@@ -275,10 +276,8 @@ print_r($myCar);
 // )
 ```
 
-## Predefined Variables
+## [Predefined Variables](http://php.net/manual/en/reserved.variables.php)
 ---
-
-[Reference](http://php.net/manual/en/reserved.variables.php)
 
 ```php
 print_r($GLOBALS);
@@ -336,9 +335,10 @@ print_r($GLOBALS);
 // )
 ````
 
-### Magic constants
+## [Magic constants](http://php.net/manual/en/language.constants.predefined.php)
+---
 
-[Reference](http://php.net/manual/en/language.constants.predefined.php) <!-- http://i.imgur.com/YsbKHg1.gif-->
+<!-- http://i.imgur.com/YsbKHg1.gif-->
 ```php
 print_r(__DIR__); //=> /pasta_que_vc_esta
 ```

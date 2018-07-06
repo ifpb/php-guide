@@ -1,0 +1,13 @@
+@startuml
+scale max 200 width
+skinparam classAttributeIconSize 0
+skinparam monochrome true
+hide circle
+
+class Point {
+  x: Number
+  y: Number
+  constructor(x: Number, y: Number)
+  {static} distance(a: Number, b: Number): Number
+}
+@enduml
