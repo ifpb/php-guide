@@ -20,7 +20,7 @@
 
 #### uname
 
-[codes/uname.php](codes/uname.php)
+[codes/uname.php](codes/uname.php):
 ```php
 {% include_relative codes/uname.php %}
 ```
@@ -37,7 +37,7 @@ Linux vagrant-ubuntu-trusty-64 3.13.0-108-generic #155-Ubuntu SMP Wed Jan 11 16:
 ```
 
 #### contrab list
-[codes/contrab-list-tasks.php](codes/contrab-list-tasks.php)
+[codes/contrab-list-tasks.php](codes/contrab-list-tasks.php):
 ```php
 {% include_relative codes/contrab-list-tasks.php %}
 ```
@@ -47,9 +47,9 @@ $ curl -I codes/contrab-list-tasks.php
 ```
 
 #### contrab add
-[codes/contrab-add-tasks.php](codes/contrab-add-tasks.php)
+[codes/contrab-add-task.php](codes/contrab-add-task.php):
 ```php
-{% include_relative codes/contrab-add-tasks.php %}
+{% include_relative codes/contrab-add-task.php %}
 ```
 
 ```
@@ -58,7 +58,7 @@ $ curl -I codes/contrab-add-tasks.php
 
 #### ping
 
-[codes/ping.php](codes/ping.php)
+[codes/ping.php](codes/ping.php):
 ```php
 {% include_relative codes/ping.php %}
 ```
@@ -85,7 +85,7 @@ chmod a+rw command/file
  -->
 
 #### cat /etc/shadow by ssh
-[codes/shell-exec-shadow.php](codes/shell-exec-shadow.php)
+[codes/shell-exec-shadow.php](codes/shell-exec-shadow.php):
 ```php
 {% include_relative codes/shell-exec-shadow.php %}
 ```
@@ -94,7 +94,7 @@ chmod a+rw command/file
 $ curl -I codes/shell-exec-shadow.php
 ```
 
-[codes/cat-shadow.php](codes/cat-shadow.php)
+[codes/cat-shadow.php](codes/cat-shadow.php):
 ```php
 {% include_relative codes/cat-shadow.php %}
 ```
@@ -113,7 +113,7 @@ $ curl -I codes/cat-shadow.php
 - [Other Services - SSH2](http://php.net/manual/en/book.ssh2.php): `ssh2_connect()`, `ssh2_auth_password()`, `ssh2_exec()`, `ssh2_fetch_stream()`
 
 #### service --status-all
-[codes/service-status-all.php](codes/service-status-all.php)
+[codes/service-status-all.php](codes/service-status-all.php):
 ```php
 {% include_relative codes/service-status-all.php %}
 ```
@@ -157,7 +157,7 @@ $ curl -I codes/service-status-all.php
 ### Change config file
 
 #### Display Error - php.ini
-[codes/display_error.php](codes/display_error.php)
+[codes/display_error.php](codes/display_error.php):
 ```php
 // sed - stream editor
 {% include_relative codes/display_error.php %}
@@ -168,7 +168,7 @@ $ curl -I codes/display_error.php
 ```
 
 #### Creating log
-[codes/ping-log.php](codes/ping-log.php)
+[codes/ping-log.php](codes/ping-log.php):
 ```php
 {% include_relative codes/ping-log.php %}
 ```
@@ -181,12 +181,12 @@ $ curl -I codes/ping-log.php?host=8.8.8.8
 # chmod o+x ping.log
 ```
 
-**Reference**
-- [Other Services - SSH2](http://php.net/manual/en/book.ssh2.php): `ssh2_connect()`, `ssh2_auth_password()`, `ssh2_exec()`
-- [Date and Time Related Extensions - Date/Time - Date/Time Functions](http://php.net/manual/en/book.datetime.php): `date()`
-- [File System Related Extensions - Filesystem - Filesystem Functions](http://php.net/manual/en/ref.filesystem.php): `file_get_content()`, `file_put_content()`
-
 <!-- 
 TODO
 sed, cut, awk
 -->
+
+**Reference**
+- [Other Services - SSH2](http://php.net/manual/en/book.ssh2.php): `ssh2_connect()`, `ssh2_auth_password()`, `ssh2_exec()`
+- [Date and Time Related Extensions - Date/Time - Date/Time Functions](http://php.net/manual/en/book.datetime.php): `date()`
+- [File System Related Extensions - Filesystem - Filesystem Functions](http://php.net/manual/en/ref.filesystem.php): `file_get_content()`, `file_put_content()`

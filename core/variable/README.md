@@ -333,7 +333,7 @@ print_r($GLOBALS);
 //  *RECURSION*
 //     [x] => 10
 // )
-````
+```
 
 ## [Magic constants](http://php.net/manual/en/language.constants.predefined.php)
 ---
