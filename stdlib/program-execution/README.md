@@ -1,4 +1,4 @@
-# Program execution
+# [Program execution](http://php.net/manual/en/book.exec.php)
 
 - [shell_exec()](#shell_exec)
   - [Basic command](#basic-command)
@@ -13,7 +13,7 @@
     - [Display Error - php.ini](#display-error---phpini)
     - [Creating log](#creating-log)
 
-## [shell_exec()](http://php.net/manual/en/book.exec.php)
+## shell_exec()
 ---
 
 ### Running basic command
