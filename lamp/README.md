@@ -37,6 +37,8 @@ end
 ---
 
 ### Downloading Lamp Vagrantfile
+
+[https://github.com/ifpb/php-guide/blob/master/lamp/lamp.zip?raw=true](https://github.com/ifpb/php-guide/blob/master/lamp/lamp.zip?raw=true):
 ```sh
 $ wget https://github.com/ifpb/php-guide/blob/master/lamp/lamp.zip?raw=true
 $ curl https://github.com/ifpb/php-guide/blob/master/lamp/lamp.zip?raw=true --output lamp.zip
@@ -71,6 +73,7 @@ $ exit
 $ vagrant ssh
 $ php -i
 $ php -m
+$ ls /var/www/html/php/phpinfo/
 ```
 
 [http://localhost:8080/php/phpinfo/](http://localhost:8080/php/phpinfo/) ([phpinfo()](http://php.net/manual/en/function.phpinfo.php)):
@@ -93,12 +96,12 @@ php > exit
 ### Connecting to VM via SSH and running PHP code (File)
 ```
 $ vagrant ssh
-$ echo '<?php echo 1+1; ?>' > example.php
-$ php -f example.php
+$ echo '<?php echo 'Hello world!'; ?>' > hello.php
+$ php -f hello.php
 10
 ```
 
-### display_errors
+### Display errors
 ```
 $ vagrant ssh
 $ sudo sed -i -r -e 's/display_errors = Off/display_errors = On/g' /etc/php/7.1/apache2/php.ini
