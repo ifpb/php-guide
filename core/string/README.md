@@ -1,30 +1,30 @@
-# String
+# [String](http://php.net/manual/en/language.types.string.php)
 
 - [Single Quoted](#single-quoted)
 - [Double Quoted](#double-quoted)
 - [Heredoc Syntax](#heredoc-syntax)
 - [Nowdoc Syntax](#nowdoc-syntax)
-- [String Functions](#string-functions)
-  - [explode()](#explode)
-  - [implode()](#implode)
 
 ## Single Quoted
 ---
 
-```php
-$variable = 'lorem ipsum';
-var_dump($variable);
-```
+### Literal
 
 ```php
-$variable = 'lorem
-ipsum';
-var_dump($variable);
+var_dump('l');           //=> string(1) "l"
+var_dump('lorem ipsum'); //=> string(11) "lorem ipsum"
+```
+
+### String Multiline
+```php
+var_dump('lorem
+ipsum');
 //=>
 // string(11) "lorem
 // ipsum"
 ```
 
+### Escape Sequences 
 ```php
 $variable = 'lorem\' ipsum';
 var_dump($variable); //=> string(12) "lorem' ipsum"
@@ -44,45 +44,50 @@ echo $variable;      //=> lorem \n ipsum
 ## Double Quoted
 ---
 
+### Literal
 ```php
-$variable = "lorem ipsum";
-var_dump($variable); //=> string(11) "lorem ipsum"
+var_dump("lorem ipsum"); //=> string(11) "lorem ipsum"
+```
+
+### Escape Sequences 
+```php
+var_dump("lorem\nipsum");
+//=>
+// string(13) "lorem
+// ipsum"
+```
+
+### Variable parsing 
+
+```php
+$name = 'Alice';
+var_dump('Hello $name'); //=> string(11) "Hello $name"
 ```
 
 ```php
-$variable = "lorem \n ipsum";
-var_dump($variable);
-//=>
-// string(13) "lorem 
-//  ipsum"
-echo $variable;
-//=>
-// lorem 
-//  ipsum
+$name = 'Alice';
+var_dump("Hello $name"); //=> string(11) "Hello Alice"
 ```
 
 ```php
-$name = 'fulano';
-$hello = 'Hello $name';
-var_dump($hello); //=> string(11) "Hello $name"
+$name = 'Alice';
+var_dump("Hello {$name}!"); //=> string(12) "Hello Alice!"
+```
 
-$hello = "Hello $name";
-var_dump($hello); //=> string(12) "Hello fulano"
+```php
+$name = ['name' => 'Alice'];
+var_dump("Hello {$name['name']}"); //=> string(11) "Hello Alice"
+```
 
-$hello = "Hello {$name}";
-var_dump($hello); //=> string(12) "Hello fulano"
-
-$name = ['name' => 'fulano'];
-$hello = "Hello {$name['name']}";
-var_dump($hello); //=> string(12) "Hello fulano"
-
-$name = 'name';
-var_dump("2 {$name}s"); //=> string(7) "2 names"
+```php
+$number = 10;
+var_dump("result: {$number+1}"); //=> Parse error: syntax error, unexpected '+', expecting :: (T_PAAMAYIM_NEKUDOTAYIM)
 ```
 
 ## Heredoc Syntax
 ---
 
+### Literal
 ```php
 $variable = <<<EOD
 lorem
@@ -95,6 +100,7 @@ var_dump($variable);
 // ipsum"
 ```
 
+### Escape Sequences 
 ```php
 $variable = "lorem
 \tipsum";
@@ -106,7 +112,7 @@ var_dump($variable);
 ```
 
 ```php
-$name = 'fulano';
+$name = 'Alice';
 
 $variable = <<<EOD 
 Hello $name
@@ -117,6 +123,7 @@ EOD;
 ## Nowdoc Syntax
 ---
 
+### Literal
 ```php
 
 $variable = <<<'EOD'
@@ -126,43 +133,12 @@ EOD;
 var_dump($variable); //=> string(12) "Hello world!"
 ```
 
+### Escape Sequences 
 ```php
-$name = 'fulano';
+$name = 'Alice';
 
 $variable = <<<'EOD' 
 Hello $name
 EOD;
 //=> Parse error: syntax error, unexpected '<<' (T_SL) in php
-```
-
-## [String Functions](http://php.net/manual/en/book.strings.php)
----
-
-### explode()
-
-```php
-$name = "fulano, sicrano";
-$names = explode(", ", $names);
-var_dump($names);
-//=>
-// array(2) {
-//   [0]=>
-//   string(6) "fulano"
-//   [1]=>
-//   string(7) "sicrano"
-// }
-```
-
-### implode()
-
-```php
-$names = ['fulano', 'sicrano'];
-$names = implode(', ', $names);
-var_dump($names); //=> string(15) "fulano, sicrano"
-```
-
-### strlen()
-
-```php
-var_dump(strlen('lorem')); //=> int(5)
 ```

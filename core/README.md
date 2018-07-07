@@ -11,6 +11,7 @@
 - [Errors]()
 - [Exceptions]()
 - [Generator]()
+- [References](references/)
 - Types:
   - Scalar:
     - [Boolean](boolean/)
@@ -19,7 +20,7 @@
     - [String](string/)
   - Compound:
     - [Array](array/)
-    - [Object](object/) ([json](json/))
+    - [Object](object/)
   - Special:
     - [Null](null/)
 

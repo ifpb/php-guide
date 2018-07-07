@@ -9,7 +9,11 @@
   - [while](#while)
   - [do...while](#do...while)
 - [Alternative syntax](#alternative-syntax)
-- [require, include, require_once, include_once](#require-include-require_once-include_once)
+- [Includes](#includes)
+  - [require](#require)
+  - [require_once](#require_once)
+  - [include](#include)
+  - [include_once](#include_once)
 
 ## Control flow
 ---
@@ -62,15 +66,15 @@ var_dump($result); //=> int(20)
 ### for
 
 ```php
-$names = ['Fulano', 'Sicrano', 'Betrano'];
+$names = ['Alice', 'Bob', 'Charlie'];
 
 for($index = 0; $index < sizeof($names); $index++){
   print($names[$index]."\n");
 }
 //=>
-// Fulano
-// Sicrano
-// Betrano
+// Alice
+// Bob
+// Charlie
 ```
 
 ### foreach
@@ -84,54 +88,26 @@ foreach (range(0, 9) as $number) {
 
 ```php
 $names = [
-  0 => 'fulano',
-  'admin' => 'sicrano',
-  'client' => 'beltrano'
+  0 => 'Alice',
+  'admin' => 'Bob',
+  'client' => 'Charlie'
 ];
 
 foreach($names as $name){
   print($name."\n");
 }
 //=>
-// fulano
-// sicrano
-// beltrano
+// Alice
+// Bob
+// Charlie
 
 foreach($names as $key=>$name){
   print("$key => $name\n");
 }
 //=>
-// 0 => fulano
-// admin => sicrano
-// client => beltrano
-```
-
-#### Reference (&)
-
-```php
-foreach($names as $key=>$name){
-  $name .= 'sufix';
-}
-print_r($names);
-//=>
-// Array
-// (
-//   [0] => fulano
-//   [admin] => sicrano
-//   [client] => beltrano
-// )
-
-foreach($names as $key=>&$name){
-  $name .= 'sufix';
-}
-print_r($names);
-//=>
-// Array
-// (
-//   [0] => fulanosufix
-//   [admin] => sicranosufix
-//   [client] => beltranosufix
-// )
+// 0 => Alice
+// admin => Bob
+// client => Charlie
 ```
 
 ### while
@@ -183,5 +159,5 @@ endif;
 //=> greater than zero
 ```
 
-## require, include, require_once, include_once
+## Includes
 ---

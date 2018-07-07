@@ -6,7 +6,6 @@
 - [Override](#override)
 - [Recursion](#recursion)
 - [Default argument values](#default-argument-values)
-- [Passing by reference](#passing-by-reference)
 - [Variable-length argument lists](#variable-length-argument-lists)
 - [Scalar type declarations & typed param](#scalar-type-declarations--typed param)
 - [Callback](#callback)
@@ -47,6 +46,8 @@ function hello() {
 
 var_dump(hello());      //=> string(6) "Hello "
 ```
+
+### Global
 
 ```php
 $name = 'fulano';
@@ -93,29 +94,6 @@ function soma($a, $b, $c=0) {
 
 var_dump(soma(1, 2));    //=> int(3)
 var_dump(soma(1, 2, 3)); //=> int(6)
-```
-
-## Passing by reference
----
-
-```php
-$num = 10;
-function add($a) {
-  return ++$a;
-}
-var_dump($num);         //=> int(10)
-var_dump(add($num));    //=> int(11)
-var_dump($num);         //=> int(10)
-```
-
-```php
-$num = 10;
-function addref(&$a) {
-  return ++$a;
-}
-var_dump($num);         //=> int(10)
-var_dump(addref($num)); //=> int(11)
-var_dump($num);         //=> int(11)
 ```
 
 ## Variable-length argument lists

@@ -9,7 +9,7 @@
 - [Null Coalescing Operator](#null-coalescing-operator)
 - [Error Control Operators](#error-control-operators)
 - [Execution Operators](#execution-operators)
-- [Increment and decrement Operators](#increment-and-decrement-operators)
+- [Increment and Decrement Operators](#increment-and-decrement-operators)
 - [Logical Operators](#logical-operators)
 - [String Operators](#string-operators)
 - [Array Operators](#array-operators)
@@ -97,7 +97,7 @@ var_dump(10 % 3);             //=> int(1)
 
 ```php
 // exponentiation operator
-var_dump(10 ** 3);            //=> int(1000) - pow(10, 3)
+var_dump(10 ** 3);            //=> int(1000);  before php 5.6: pow(10, 3)
 ```
 
 ## [Assignment Operators](http://php.net/manual/en/language.operators.assignment.php)
@@ -287,7 +287,7 @@ var_dump(shell_exec('ping -c1 8.8.8.8'));
 // "
 ```
 
-## [Increment and decrement Operators](http://php.net/manual/en/language.operators.increment.php)
+## [Increment and Decrement Operators](http://php.net/manual/en/language.operators.increment.php)
 ---
 
 ```php
@@ -316,8 +316,6 @@ var_dump(--$number);      //=> int(9)
 
 ## [Logical Operators](http://php.net/manual/en/language.operators.logical.php)
 ---
-
-> false == false, 0, "", null, undefined, NaN
 
 ```php
 // logical and operator (and, &&)
@@ -400,11 +398,12 @@ var_dump([1] !== ["1"]);  //=> bool(true)
 var_dump([1, 2] !== [3]); //=> bool(true)
 ```
 
-
 ## [Type Operators](http://php.net/manual/en/language.operators.type.php)
 ---
 
-### Types: `(int)`, `(float)`, `(string)`, `(array)`, `(object)`, `(bool)`
+### Types: `(int)`, `(integer)`, `(float)`, `(string)`, `(array)`, `(object)`, `(bool)`, `(boolean)`
+
+[Type casting](http://php.net/manual/en/language.types.type-juggling.php):
 ```php
 var_dump((int) "10"); //=> int(10)
 ``` 
@@ -412,9 +411,11 @@ var_dump((int) "10"); //=> int(10)
 ### instanceof
 ```php
 class MyClass { }
+class OtherClass { }
 
 $a = new MyClass;
-var_dump($a instanceof MyClass); //=> bool(true)
+var_dump($a instanceof MyClass);    //=> bool(true)
+var_dump($a instanceof OtherClass); //=> bool(false)
 ``` 
 
 ## [Operators List](http://php.net/manual/en/language.operators.precedence.php)
@@ -422,6 +423,7 @@ var_dump($a instanceof MyClass); //=> bool(true)
 
 | Operator type | Operators |
 |-|-|
+| Grouping | `()` |
 | Clone | `clone` |
 | Instantiation | `new` |
 | Array operators | `[]`, `+`, `==`, `!=`, `<>`, `===`, `!==` |
@@ -433,7 +435,7 @@ var_dump($a instanceof MyClass); //=> bool(true)
 | Error Control | `@` |
 | String operator | `.` |
 | Execution Operator | <code class="highlighter-rouge">``</code> |
-| Comparison operators | `<`, `<=`, `>`, `>=`, `==`, `!=`, `<>`, `===`, `!==`, `??` |
+| Comparison operators | `<`, `<=`, `>`, `>=`, `==`, `!=`, `<>`, `===`, `!==`, `<=>`, `??` |
 | Ternary operators | `?:` |
 | Assignment operators | `=`, `+=`, `-=`, `*=`, `**=`, `/=`, `.=`, `%=`, `&=`, `|=`, `^=`, `<<=`, `>>=` |
 

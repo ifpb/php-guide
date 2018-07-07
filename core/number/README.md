@@ -9,11 +9,11 @@
 ---
 
 ```php
-// decimal number
+// positive decimal number
 $number = 255;
 var_dump($number); //=> int(255)
 
-// negative number
+// negative decimal number
 $number = -255; 
 var_dump($number); //=> int(-255)
 
@@ -30,9 +30,17 @@ $number = 0b11111111;
 var_dump($number); //=> int(255)
 ```
 
+The size of an integer:
 ```php
-var_dump(pow(2,62)); //=> int(4611686018427387904)
-var_dump(pow(2,63)); //=> float(9.2233720368548E+18)
+// 64-bit platforms usually have a maximum value of about 9E18
+var_dump(PHP_INT_MAX);   //=> int(9223372036854775807): 2**63
+var_dump(PHP_INT_MIN);   //=> int(-9223372036854775808)
+```
+
+Integer overflow:
+```php
+var_dump(PHP_INT_MAX);   //=> int(9223372036854775807)
+var_dump(PHP_INT_MAX+1); //=> float(9.2233720368548E+18)
 ```
 
 ## Float
@@ -42,8 +50,8 @@ var_dump(pow(2,63)); //=> float(9.2233720368548E+18)
 $number = 1.234;
 var_dump($number); //=> float(1.234)
 
-$number = 1.2e3;
-var_dump($number); //=> float(1200)
+$number = -1.2e3;
+var_dump($number); //=> float(-1200)
 
 $number = 1.21233312432534523e1;
 var_dump($number); //=> float(12.123331243253)
@@ -52,13 +60,18 @@ $number = 7E-10;
 var_dump($number); //=> float(7.0E-10)
 ```
 
+### Converting to float
+
 ```php
 var_dump((float)3); //=> float(3)
 ```
 
+### IEEE 754 double precision format
 ```php
 var_dump(0.3-0.2); //=> float(0.1)
+```
 
+```php
 $x = 8 - 6.4;
 var_dump($x); //=> float(1.6)
 
