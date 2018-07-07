@@ -98,7 +98,7 @@ php > exit
 $ vagrant ssh
 $ echo '<?php echo 'Hello world!'; ?>' > hello.php
 $ php -f hello.php
-10
+Hello world!
 ```
 
 ### Display errors
