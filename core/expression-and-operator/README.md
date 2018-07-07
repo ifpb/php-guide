@@ -432,7 +432,8 @@ var_dump($a instanceof MyClass); //=> bool(true)
 | Logical operators | `!`, `&&`, `and`, `||`, `or`, `xor` |
 | Error Control | `@` |
 | String operator | `.` |
-| Comparison operators | `<`, `<=`, `>`, `>=`, `==`, `!=`, `===`, `!==`, `??` |
+| Execution Operator | <code class="highlighter-rouge">``</code> |
+| Comparison operators | `<`, `<=`, `>`, `>=`, `==`, `!=`, `<>`, `===`, `!==`, `??` |
 | Ternary operators | `?:` |
 | Assignment operators | `=`, `+=`, `-=`, `*=`, `**=`, `/=`, `.=`, `%=`, `&=`, `|=`, `^=`, `<<=`, `>>=` |
 
