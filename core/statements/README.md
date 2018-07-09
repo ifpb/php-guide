@@ -174,12 +174,12 @@ require
 
 [codes/require/test.php](codes/require/test.php):
 ```php
-{% require_relative codes/require/test.php %}
+{% include_relative codes/require/test.php %}
 ```
 
 [codes/require/util.php](codes/require/util.php):
 ```php
-{% require_relative codes/require/util.php %}
+{% include_relative codes/require/util.php %}
 ```
 
 #### Example 2
@@ -193,12 +193,12 @@ require-path-child
 
 [codes/require-path-child/test.php](codes/require-path-child/test.php):
 ```php
-{% require_relative codes/require-path-child/test.php %}
+{% include_relative codes/require-path-child/test.php %}
 ```
 
 [codes/require-path-child/lib/util.php](codes/require-path-child/lib/util.php):
 ```php
-{% require_relative codes/require-path-child/lib/util.php %}
+{% include_relative codes/require-path-child/lib/util.php %}
 ```
 
 #### Example 3
@@ -213,12 +213,12 @@ require-path-parent
 
 [codes/require-path-parent/src/test.php](codes/require-path-parent/src/test.php):
 ```php
-{% require_relative codes/require-path-parent/src/test.php %}
+{% include_relative codes/require-path-parent/src/test.php %}
 ```
 
 [codes/require-path-parent/lib/util.php](codes/require-path-parent/lib/util.php):
 ```php
-{% require_relative codes/require-path-parent/lib/util.php %}
+{% include_relative codes/require-path-parent/lib/util.php %}
 ```
 
 ### [include](http://php.net/manual/en/function.include.php)
@@ -231,62 +231,67 @@ include
 
 [codes/include/test.php](codes/include/test.php):
 ```php
-{% require_relative codes/include/test.php %}
+{% include_relative codes/include/test.php %}
 ```
 
 [codes/include/util.php](codes/include/util.php):
 ```php
-{% require_relative codes/include/util.php %}
+{% include_relative codes/include/util.php %}
 ```
 
 ### [require_once](http://php.net/manual/en/function.require_once.php)
 
 ```
 require-error
-├── test.php
-└── util.php
+├── lib
+│   ├── math.php
+│   └── util.php
+└── test.php
 ```
 
 [codes/require-error/test.php](codes/require-error/test.php):
 ```php
-{% require_relative codes/require-error/test.php %}
+{% include_relative codes/require-error/test.php %}
 ```
 
 [codes/require-error/lib/util.php](codes/require-error/lib/util.php):
 ```php
-{% require_relative codes/require-error/lib/util.php %}
+{% include_relative codes/require-error/lib/util.php %}
 ```
 
 ```
 require_once
-├── test.php
-└── util.php
-```
+├── lib
+│   ├── math.php
+│   └── util.php
+└── test.php```
 
 [codes/require_once/test.php](codes/require_once/test.php):
 ```php
-{% require_relative codes/require_once/test.php %}
+{% include_relative codes/require_once/test.php %}
 ```
 
 [codes/require_once/lib/util.php](codes/require_once/lib/util.php):
 ```php
-{% require_relative codes/require_once/lib/util.php %}
+{% include_relative codes/require_once/lib/util.php %}
 ```
 
 ### [include_once](http://php.net/manual/en/function.include_once.php)
 
 ```
 include_once
-├── test.php
-└── util.php
+├── lib
+│   ├── math.php
+│   └── util.php
+└── test.php
 ```
 
 [codes/include_once/test.php](codes/include_once/test.php):
 ```php
-{% require_relative codes/include_once/test.php %}
+{% include_relative codes/include_once/test.php %}
 ```
 
 [codes/include_once/lib/util.php](codes/include_once/lib/util.php):
 ```php
-{% require_relative codes/include_once/lib/util.php %}
+{% include_relative codes/include_once/lib/util.php %}
 ```
