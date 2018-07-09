@@ -11,8 +11,8 @@
 - [Alternative syntax](#alternative-syntax)
 - [Includes](#includes)
   - [require](#require)
-  - [require_once](#require_once)
   - [include](#include)
+  - [require_once](#require_once)
   - [include_once](#include_once)
 
 ## Control flow
@@ -161,3 +161,132 @@ endif;
 
 ## Includes
 ---
+
+### [require](http://php.net/manual/en/function.require.php)
+
+#### Example 1
+
+```
+require
+├── test.php
+└── util.php
+```
+
+[codes/require/test.php](codes/require/test.php):
+```php
+{% require_relative codes/require/test.php %}
+```
+
+[codes/require/util.php](codes/require/util.php):
+```php
+{% require_relative codes/require/util.php %}
+```
+
+#### Example 2
+
+```
+require-path-child
+├── lib
+│   └── util.php
+└── test.php
+```
+
+[codes/require-path-child/test.php](codes/require-path-child/test.php):
+```php
+{% require_relative codes/require-path-child/test.php %}
+```
+
+[codes/require-path-child/lib/util.php](codes/require-path-child/lib/util.php):
+```php
+{% require_relative codes/require-path-child/lib/util.php %}
+```
+
+#### Example 3
+
+```
+require-path-parent
+├── lib
+│   └── util.php
+└── src
+    └── test.php
+```
+
+[codes/require-path-parent/src/test.php](codes/require-path-parent/src/test.php):
+```php
+{% require_relative codes/require-path-parent/src/test.php %}
+```
+
+[codes/require-path-parent/lib/util.php](codes/require-path-parent/lib/util.php):
+```php
+{% require_relative codes/require-path-parent/lib/util.php %}
+```
+
+### [include](http://php.net/manual/en/function.include.php)
+
+```
+include
+├── test.php
+└── util.php
+```
+
+[codes/include/test.php](codes/include/test.php):
+```php
+{% require_relative codes/include/test.php %}
+```
+
+[codes/include/util.php](codes/include/util.php):
+```php
+{% require_relative codes/include/util.php %}
+```
+
+### [require_once](http://php.net/manual/en/function.require_once.php)
+
+```
+require-error
+├── test.php
+└── util.php
+```
+
+[codes/require-error/test.php](codes/require-error/test.php):
+```php
+{% require_relative codes/require-error/test.php %}
+```
+
+[codes/require-error/util.php](codes/require-error/util.php):
+```php
+{% require_relative codes/require-error/util.php %}
+```
+
+```
+require_once
+├── test.php
+└── util.php
+```
+
+[codes/require_once/test.php](codes/require_once/test.php):
+```php
+{% require_relative codes/require_once/test.php %}
+```
+
+[codes/require_once/util.php](codes/require_once/util.php):
+```php
+{% require_relative codes/require_once/util.php %}
+```
+
+### [include_once](http://php.net/manual/en/function.include_once.php)
+
+```
+include_once
+├── test.php
+└── util.php
+```
+
+[codes/include_once/test.php](codes/include_once/test.php):
+```php
+{% require_relative codes/include_once/test.php %}
+```
+
+[codes/include_once/util.php](codes/include_once/util.php):
+```php
+{% require_relative codes/include_once/util.php %}
+```
