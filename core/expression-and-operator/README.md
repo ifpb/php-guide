@@ -401,9 +401,8 @@ var_dump([1, 2] !== [3]); //=> bool(true)
 ## [Type Operators](http://php.net/manual/en/language.operators.type.php)
 ---
 
-### Types: `(int)`, `(integer)`, `(float)`, `(string)`, `(array)`, `(object)`, `(bool)`, `(boolean)`
+### [Type casting](http://php.net/manual/en/language.types.type-juggling.php): `(int)`, `(integer)`, `(float)`, `(string)`, `(array)`, `(object)`, `(bool)`, `(boolean)`
 
-[Type casting](http://php.net/manual/en/language.types.type-juggling.php):
 ```php
 var_dump((int) "10"); //=> int(10)
 ``` 
