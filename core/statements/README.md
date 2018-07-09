@@ -252,9 +252,9 @@ require-error
 {% require_relative codes/require-error/test.php %}
 ```
 
-[codes/require-error/util.php](codes/require-error/util.php):
+[codes/require-error/lib/util.php](codes/require-error/lib/util.php):
 ```php
-{% require_relative codes/require-error/util.php %}
+{% require_relative codes/require-error/lib/util.php %}
 ```
 
 ```
@@ -268,9 +268,9 @@ require_once
 {% require_relative codes/require_once/test.php %}
 ```
 
-[codes/require_once/util.php](codes/require_once/util.php):
+[codes/require_once/lib/util.php](codes/require_once/lib/util.php):
 ```php
-{% require_relative codes/require_once/util.php %}
+{% require_relative codes/require_once/lib/util.php %}
 ```
 
 ### [include_once](http://php.net/manual/en/function.include_once.php)
@@ -286,7 +286,7 @@ include_once
 {% require_relative codes/include_once/test.php %}
 ```
 
-[codes/include_once/util.php](codes/include_once/util.php):
+[codes/include_once/lib/util.php](codes/include_once/lib/util.php):
 ```php
-{% require_relative codes/include_once/util.php %}
+{% require_relative codes/include_once/lib/util.php %}
 ```
