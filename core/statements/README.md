@@ -162,7 +162,7 @@ endif;
 ## Includes
 ---
 
-### [require](http://php.net/manual/en/function.require.php)
+### [require()](http://php.net/manual/en/function.require.php)
 
 #### Example 1
 
@@ -221,7 +221,7 @@ require-path-parent
 {% include_relative codes/require-path-parent/src/test.php %}
 ```
 
-### [include](http://php.net/manual/en/function.include.php)
+### [include()](http://php.net/manual/en/function.include.php)
 
 ```
 include
@@ -239,7 +239,9 @@ include
 {% include_relative codes/include/util.php %}
 ```
 
-### [require_once](http://php.net/manual/en/function.require_once.php)
+### [require_once()](http://php.net/manual/en/function.require_once.php)
+
+#### Error
 
 ```
 require-error
@@ -263,6 +265,8 @@ require-error
 ```php
 {% include_relative codes/require-error/test.php %}
 ```
+
+#### Valid
 
 ```
 require_once
@@ -288,7 +292,7 @@ require_once
 {% include_relative codes/require_once/test.php %}
 ```
 
-### [include_once](http://php.net/manual/en/function.include_once.php)
+### [include_once()](http://php.net/manual/en/function.include_once.php)
 
 ```
 include_once
