@@ -1,4 +1,4 @@
-[Arrays](http://php.net/manual/en/book.array.php)
+# [Arrays](http://php.net/manual/en/book.array.php)
 
 - [sizeof()](#sizeof)
 - [sort()](#sort)

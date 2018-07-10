@@ -6,3 +6,4 @@ ssh2_auth_password($connection, 'vagrant', 'vagrant');
 
 ssh2_exec($connection, $display_error);
 ssh2_exec($connection, 'service apache2 restart');
+?>

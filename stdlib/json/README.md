@@ -3,10 +3,8 @@
 - [json_decode()](#json_decode)
 - [json_encode()](#json_encode)
 
-## [JSON Functions](http://php.net/manual/en/book.json.php)
+## json_encode()
 ---
-
-### json_encode()
 
 ```php
 $address = json_encode([

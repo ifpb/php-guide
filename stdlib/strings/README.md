@@ -27,7 +27,7 @@ $names = implode(', ', $names);
 var_dump($names); //=> string(10) "Alice, Bob"
 ```
 
-### strlen()
+## strlen()
 ---
 
 ```php
