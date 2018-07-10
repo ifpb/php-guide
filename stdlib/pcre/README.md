@@ -69,7 +69,12 @@ CPU User:
 $message = "%Cpu(s):  1.2 us,  0.6 sy,  0.1 ni, 98.0 id,  0.1 wa,  0.0 hi,  0.1 si,  0.0 st";
 $pattern = "/Cpu\(s\):  (.+) us|CPU usage: (.+)% user/";
 preg_match($pattern, $message, $matches);
-var_dump($matches); //=> array(1) { [0]=>string(8) "11:41:04" }
+var_dump($matches); 
+//=> 
+// array(2) {
+//  [0]=>string(15) "Cpu(s):  1.2 us"
+//  [1]=>string(3) "1.2"
+// }
 ```
 
 References: 
