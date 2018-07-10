@@ -1,0 +1,9 @@
+30 08 10 06 * /scripts/full-backup
+00 11,16 * * * /scripts/incremental-backup
+00 09-18 * * * /scripts/check-db-status
+00 09-18 * * 1-5 /scripts/check-db-status
+*/10 * * * * /scripts/monitor.sh
+@yearly /scripts/annual-maintenance
+@monthly /scripts/tape-backup
+@daily /scripts/cleanup-logs
+@reboot /script/start-service-x

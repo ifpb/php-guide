@@ -1,6 +1,6 @@
 # [Secure Shell2](http://php.net/manual/en/book.ssh2.php)
 
-- [ssh2_exec()](ssh2_exec
+- [ssh2_exec()](#ssh2_exec)
   - [Run command as the system administrator (root)](#run-command-as-the-system-administrator-root)
     - [cat /etc/shadow by ssh](#cat-etcshadow-by-ssh)
     - [service --status-all](#service---status-all)
@@ -52,7 +52,7 @@ $ curl -I codes/cat-shadow.php
 **Reference**
 - [Other Services - SSH2](http://php.net/manual/en/book.ssh2.php): `ssh2_connect()`, `ssh2_auth_password()`, `ssh2_exec()`, `ssh2_fetch_stream()`
 
-#### service --status-all
+#### service \-\-status-all
 [codes/service-status-all.php](codes/service-status-all.php):
 ```php
 {% include_relative codes/service-status-all.php %}

@@ -81,6 +81,16 @@ $ ls /var/www/html/php/phpinfo/
 $ curl -i http://localhost:8080/php/phpinfo/
 ```
 
+```sh
+$ cd /var/www/html/php/phpinfo/
+$ php -S localhost:8090 -t .
+```
+
+[http://localhost:8090/](http://localhost:8090/) ([phpinfo()](http://php.net/manual/en/function.phpinfo.php)):
+```sh
+$ curl -i http://localhost:8090/
+```
+
 ### Connecting to VM via SSH and running PHP code (Interactive shell)
 ```
 $ vagrant ssh
