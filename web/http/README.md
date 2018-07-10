@@ -23,11 +23,9 @@
 {% include_relative codes/get-hello/hello.php %}
 ```
 
-[http://localhost:8080/php/web/http/codes/get-hello/](http://localhost:8080/php/web/http/codes/get-hello/)
+> [http://localhost:8080/php/web/http/codes/get-hello/](http://localhost:8080/php/web/http/codes/get-hello/)
 
 ### Hello - Client-side rendering
-
-[http://localhost:8080/php/web/http/codes/get-hello/](http://localhost:8080/php/web/http/codes/get-hello/)
 
 [codes/get-hello-fetch/public/index.html](codes/get-hello-fetch/public/index.html):
 ```html
@@ -44,7 +42,7 @@
 {% include_relative codes/get-hello-fetch/api/hello.php %}
 ```
 
-[http://localhost:8080/php/web/http/codes/get-hello-fetch/public/](http://localhost:8080/php/web/http/codes/get-hello-fetch/public/)
+> [http://localhost:8080/php/web/http/codes/get-hello-fetch/public/](http://localhost:8080/php/web/http/codes/get-hello-fetch/public/)
 
 **References:**
 * [$_GET](http://php.net/manual/en/reserved.variables.get.php)
@@ -65,7 +63,7 @@
 {% include_relative codes/post-hello/hello.php %}
 ```
 
-[http://localhost:8080/php/web/http/codes/post-hello/](http://localhost:8080/php/web/http/codes/post-hello/)
+> [http://localhost:8080/php/web/http/codes/post-hello/](http://localhost:8080/php/web/http/codes/post-hello/)
 
 ### Hello Shortened - Server-side rendering
 
@@ -77,8 +75,6 @@
 [http://localhost:8080/php/web/http/codes/post-hello-compact/](http://localhost:8080/php/web/http/codes/post-hello-compact/)
 
 ### Hello - Client-side rendering
-
-[http://localhost:8080/php/web/http/codes/post-hello/](http://localhost:8080/php/web/http/codes/post-hello/)
 
 [codes/post-hello-fetch/public/index.html](codes/post-hello-fetch/public/index.html):
 ```html
@@ -95,7 +91,7 @@
 {% include_relative codes/post-hello-fetch/api/hello.php %}
 ```
 
-[http://localhost:8080/php/web/http/codes/post-hello-fetch/public/](http://localhost:8080/php/web/http/codes/post-hello-fetch/public/)
+> [http://localhost:8080/php/web/http/codes/post-hello-fetch/public/](http://localhost:8080/php/web/http/codes/post-hello-fetch/public/)
 
 **References:** 
 - [$_POST](http://php.net/manual/en/reserved.variables.post.php)
