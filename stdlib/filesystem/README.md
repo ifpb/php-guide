@@ -1,11 +1,11 @@
 # [Filesystem](http://php.net/manual/en/book.filesystem.php)
 
-- [ssh2_exec()](#ssh2_exec)
+- [file_get_contents()](#file_get_contents)
   - [Change config file](Change config file)
     - [Display Error - php.ini](display-error---php.ini)
     - [Creating log](creating-log)
 
-## ssh2_exec()
+## file_get_contents()
 ---
 
 <!-- 
