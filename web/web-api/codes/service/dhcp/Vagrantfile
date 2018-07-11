@@ -1,0 +1,44 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+
+  config.vm.define "dhcpserver" do |dhcpserver|
+    dhcpserver.vm.hostname = "dhcpserver"
+    dhcpserver.vm.box = "debian/jessie64"
+    dhcpserver.vm.network "private_network", ip: "192.168.1.2", virtualbox__intnet: "RedeVagrant"
+    dhcpserver.vm.provider "virtualbox" do |vb|
+      vb.name = "dhcpserver"
+    end
+    dhcpserver.vm.provision "shell", inline: <<-SHELL
+      sudo apt-get install isc-dhcp-server
+cat << EOF > /etc/dhcp/dhcpd.conf
+    default-lease-time 600;
+    max-lease-time 7200;
+    option subnet-mask 255.255.255.0;
+    option broadcast-address 192.168.1.255;
+    option routers 192.168.1.254;
+    option domain-name-servers 192.168.1.1, 192.168.1.2;
+    option domain-name "mydomain.example";
+    subnet 192.168.1.0 netmask 255.255.255.0 {
+    range 192.168.1.10 192.168.1.100;
+    range 192.168.1.150 192.168.1.200;
+    }
+EOF
+    sudo service isc-dhcp-server restart
+    SHELL
+  end
+
+  config.vm.define "dhcpclient" do |dhcpclient|
+    dhcpclient.vm.hostname = "dhcpclient"
+    dhcpclient.vm.box = "debian/jessie64"
+    dhcpclient.vm.network "private_network", type: "dhcp", virtualbox__intnet: "RedeVagrant"
+    dhcpclient.vm.provider "virtualbox" do |vb|
+      vb.name = "dhcpclient"
+    end
+    dhcpclient.vm.provision "shell", inline: <<-SHELL
+
+    SHELL
+  end
+
+end

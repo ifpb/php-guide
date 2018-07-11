@@ -11,76 +11,55 @@
 
 ### $_COOKIE
 
-Reference: [Cookies](http://php.net/manual/en/features.cookies.php), [$_COOKIE](http://php.net/manual/en/reserved.variables.cookies.php), [setcookie()](http://php.net/manual/en/function.setcookie.php)
-
-[Cookie](http://php.net/manual/en/features.cookies.php): name, value, expire, path, domain, secure, httponly
-[setcookie()](http://php.net/manual/en/function.setcookie.php)
-
-[cookie/counter-cookie.php](cookie/counter-cookie.php)
+[codes/cookie-counter/index.php](codes/cookie-counter/index.php)
 ```php
-<?php
-	$times = $_COOKIE['count'] ?? 0;
-
-	$times++;
-
-	if(isset($_GET['zerar'])){
-		$times = 0;
-		setcookie('count', false);
-	}else{
-		setcookie('count', $times, time()+60*60*24);
-	}
-?>
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
-	<p>A quantidade de vezes que vc acessou esta página é <?php echo $times ?></p>
-	<a href="counter-cookie.php?zerar=true">zerar</a>
-	<a href="counter-cookie.php">+1</a>
-</body>
-</html>
+{% include_relative codes/cookie-counter/index.php %}
 ```
+
+**References:** 
+- [Cookie](http://php.net/manual/en/features.cookies.php): name, value, expire, path, domain, secure, httponly
+- [$_COOKIE](http://php.net/manual/en/reserved.variables.cookies.php)
+- [setcookie()](http://php.net/manual/en/function.setcookie.php)
 
 ## Session
 ---
 
 ### $_SESSION
 
-[session/counter-session.php](session/counter-session.php)
+[codes/cookie-counter/index.php](codes/cookie-counter/index.php)
 ```php
-<?php
-	session_start();
-
-	$times = $_SESSION['count'] ?? 0;
-
-	$times++;
-
-	if(isset($_GET['zerar'])){
-		$times = 0;
-		$_SESSION['count'] = 0;
-	}else{
-		$_SESSION['count'] = $times;
-	}
-
-?>
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
-	<p>A quantidade de vezes que vc acessou esta página é <?php echo $times ?></p>
-	<a href="counter-session.php?zerar=true">zerar</a>
-	<a href="counter-session.php">+1</a>
-</body>
-</html>
+{% include_relative codes/cookie-counter/index.php %}
 ```
+
+**References:** 
+- [$_SESSION](http://php.net/manual/en/reserved.variables.session.php)
 
 ### Auth
 
-- [session/auth/login.html](session/auth/login.html)
-- [session/auth/home.php](session/auth/home.php)
+```
+auth
+├── auth.php
+├── home.php
+├── login.html
+└── logout.php
+```
+
+[codes/auth/login.html](codes/auth/login.html)
+```html
+{% include_relative codes/auth/login.html %}
+```
+
+[codes/auth/auth.php](codes/auth/auth.php)
+```php
+{% include_relative codes/auth/auth.php %}
+```
+
+[codes/auth/home.php](codes/auth/home.php)
+```php
+{% include_relative codes/auth/home.php %}
+```
+
+[codes/auth/logout.php](codes/auth/logout.php)
+```php
+{% include_relative codes/auth/logout.php %}
+```

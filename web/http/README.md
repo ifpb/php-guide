@@ -72,7 +72,7 @@
 {% include_relative codes/post-hello-compact/index.php %}
 ```
 
-[http://localhost:8080/php/web/http/codes/post-hello-compact/](http://localhost:8080/php/web/http/codes/post-hello-compact/)
+> [http://localhost:8080/php/web/http/codes/post-hello-compact/](http://localhost:8080/php/web/http/codes/post-hello-compact/)
 
 ### Hello - Client-side rendering
 

@@ -1,0 +1,44 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+
+  # Servidor
+  config.vm.define "ServidorSNMP" do |snmps|
+
+    snmps.vm.hostname = "Servidor-SNMP"
+
+    snmps.vm.box = "ubuntu/trusty64"
+
+    snmps.vm.network "public_network"
+
+    # snmps.vm.provider "virtualbox" do |v|
+    #     v.customize [ "modifyvm", :id, "--cpus", "2" ]
+    #     v.customize [ "modifyvm", :id, "--memory", "2048" ]
+    # end
+
+    snmps.vm.provision "shell", path: "./install/servidor.sh"
+
+  end
+  # End SERVIDOR
+
+  # AGENTE
+  config.vm.define "AgenteSNMP" do |snmpa|
+
+    snmpa.vm.hostname = "Agente-SNMP"
+
+    snmpa.vm.box = "ubuntu/trusty64"
+
+    snmpa.vm.network "public_network"
+
+    # snmpa.vm.provider "virtualbox" do |v|
+    #     v.customize [ "modifyvm", :id, "--cpus", "2" ]
+    #     v.customize [ "modifyvm", :id, "--memory", "2048" ]
+    # end
+
+    snmpa.vm.provision "shell", path: "./install/cliente.sh"
+
+  end
+  # End AGENTE
+
+end

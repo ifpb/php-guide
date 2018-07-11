@@ -1,0 +1,35 @@
+main {
+  width: 50%;
+  margin: auto;
+}
+
+section {
+  width: 50%;
+  margin: auto;
+}
+
+#pingTable,
+#infoStatus {
+  display: inline-block;
+  vertical-align: top;
+}
+
+#pingTable {
+  width: 60%;
+  border-collapse: collapse;
+  visibility: hidden;
+}
+
+#pingTable td:hover {
+  cursor: pointer;
+}
+
+#infoStatus {
+  text-align: center;
+  width: 30%;
+  visibility: hidden;
+}
+
+#spinner {
+  visibility: hidden;
+}
