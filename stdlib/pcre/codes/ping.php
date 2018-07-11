@@ -1,5 +1,4 @@
 <?php
-
   function ping($host, $count) {
     $pingInfo = [];
 

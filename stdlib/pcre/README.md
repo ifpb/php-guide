@@ -218,7 +218,22 @@ PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
 rtt min/avg/max/mdev = 144.691/146.669/148.648/2.015 ms
 ```
 
-Regular Expression:
+#### Shell script mode
+
+[codes/ping.sh](codes/ping.sh):
+```php
+{% include_relative codes/ping.sh %}
+```
+
+[codes/ping-sh.php](codes/ping-sh.php):
+```php
+{% include_relative codes/ping-sh.php %}
+```
+
+> [http://localhost:8080/php/stdlib/pcre/codes/ping-sh.php?host=8.8.8.8](http://localhost:8080/php/stdlib/pcre/codes/ping-sh.php?host=8.8.8.8)
+
+#### PCRE mode
+
 ```
 /\(([\d\.]+)\)/
 
