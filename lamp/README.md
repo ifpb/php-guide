@@ -125,3 +125,12 @@ sed -i -r -e 's/error_reporting = E_ALL & ~E_DEPRECATED/error_reporting = E_ALL 
 ```sh
 $ vagrant suspend
 ```
+
+### Vagrant commands
+
+* `vagrant up`
+* `vagrant ssh`
+* `vagrant suspend`
+* `vagrant destroy`
+* `vagrant status`
+* `vagrant box list`
