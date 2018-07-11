@@ -1,45 +1,47 @@
-# PS API
+# TOP API
 
 ## Services
 ---
 
-### PS Process
+### TOP Process
 
 ```
-/ps.php
+/top.php
 ```
 
 **Examples**
 
-[http://localhost:8080/php/web/web-api/codes/command/ps-api/v1/ps.php](http://localhost:8080/php/web/web-api/codes/command/ps-api/v1/ps.php):
+[http://localhost:8080/php/web/web-api/codes/command/top-api/v1/top.php](http://localhost:8080/php/web/web-api/codes/command/top-api/v1/top.php):
 ```js
 [
-  {  
-    "user":"root",
+  {
     "pid":"1",
+    "user":"root",
+    "pr":"20",
+    "ni":"0",
+    "virt":"33632",
+    "res":"2940",
+    "shr":"1468",
+    "s":"S",
     "cpu":"0.0",
-    "mem":"0.5",
-    "vsz":"33632",
-    "rss":"2940",
-    "tty":"?",
-    "stat":"Ss",
-    "start":"Jul10",
-    "time":"0:01",
-    "command":"\/sbin\/init"
+    "mem":"0.6",
+    "time":"0:01.87",
+    "command":"init"
   },
   ...
-  {  
+  {
+    "pid":"20591",
     "user":"www-data",
-    "pid":"20662",
+    "pr":"20",
+    "ni":"0",
+    "virt":"21984",
+    "res":"1316",
+    "shr":"972",
+    "s":"R",
     "cpu":"0.0",
-    "mem":"0.2",
-    "vsz":"15560",
-    "rss":"1132",
-    "tty":"?",
-    "stat":"R",
-    "start":"04:27",
-    "time":"0:00",
-    "command":"ps aux"
+    "mem":"0.3",
+    "time":"0:00.00",
+    "command":"top"
   }
 ]
 ```
@@ -47,9 +49,15 @@
 **Commands**
 
 ```sh
-$ ps aux
-USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-root         1  0.0  0.5  33632  2940 ?        Ss   Jul10   0:01 /sbin/init
+$ top -n1 -b
+top - 03:27:45 up  6:00,  1 user,  load average: 0.01, 0.08, 0.08
+Tasks:  85 total,   1 running,  84 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.3 us,  0.2 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem:    501692 total,   464744 used,    36948 free,    16452 buffers
+KiB Swap:        0 total,        0 used,        0 free.   263388 cached Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND
+    1 root      20   0   33632   2940   1468 S  0.0  0.6   0:01.87 init
 ...
-vagrant  20648  0.0  0.2  17160  1288 pts/0    R+   04:13   0:00 ps aux
+20278 vagrant   20   0   23528   1404   1048 R  0.0  0.3   0:00.00 top
 ```

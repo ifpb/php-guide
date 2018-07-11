@@ -2,13 +2,13 @@
 
 - [Hello](codes/hello-api/)
 - Command
-  - [cron-api](#cron-api)
+  - [cron-api](codes/command/cron-api)
   - hash-generataor
-  - [monitor-host](monitor-host-api/)
+  - [monitor-host](codes/command/monitor-host-api/)
   - network-tool
-  - [Ping](codes/ping-api/)
-  - [ps](codes/ps-api/)
-  - [top](codes/top-api/)
+  - [Ping](codes/command/ping-api/)
+  - [ps](codes/command/ps-api/)
+  - [top](codes/command/top-api/)
 - Service
   - dhcp
   - dns
