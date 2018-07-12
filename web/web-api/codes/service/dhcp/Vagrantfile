@@ -5,40 +5,32 @@ Vagrant.configure(2) do |config|
 
   config.vm.define "dhcpserver" do |dhcpserver|
     dhcpserver.vm.hostname = "dhcpserver"
-    dhcpserver.vm.box = "debian/jessie64"
+    dhcpserver.vm.box = "ubuntu/trusty64"
+    dhcpserver.vm.network "forwarded_port", guest: 80, host: 8080
     dhcpserver.vm.network "private_network", ip: "192.168.1.2", virtualbox__intnet: "RedeVagrant"
+    dhcpserver.vm.synced_folder ".", "/var/www/html"
     dhcpserver.vm.provider "virtualbox" do |vb|
       vb.name = "dhcpserver"
     end
-    dhcpserver.vm.provision "shell", inline: <<-SHELL
-      sudo apt-get install isc-dhcp-server
-cat << EOF > /etc/dhcp/dhcpd.conf
-    default-lease-time 600;
-    max-lease-time 7200;
-    option subnet-mask 255.255.255.0;
-    option broadcast-address 192.168.1.255;
-    option routers 192.168.1.254;
-    option domain-name-servers 192.168.1.1, 192.168.1.2;
-    option domain-name "mydomain.example";
-    subnet 192.168.1.0 netmask 255.255.255.0 {
-    range 192.168.1.10 192.168.1.100;
-    range 192.168.1.150 192.168.1.200;
-    }
-EOF
-    sudo service isc-dhcp-server restart
-    SHELL
+    dhcpserver.vm.provision "shell", path: "install/dhcpserver.sh"
   end
 
-  config.vm.define "dhcpclient" do |dhcpclient|
-    dhcpclient.vm.hostname = "dhcpclient"
-    dhcpclient.vm.box = "debian/jessie64"
-    dhcpclient.vm.network "private_network", type: "dhcp", virtualbox__intnet: "RedeVagrant"
-    dhcpclient.vm.provider "virtualbox" do |vb|
-      vb.name = "dhcpclient"
+  config.vm.define "dhcpclient1" do |dhcpclient1|
+    dhcpclient1.vm.hostname = "dhcpclient1"
+    dhcpclient1.vm.box = "ubuntu/trusty64"
+    dhcpclient1.vm.network "private_network", type: "dhcp", mac: "0800278B80A3", virtualbox__intnet: "RedeVagrant"
+    dhcpclient1.vm.provider "virtualbox" do |vb|
+      vb.name = "dhcpclient1"
     end
-    dhcpclient.vm.provision "shell", inline: <<-SHELL
-
-    SHELL
   end
+
+  # config.vm.define "dhcpclient2" do |dhcpclient2|
+  #   dhcpclient2.vm.hostname = "dhcpclient2"
+  #   dhcpclient2.vm.box = "ubuntu/trusty64"
+  #   dhcpclient2.vm.network "private_network", type: "dhcp", mac: "0800278B80A4", virtualbox__intnet: "RedeVagrant"
+  #   dhcpclient2.vm.provider "virtualbox" do |vb|
+  #     vb.name = "dhcpclient2"
+  #   end
+  # end
 
 end
