@@ -62,7 +62,7 @@ $ crontab -l
 
 **Examples**
 
-[http://localhost:8080/php/web/web-api/codes/command/cron-api/v1/cron.php?info=addTask&minute=30&hour=08&day=10&month=06&weekDay=*&task=/scripts/full-backup](http://localhost:8080/php/web/web-api/codes/command/cron-api/v1/cron.php?info=addTask&minute=30&hour=08&day=10&month=06&weekDay=*&task=/scripts/full-backup):
+<a href="http://localhost:8080/php/web/web-api/codes/command/cron-api/v1/cron.php?info=addTask&minute=30&hour=08&day=10&month=06&weekDay=*&task=/scripts/full-backup">http://localhost:8080/php/web/web-api/codes/command/cron-api/v1/cron.php?info=addTask&minute=30&hour=08&day=10&month=06&weekDay=*&task=/scripts/full-backup</a>:
 
 ```js
 {
