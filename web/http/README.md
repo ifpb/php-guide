@@ -70,7 +70,7 @@ $ curl 'http://localhost:8080/php/web/http/codes/get-hello/hello.php?name=Alice'
 ```
 
 ```
-$ curl 'http://localhost:8080/php/web/http/codes/get-hello/hello.php?name=Alice' \
+$ curl 'http://localhost:8080/php/web/http/codes/post-hello/hello.php' \
   -H 'Connection: keep-alive' \
   -H 'Pragma: no-cache' \
   -H 'Cache-Control: no-cache' \

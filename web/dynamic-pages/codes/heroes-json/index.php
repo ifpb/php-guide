@@ -1,4 +1,4 @@
-<?php require('heroes.php'); ?>
+<?php $heroes = json_decode(file_get_contents("heroes.json"), true); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

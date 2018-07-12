@@ -1,8 +1,10 @@
 # Dynamic pages
 
 - [Server-side rendering](#server-side-rendering)
-  - [Layout](#layout)
+  - [Heroes Page](#heroes-page)
+  - [Heroes JSON](#heroes-json)
   - [Hello Compact](#hello-compact)
+  - [Layout](#layout)
 - [Client-side rendering](#client-side-rendering)
   - [Hello GET](#hello-get)
   - [Hello POST](#hello-post)
@@ -10,16 +12,28 @@
 ## Server-side rendering
 ---
 
-### Heroes page
+### Heroes Page
 
-[codes/heroes/heroes.json](codes/heroes/heroes.json):
-```json
-{% include_relative codes/heroes/heroes.json %}
+[codes/heroes/heroes.php](codes/heroes/heroes.php):
+```php
+{% include_relative codes/heroes/heroes.php %}
 ```
 
 [codes/heroes/index.php](codes/heroes/index.php):
 ```php
 {% include_relative codes/heroes/index.php %}
+```
+
+### Heroes JSON
+
+[codes/heroes-json/heroes.json](codes/heroes-json/heroes.json):
+```json
+{% include_relative codes/heroes-json/heroes.json %}
+```
+
+[codes/heroes-json/index.php](codes/heroes-json/index.php):
+```php
+{% include_relative codes/heroes-json/index.php %}
 ```
 
 ### Hello Compact
