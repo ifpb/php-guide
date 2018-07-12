@@ -1,6 +1,7 @@
 # PHP Web
 
 - [HTTP Methods](http/)
-- [Layout](dynamic-pages/)
+- [Dynamic Pages](dynamic-pages/)
 - [Session](session/)
 - [Web API](web-api/)
+- [Web App](app/)
