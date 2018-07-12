@@ -3,42 +3,28 @@
 
 Vagrant.configure(2) do |config|
 
-  # Servidor
-  config.vm.define "ServidorSNMP" do |snmps|
-
-    snmps.vm.hostname = "Servidor-SNMP"
-
-    snmps.vm.box = "ubuntu/trusty64"
-
-    snmps.vm.network "public_network"
-
-    # snmps.vm.provider "virtualbox" do |v|
-    #     v.customize [ "modifyvm", :id, "--cpus", "2" ]
-    #     v.customize [ "modifyvm", :id, "--memory", "2048" ]
-    # end
-
-    snmps.vm.provision "shell", path: "./install/servidor.sh"
-
+  # monitor
+  config.vm.define "snmpserver" do |snmpserver|
+    snmpserver.vm.hostname = "snmpserver"
+    snmpserver.vm.box = "ubuntu/trusty64"
+    snmpserver.vm.network "public_network"
+    snmpserver.vm.network "forwarded_port", guest: 80, host: 8080
+    snmpserver.vm.synced_folder ".", "/var/www/html"
+    snmpserver.vm.provider "virtualbox" do |vb|
+      vb.name = "snmpserver"
+    end
+    snmpserver.vm.provision "shell", path: "./install/snmpserver.sh"
   end
-  # End SERVIDOR
 
-  # AGENTE
-  config.vm.define "AgenteSNMP" do |snmpa|
-
-    snmpa.vm.hostname = "Agente-SNMP"
-
-    snmpa.vm.box = "ubuntu/trusty64"
-
-    snmpa.vm.network "public_network"
-
-    # snmpa.vm.provider "virtualbox" do |v|
-    #     v.customize [ "modifyvm", :id, "--cpus", "2" ]
-    #     v.customize [ "modifyvm", :id, "--memory", "2048" ]
-    # end
-
-    snmpa.vm.provision "shell", path: "./install/cliente.sh"
-
+  # agent
+  config.vm.define "snmpclient" do |snmpclient|
+    snmpclient.vm.hostname = "snmpclient"
+    snmpclient.vm.box = "ubuntu/trusty64"
+    snmpclient.vm.network "public_network"
+    snmpclient.vm.provider "virtualbox" do |vb|
+      vb.name = "snmpclient"
+    end
+    snmpclient.vm.provision "shell", path: "./install/snmpclient.sh"
   end
-  # End AGENTE
 
 end

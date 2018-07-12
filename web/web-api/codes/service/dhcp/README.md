@@ -42,12 +42,12 @@ host DISP003 {hardware ethernet 08:00:27:8B:80:A5; fixed-address 192.168.1.12;} 
 ### List reservation
 
 ```
-/v1/index.php?action=list-ips
+/v1/?action=list-ips
 ```
 
 **Example**
 
-[http://localhost:8080/v1/index.php?action=list-ips](http://localhost:8080/v1/index.php?action=list-ips):
+[http://localhost:8080/v1/?action=list-ips](http://localhost:8080/v1/?action=list-ips):
 
 ```js
 [
@@ -75,7 +75,7 @@ $ cat /var/lib/dhcp/dhcpd.leases
 ### Add reservation
 
 ```
-/v1/index.php?action=add-ip&comment=:comment&mac=:mac&host=:host&ip=:ip&sector=:sector
+/v1/?action=add-ip&comment=:comment&mac=:mac&host=:host&ip=:ip&sector=:sector
 ```
 
 **Params**
@@ -90,7 +90,7 @@ $ cat /var/lib/dhcp/dhcpd.leases
 
 **Example**
 
-[http://localhost:8080/v1/index.php?action=add-ip&comment=alice&mac=08:00:27:8B:80:A3&host=DISP001&ip=192.168.1.10&sector=primary](http://localhost:8080/v1/index.php?action=add-ip&comment=alice&mac=08:00:27:8B:80:A3&host=DISP001&ip=192.168.1.10&sector=primary):
+[http://localhost:8080/v1/?action=add-ip&comment=alice&mac=08:00:27:8B:80:A3&host=DISP001&ip=192.168.1.10&sector=primary](http://localhost:8080/v1/?action=add-ip&comment=alice&mac=08:00:27:8B:80:A3&host=DISP001&ip=192.168.1.10&sector=primary):
 
 ```js
 {
@@ -102,7 +102,7 @@ $ cat /var/lib/dhcp/dhcpd.leases
 
 ```
 # echo "host DISP001 {hardware ethernet 08:00:27:8B:80:A3; fixed-address 192.168.1.10;} # alice (primary)" | sudo tee --append /etc/dhcp/dhcpd.conf
-# sudo service isc-dhcp-server restart
+# service isc-dhcp-server restart
 ```
 
 ```
@@ -112,7 +112,7 @@ $ cat /etc/dhcp/dhcpd.conf
 ### Remove reservation
 
 ```
-/v1/index.php?action=rm-ip&ip=:ip
+/v1/?action=rm-ip&ip=:ip
 ```
 
 **Params**
@@ -123,7 +123,7 @@ $ cat /etc/dhcp/dhcpd.conf
 
 **Example**
 
-[http://localhost:8080/v1/index.php?action=rm-ip&ip=192.168.1.10](http://localhost:8080/v1/index.php?action=rm-ip&ip=192.168.1.10):
+[http://localhost:8080/v1/?action=rm-ip&ip=192.168.1.10](http://localhost:8080/v1/?action=rm-ip&ip=192.168.1.10):
 
 ```js
 {
@@ -135,7 +135,7 @@ $ cat /etc/dhcp/dhcpd.conf
 
 ```
 # sed '/192.168.1.10/d' /etc/dhcp/dhcpd.conf
-# sudo service isc-dhcp-server restart
+# service isc-dhcp-server restart
 ```
 
 ```

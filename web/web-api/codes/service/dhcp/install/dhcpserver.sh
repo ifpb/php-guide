@@ -1,8 +1,3 @@
-# echo "Changing password"
-# passwd -d -u ubuntu
-# chage -d0 ubuntu
-# echo "ubuntu:ubuntu" | sudo chpasswd
-
 echo "Updating apt"
 sudo apt-get -y update > /dev/null
 
@@ -37,3 +32,5 @@ echo "Installing DHCP Server"
 sudo apt-get install isc-dhcp-server
 sudo cp /var/www/html/scripts/dhcpd.conf /etc/dhcp/dhcpd.conf
 sudo service isc-dhcp-server restart
+
+echo "Vagrant finish"
