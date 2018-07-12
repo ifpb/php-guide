@@ -25,13 +25,13 @@ Vagrant.configure(2) do |config|
   config.vm.provider "virtualbox" do |vb|
     vb.name = "LAMP VM"
   end
-  config.vm.provision "shell", path: "script/lamp-install.sh"
+  config.vm.provision "shell", path: "install/lampserver.sh"
 end
 ```
 
 ### Provision
 
-[../script/lamp-install.sh](https://github.com/ifpb/php-guide/blob/master/script/lamp-install.sh)
+[../install/lampserver.sh](https://github.com/ifpb/php-guide/blob/master/install/lampserver.sh)
 
 ## How to use LAMP VM
 ---
@@ -130,6 +130,7 @@ $ vagrant suspend
 
 * `vagrant up`
 * `vagrant ssh`
+* `vagrant ssh lampserver`
 * `vagrant suspend`
 * `vagrant destroy`
 * `vagrant status`

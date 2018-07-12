@@ -92,6 +92,29 @@ function services(){
     return $result;
   }
 
+  function servicesStatus() {
+    $result = [];
+
+    $connection = ssh2_connect('localhost', 22);
+    ssh2_auth_password($connection, 'vagrant', 'vagrant');
+    $stream = ssh2_exec($connection, 'sudo service --status-all');
+    stream_set_blocking($stream, true);
+    $stream_out = ssh2_fetch_stream($stream, SSH2_STREAM_STDIO);
+    $status = stream_get_contents($stream_out);
+
+    $regex = "/\[ (.) \]  (.+)/";
+    preg_match_all($regex, $status, $matches);
+
+    foreach ($matches[2] as $index => $services) {
+      $result[] = [
+        "service" => $services,
+        "status" => $matches[1][$index] === '+' ? 'up' : 'down',
+      ];
+    }
+
+    return $result;
+  }
+
   function users(){
     $result = [];
 

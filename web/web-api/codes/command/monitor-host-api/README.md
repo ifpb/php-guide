@@ -128,6 +128,26 @@
 ]
 ```
 
+[http://localhost:8080/php/web/web-api/codes/command/monitor-host-api/v1/stats.php?info=servicesStatus](http://localhost:8080/php/web/web-api/codes/command/monitor-host-api/v1/stats.php?info=servicesStatus):
+
+```js
+[
+  {
+    "service":"acpid",
+    "status":"up"
+  },
+  {
+    "service":"apache2",
+    "status":"up"
+  },
+  ...
+  {
+    "service":"x11-common",
+    "status":"down"
+  }
+]
+```
+
 **Commands**
 
 ```sh
@@ -196,6 +216,53 @@ chargen         19/udp          ttytst source
 ftp-data        20/tcp
 ftp             21/tcp
 ...
+```
+
+```
+# service --status-all
+ [ + ]  acpid
+ [ + ]  apache2
+ [ + ]  apparmor
+ [ ? ]  apport
+ [ + ]  atd
+ [ + ]  chef-client
+ [ ? ]  console-setup
+ [ + ]  cron
+ [ ? ]  cryptdisks
+ [ ? ]  cryptdisks-early
+ [ - ]  dbus
+ [ ? ]  dns-clean
+ [ + ]  friendly-recovery
+ [ - ]  grub-common
+ [ ? ]  irqbalance
+ [ ? ]  killprocs
+ [ ? ]  kmod
+ [ - ]  landscape-client
+ [ ? ]  mysql
+ [ ? ]  networking
+ [ ? ]  ondemand
+ [ ? ]  open-vm-tools
+ [ ? ]  pppd-dns
+ [ - ]  procps
+ [ + ]  puppet
+ [ ? ]  rc.local
+ [ + ]  resolvconf
+ [ + ]  rpcbind
+ [ - ]  rsync
+ [ + ]  rsyslog
+ [ ? ]  screen-cleanup
+ [ ? ]  sendsigs
+ [ + ]  ssh
+ [ - ]  sudo
+ [ + ]  udev
+ [ ? ]  umountfs
+ [ ? ]  umountnfs.sh
+ [ ? ]  umountroot
+ [ - ]  unattended-upgrades
+ [ - ]  urandom
+ [ - ]  virtualbox-guest-utils
+ [ ? ]  virtualbox-guest-x11
+ [ - ]  x11-common
 ```
 
 ```sh

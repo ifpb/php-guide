@@ -9,5 +9,5 @@ Vagrant.configure(2) do |config|
   config.vm.provider "virtualbox" do |vb|
     vb.name = "LAMP VM"
   end
-  config.vm.provision "shell", path: "script/lamp-install.sh"
+  config.vm.provision "shell", path: "install/lampserver.sh"
 end

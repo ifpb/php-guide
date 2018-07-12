@@ -17,6 +17,8 @@
     $response = users();
   } else if($info == 'services') {
     $response = services();
+  } else if($info == 'servicesStatus') {
+    $response = servicesStatus();
   }
 
   if(empty($response)) {
