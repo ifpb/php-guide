@@ -1,5 +1,11 @@
 # Samba API
 
+- [Architecture](#architecture)
+- [Services](#services)
+  - [List reservation](#list-reservation)
+  - [Add reservation](#add-reservation)
+  - [Remove reservation](#remove-reservation)
+
 ## Architecture
 ---
 
