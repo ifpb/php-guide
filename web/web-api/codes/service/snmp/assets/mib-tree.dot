@@ -1,0 +1,37 @@
+graph MIB {
+  graph [ concentrate=true ]
+
+  node  [ fontname=Courier, shape=box, width=2 ];
+  n1          [ label = "iso(1)" ];
+  n13         [ label = "identified-organization(3)" ];
+  n136        [ label = "dod(6)" ];
+  n1361       [ label = "internet(1)" ];
+  n13611      [ label = "directory(1)" ];
+  n13612      [ label = "mgmt(2)" ];
+  n136121     [ label = "mib-2(1)" ];
+  n1361211    [ label = "system(1)" ];
+  n13612111   [ label = "sysDescr(1)" ];
+  n13612112   [ label = "sysObjectID(2)" ];
+  n13612113   [ label = "sysUpTime(3)" ];
+  n1361212    [ label = "interfaces(2)" ];
+  n1361213    [ label = "at(3)" ];
+  n1361214    [ label = "ip(4)" ];
+  n1361215    [ label = "icmp(5)" ];
+  n13613      [ label = "experimental(3)" ];
+  n13614      [ label = "private(4)" ];
+  n136141     [ label = "reserved(1)" ];
+  n136142     [ label = "enterprise(2)" ];
+  n1361429    [ label = "cisco(9)" ];
+  n136142311  [ label = "microsof(311)" ];
+  n1361422636 [ label = "juniperMIB(2636)" ];
+
+  n1         -- { n13 }
+  n13        -- { n136 }
+  n136       -- { n1361 }
+  n1361      -- { n13611 n13612 n13613 n13614 }
+  n13614     -- { n136141 n136142}
+  n136142    -- { n1361429 n136142311 n1361422636 }
+  n13612     -- { n136121 }
+  n136121    -- { n1361211 n1361212 n1361213 n1361214 n1361215 }
+  n1361211   -- { n13612111 n13612112 n13612113 }
+}
