@@ -17,9 +17,9 @@
 {% include_relative install/snmpserver.sh %}
 ```
 
-[install/snmplient.sh](install/snmplient.sh):
+[install/snmpclient.sh](install/snmpclient.sh):
 ```sh
-{% include_relative install/snmplient.sh %}
+{% include_relative install/snmpclient.sh %}
 ```
 
 ### MIB
