@@ -14,9 +14,6 @@ graph MIB {
   n13612112   [ label = "sysObjectID(2)" ];
   n13612113   [ label = "sysUpTime(3)" ];
   n1361212    [ label = "interfaces(2)" ];
-  n1361213    [ label = "at(3)" ];
-  n1361214    [ label = "ip(4)" ];
-  n1361215    [ label = "icmp(5)" ];
   n13613      [ label = "experimental(3)" ];
   n13614      [ label = "private(4)" ];
   n136141     [ label = "reserved(1)" ];
@@ -32,6 +29,6 @@ graph MIB {
   n13614     -- { n136141 n136142}
   n136142    -- { n1361429 n136142311 n1361422636 }
   n13612     -- { n136121 }
-  n136121    -- { n1361211 n1361212 n1361213 n1361214 n1361215 }
+  n136121    -- { n1361211 n1361212 }
   n1361211   -- { n13612111 n13612112 n13612113 }
 }

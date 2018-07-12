@@ -26,15 +26,24 @@
 
 ![](assets/mib-tree.svg)
 
-[Object Identifier (OID) - sysUpTime](http://oid-info.com/get/1.3.6.1.2.1.1.3): 
-iso(1)>identified-organization(3)>dod(6)>internet(1)>mgmt(2)>mib-2(1)>system(1)>sysUpTime(3) - 1.3.6.1.2.1.1.3
+[Object Identifier (OID) - sysUpTime](http://oid-info.com/get/1.3.6.1.2.1.1.3):
+
+- 1 - iso
+- 1.3 - identified-organization
+- 1.3.6 - dod
+- 1.3.6.1 - internet
+- 1.3.6.1.2 - mgmt
+- 1.3.6.1.2.1 - mib-2
+- 1.3.6.1.2.1.1 - system
+- 1.3.6.1.2.1.1.3 - sysUpTime
+
+`snmpget`, `snmpwalk`, `snmpbulkwalk`, `snmptable`, `snmpset`, `snmptrapd` (vagrant@snmpserver):
+
 ```
 $ snmpget -v 2c -cpublic [IP_DO_AGENTE] sysUpTime.0
 $ snmpget -v 2c -cpublic [IP_DO_AGENTE] 1.3.6.1.2.1.1.3.0
 $ snmpget -v 1  -cpublic [IP_DO_AGENTE] sysUpTime.0
 ``` 
-
-`snmpget`, `snmpwalk`, `snmpbulkwalk`, `snmptable`, `snmpset`, `snmptrapd` (vagrant@snmpserver):
 
 ```
 $ snmpwalk -v 2c -c public [IP_DO_AGENTE]
