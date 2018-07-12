@@ -100,7 +100,7 @@ $ cat /var/lib/dhcp/dhcpd.leases
 
 **Command**
 
-```sh
+```
 # echo "host DISP001 {hardware ethernet 08:00:27:8B:80:A3; fixed-address 192.168.1.10;} # alice (primary)" | sudo tee --append /etc/dhcp/dhcpd.conf
 # sudo service isc-dhcp-server restart
 ```
