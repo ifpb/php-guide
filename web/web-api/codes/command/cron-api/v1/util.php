@@ -16,12 +16,12 @@ function getTasks() {
       ];
     } else if(isset($matches[6])) {
       $crontabArray[] = [
-        "minute" => $matches[1],
-        "hour" => $matches[2],
-        "day" => $matches[3],
-        "month" => $matches[4],
-        "weekDay" => $matches[5],
-        "task" => $matches[6],
+        "minute" => $matches[3],
+        "hour" => $matches[4],
+        "day" => $matches[5],
+        "month" => $matches[6],
+        "weekDay" => $matches[7],
+        "task" => $matches[8],
       ];
     } 
   }

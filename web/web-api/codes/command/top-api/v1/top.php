@@ -15,20 +15,20 @@
     preg_match_all($regex, $result, $matches);
 
     foreach ($matches[2] as $index => $pid) {
-      $process = [];
-      $process["pid"] = $matches[2][$index];
-      $process["user"] = $matches[3][$index];
-      $process["pr"] = $matches[4][$index];
-      $process["ni"] = $matches[5][$index];
-      $process["virt"] = $matches[6][$index];
-      $process["res"] = $matches[7][$index];
-      $process["shr"] = $matches[8][$index];
-      $process["s"] = $matches[9][$index];
-      $process["cpu"] = $matches[10][$index];
-      $process["mem"] = $matches[11][$index];
-      $process["time"] = $matches[12][$index];
-      $process["command"] = $matches[13][$index];
-      $processes[] = $process;
+      $processes[] = [
+        "pid"     => $matches[2][$index],
+        "user"    => $matches[3][$index],
+        "pr"      => $matches[4][$index],
+        "ni"      => $matches[5][$index],
+        "virt"    => $matches[6][$index],
+        "res"     => $matches[7][$index],
+        "shr"     => $matches[8][$index],
+        "s"       => $matches[9][$index],
+        "cpu"     => $matches[10][$index],
+        "mem"     => $matches[11][$index],
+        "time"    => $matches[12][$index],
+        "command" => $matches[13][$index],
+      ];
     }
 
     return $processes;

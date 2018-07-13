@@ -2,9 +2,9 @@
 
 - [Architecture](#architecture)
 - [Services](#services)
-  - [List reservation](#list-reservation)
-  - [Add reservation](#add-reservation)
-  - [Remove reservation](#remove-reservation)
+  - [Show samba config](#show-samba-config)
+  - [Add shared folder](#add-shared-folder)
+  - [Remove shared folder](#remove-shared-folder)
 
 ## Architecture
 ---
@@ -53,10 +53,10 @@
 ## Services
 ---
 
-### List reservation
+### Show samba config
 
 ```
-/v1/?action=list-ips
+/v1/?action=list-shares
 ```
 
 **Example**
@@ -82,7 +82,7 @@ $ cat /etc/samba/smb.conf
   security = user
 ```
 
-### Add reservation
+### Add shared folder
 
 ```
 /v1/?action=add-share&section=:section&user=:user&path=:path&validUsers=:validUsers&comment=:comment
@@ -219,7 +219,7 @@ $ smbtree
 $ mount -t cifs -o <username>,<password> //<servername>/<sharename> /mnt/point/
 -->
 
-### Remove reservation
+### Remove shared folder
 
 ```
 /v1/?action=add-share&section=:section

@@ -3,6 +3,7 @@ sudo apt-get -y update > /dev/null
 
 echo "Installing Apache"
 sudo apt-get -y install apache2 > /dev/null
+sudo rm /var/www/html/index.html > /dev/null
 
 echo "Installing PHP"
 sudo LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php > /dev/null
@@ -19,7 +20,6 @@ sudo ln -s /etc/php/7.1/mods-available/ssh2.ini /etc/php/7.1/cli/conf.d/20-ssh2.
 sudo sed -i -r -e 's/display_errors = Off/display_errors = On/g' /etc/php/7.1/apache2/php.ini
 echo -e "\n\n[ssh2]\nextension=ssh2.so" | sudo tee --append /etc/php/7.1/apache2/php.ini
 sudo service apache2 restart > /dev/null
-sudo rm /var/www/html/index.html > /dev/null
 
 echo "Installing MySQL"
 DBPASSWD=abc123
