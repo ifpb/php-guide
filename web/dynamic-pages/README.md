@@ -59,14 +59,14 @@ layout
 {% include_relative codes/layout/index.php %}
 ```
 
-[codes/layout/page1.php](codes/layout/page1.php)
-```php
-{% include_relative codes/layout/page1.php %}
+[codes/layout/page1.html](codes/layout/page1.html)
+```html
+{% include_relative codes/layout/page1.html %}
 ```
 
-[codes/layout/page2.php](codes/layout/page2.php)
-```php
-{% include_relative codes/layout/page2.php %}
+[codes/layout/page2.html](codes/layout/page2.html)
+```html
+{% include_relative codes/layout/page2.html %}
 ```
 
 ## Client-side rendering
