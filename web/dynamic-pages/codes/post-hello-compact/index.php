@@ -1,6 +1,4 @@
-<?php
-  $name = $_POST['name'] ?? null;
-?>
+<?php $name = $_POST['name'] ?? null; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

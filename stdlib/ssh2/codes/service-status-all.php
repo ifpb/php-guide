@@ -12,7 +12,7 @@
   $status = [];
 
   foreach($matches[2] as $index=>$service) {
-  $status[$service] = $matches[1][$index] == '+' ? 'up' : 'down';
+    $status[$service] = $matches[1][$index] == '+' ? 'up' : 'down';
   }
 
   $json = json_encode($status);
