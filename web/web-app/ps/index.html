@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="http://tablesorter.com/themes/blue/style.css">
+	<style>
+		table tbody tr:hover {
+			background: #ccc !important;
+		}
+	</style>
+</head>
+<body>
+	<table id="myTable" class="tablesorter">
+		<thead>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="http://tablesorter.com/__jquery.tablesorter.min.js"></script>
+	<script>
+		const theadPS = document.querySelector('table thead')
+		const tbodyPS = document.querySelector('table tbody')
+
+		showProcess()
+
+		function showProcess(){
+			fetch('ps.php')
+				.then(function(res){return res.json()})
+				.then(function(ps){
+					theadPS.innerHTML = `<tr><th>${ps.head.join('</th><th>')}</th></tr>`
+					for(let line in ps.lines){
+						tbodyPS.innerHTML += `<tr><td>${ps.lines[line].join('</td><td>')}</td></tr>`
+					}
+					$("#myTable").tablesorter()
+				})
+
+			setTimeout('showProcess()', 3000)
+		}
+	</script>
+</body>
+</html>

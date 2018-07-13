@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #result {
+      width: 400px;
+      height: 400px;
+    }
+    #result canvas {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" id="address" placeholder="Address">
+  <input type="text" id="count" placeholder="Count">
+  <button>ping</button>
+  <div id="result">
+    <canvas></canvas>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+  <script>
+    const addressField = document.querySelector('#address')
+    const countField = document.querySelector('#count')
+    const pingBtn = document.querySelector('button')
+    const timesChart = document.querySelector('#result canvas')
+
+    pingBtn.addEventListener('click', function(){
+      let url = `ping.php?address=${addressField.value}&count=${countField.value}`
+      fetch(url)
+      .then(res => res.json())
+      .then(pingInfo => {
+        console.log(pingInfo)
+        new Chart(timesChart, {
+          type: 'line',
+          data: {
+            labels: Object.keys(pingInfo.times),
+            datasets: [{
+              label: 'ICMP Times',
+              data: pingInfo.times
+            }]
+          },
+          options: {
+              scales: {
+                  yAxes: [{
+                      ticks: {
+                          beginAtZero:true
+                      }
+                  }]
+              }
+          }
+        })
+      })
+    })
+  </script>
+</body>
+</html>
