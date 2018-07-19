@@ -5,4 +5,5 @@ ip a
 nmap
 ping
 fping 
+nc netcat
 -->

@@ -103,7 +103,7 @@ $ crontab -l
 
 **Examples**
 
-[http://localhost:8080/php/web/web-api/codes/command/cron-api/v1/cron.php?info=rmTasks&remove=0](http://localhost:8080/php/web/web-api/codes/command/cron-api/v1/cron.php?info=rmTasks&remove=0):
+[http://localhost:8080/php/web/web-api/codes/command/cron-api/v1/cron.php?info=rmTask&remove=0](http://localhost:8080/php/web/web-api/codes/command/cron-api/v1/cron.php?info=rmTask&remove=0):
 
 ```js
 {
