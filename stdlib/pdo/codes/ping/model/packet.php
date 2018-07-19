@@ -8,7 +8,7 @@ require_once __DIR__."/../database/database.php";
 
 class Packet extends Database {
 
-  public function create($seq, $ttl, $time, $icmp_id){
+  public function create($seq, $ttl, $time, $icmp_id) {
     $sql = "INSERT INTO packet (seq, ttl, time, icmp_id)
             VALUES (${seq}, ${ttl}, ${time}, ${icmp_id});";
     try {
@@ -21,34 +21,34 @@ class Packet extends Database {
     } 
   }
 
-  public function read($id){
+  public function read($id) {
     $sql = "SELECT * FROM packet WHERE id = ${id}";
     $pdoStm = $this->connection->query($sql);
     return $pdoStm->fetch(PDO::FETCH_ASSOC);
   }
 
-  public function readAll(){
+  public function readAll() {
     $sql = "SELECT * FROM packet";
     $pdoStm = $this->connection->query($sql);
     return $pdoStm->fetchAll(PDO::FETCH_ASSOC);
   }
   
-  public function update($id, $seq, $ttl, $time, $icmp_id){
+  public function update($id, $seq, $ttl, $time, $icmp_id) {
     $sql = "UPDATE packet
             SET seq=${seq}, ttl=${ttl}, time=${time}, icmp_id=${icmp_id}
             WHERE id=${id}";
     try {
-      $this->connection->exec($sql);
+      return $this->connection->exec($sql);
     } catch(PDOExecption $e) { 
       $this->connection->rollback(); 
       print "Error!: " . $e->getMessage(); 
     }
   }
   
-  public function remove($id){
+  public function remove($id) {
     $sql = "DELETE FROM packet WHERE id=${id}";
     try {
-      $this->connection->exec($sql);
+      return $this->connection->exec($sql);
     } catch(PDOExecption $e) { 
       $this->connection->rollback(); 
       print "Error!: " . $e->getMessage(); 

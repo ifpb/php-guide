@@ -8,9 +8,8 @@ require_once __DIR__."/../database/database.php";
 
 class Host extends Database {
 
-  public function create($name, $address){
-    $sql = "INSERT INTO host (name, address)
-            VALUES ('${name}', '${address}');";
+  public function create($name, $address) {
+    $sql = "INSERT INTO host (name, address) VALUES ('${name}', '${address}');";
     try {
       $this->connection->exec($sql);
       return $this->connection->lastInsertId();
@@ -21,25 +20,25 @@ class Host extends Database {
     } 
   }
 
-  public function read($id){
+  public function read($id) {
     $sql = "SELECT * FROM host WHERE id = ${id}";
     $pdoStm = $this->connection->query($sql);
     return $pdoStm ? $pdoStm->fetch(PDO::FETCH_ASSOC) : null;
   }
 
-  public function readByNameAddress($name, $address){
+  public function readByNameAddress($name, $address) {
     $sql = "SELECT * FROM host WHERE name='${name}' AND address='${address}'";
     $pdoStm = $this->connection->query($sql);
     return $pdoStm ? $pdoStm->fetch(PDO::FETCH_ASSOC) : null;
   }
 
-  public function readAll(){
+  public function readAll() {
     $sql = "SELECT * FROM host";
     $pdoStm = $this->connection->query($sql);
     return $pdoStm ? $pdoStm->fetchAll(PDO::FETCH_ASSOC) : null;
   }
 
-  public function readOrCreate($name, $address){
+  public function readOrCreate($name, $address) {
     $result = $this->readByNameAddress($name, $address);
 
     if ($result) {
@@ -49,22 +48,22 @@ class Host extends Database {
     }
   }
   
-  public function update($id, $name, $address){
+  public function update($id, $name, $address) {
     $sql = "UPDATE host
             SET name=${name}, address=${address}
             WHERE id=${id}";
     try {
-      $this->connection->exec($sql);
+      return $this->connection->exec($sql);
     } catch(PDOExecption $e) { 
       $this->connection->rollback(); 
       print "Error!: " . $e->getMessage(); 
     }
   }
   
-  public function remove($id){
+  public function remove($id) {
     $sql = "DELETE FROM host WHERE id=${id}";
     try {
-      $this->connection->exec($sql);
+      return $this->connection->exec($sql);
     } catch(PDOExecption $e) { 
       $this->connection->rollback(); 
       print "Error!: " . $e->getMessage(); 
