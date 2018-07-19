@@ -1,0 +1,21 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam monochrome true
+hide circle
+
+class Database {
+  $connection
+  __construct()
+}
+
+class Icmp {
+  create(int $transmitted, int $received, int $host_id): int
+  read(int $id): array
+  readAll(): array
+  readJoinAll(): array
+  update(int $id, int $transmitted, int $received, string $created_at, int $host_id): $int
+  remove(int $id): $int
+}
+
+Database -- Icmp
+@enduml

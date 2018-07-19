@@ -6,7 +6,7 @@ pdo_mysql
 pdo_sqlite
 ```
 
-## Ping
+## Examples
 ---
 
-[Ping](ping/)
+[Ping](codes/ping/)

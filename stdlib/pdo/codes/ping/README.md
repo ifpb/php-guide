@@ -1,5 +1,10 @@
 # Ping Model
 
+- [Database](#database)
+- [Install](#install)
+- [PDO Model](#pdo-moodel)
+- [How to CRUD](#how-to-crud)
+
 ## Database
 ---
 
@@ -23,32 +28,38 @@
 {% include_relative database/config.php %}
 ```
 
-## CRUD
+## PDO Model
 ---
 
-![](assets/model.svg)
+![](assets/model-database.svg)
 
 [database/database.php](database/database.php):
 ```php
 {% include_relative database/database.php %}
 ```
 
+![](assets/model-host.svg)
+
 [model/host.php](model/host.php):
 ```php
 {% include_relative model/host.php %}
 ```
+
+![](assets/model-icmp.svg)
 
 [model/icmp.php](model/icmp.php):
 ```php
 {% include_relative model/icmp.php %}
 ```
 
+![](assets/model-packet.svg)
+
 [model/packet.php](model/packet.php):
 ```php
 {% include_relative model/packet.php %}
 ```
 
-## Test
+## How to CRUD
 ---
 
 [test.php](test.php):

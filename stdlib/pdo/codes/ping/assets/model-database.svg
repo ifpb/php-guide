@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="185px" preserveAspectRatio="none" style="width:197px;height:185px;" version="1.1" viewBox="0 0 197 185" width="197px" zoomAndPan="magnify"><defs><filter height="300%" id="fddwcpqepd3oq" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--class Database--><rect fill="#F8F8F8" filter="url(#fddwcpqepd3oq)" height="66.043" id="Database" style="stroke: #383838; stroke-width: 1.5;" width="84" x="48" y="8"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="55" x="62.5" y="24.6016">Database</text><line style="stroke: #383838; stroke-width: 1.5;" x1="49" x2="131" y1="32.1328" y2="32.1328"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="67" x="54" y="46.7676">$connection</text><line style="stroke: #383838; stroke-width: 1.5;" x1="49" x2="131" y1="53.0879" y2="53.0879"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="72" x="54" y="67.7227">__construct()</text><!--class Host--><rect fill="#F8F8F8" filter="url(#fddwcpqepd3oq)" height="40.1328" id="Host" style="stroke: #383838; stroke-width: 1.5;" width="32" x="6" y="134"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="26" x="9" y="150.6016">Host</text><line style="stroke: #383838; stroke-width: 1.5;" x1="7" x2="37" y1="158.1328" y2="158.1328"/><line style="stroke: #383838; stroke-width: 1.5;" x1="7" x2="37" y1="166.1328" y2="166.1328"/><!--class Icmp--><rect fill="#F8F8F8" filter="url(#fddwcpqepd3oq)" height="40.1328" id="Icmp" style="stroke: #383838; stroke-width: 1.5;" width="34" x="73" y="134"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="28" x="76" y="150.6016">Icmp</text><line style="stroke: #383838; stroke-width: 1.5;" x1="74" x2="106" y1="158.1328" y2="158.1328"/><line style="stroke: #383838; stroke-width: 1.5;" x1="74" x2="106" y1="166.1328" y2="166.1328"/><!--class Packet--><rect fill="#F8F8F8" filter="url(#fddwcpqepd3oq)" height="40.1328" id="Packet" style="stroke: #383838; stroke-width: 1.5;" width="44" x="142" y="134"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="38" x="145" y="150.6016">Packet</text><line style="stroke: #383838; stroke-width: 1.5;" x1="143" x2="185" y1="158.1328" y2="158.1328"/><line style="stroke: #383838; stroke-width: 1.5;" x1="143" x2="185" y1="166.1328" y2="166.1328"/><!--link Database to Host--><path d="M69.9655,74.2925 C58.3693,93.5627 44.1498,117.1923 34.2159,133.7 " fill="none" id="Database-Host" style="stroke: #383838; stroke-width: 1.0;"/><!--link Database to Icmp--><path d="M90,74.2925 C90,93.5627 90,117.1923 90,133.7 " fill="none" id="Database-Icmp" style="stroke: #383838; stroke-width: 1.0;"/><!--link Database to Packet--><path d="M111.8022,74.2925 C124.4216,93.5627 139.8958,117.1923 150.7062,133.7 " fill="none" id="Database-Packet" style="stroke: #383838; stroke-width: 1.0;"/><!--
+@startuml
+skinparam classAttributeIconSize 0
+skinparam monochrome true
+hide circle
+
+class Database {
+  $connection
+  __construct()
+}
+
+Database - - Host
+Database - - Icmp
+Database - - Packet
+@enduml
+
+PlantUML version 1.2018.03(Thu Apr 05 13:59:15 BRT 2018)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_101-b13
+Operating System: Mac OS X
+OS Version: 10.13.5
+Default Encoding: US-ASCII
+Language: en
+Country: US
+--></g></svg>

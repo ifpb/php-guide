@@ -1,0 +1,20 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam monochrome true
+hide circle
+
+class Database {
+  $connection
+  __construct()
+}
+
+class Packet {
+  create(int $seq, int $ttl, float $time, int $icmp_id): int
+  read(int $id): array
+  readAll(): array
+  update(int $id, int $seq, int $ttl, float $time, int $icmp_id): int
+  remove(int $id): int
+}
+
+Database -- Packet
+@enduml
