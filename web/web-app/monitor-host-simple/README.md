@@ -15,6 +15,8 @@ monitor-host-simple
         └── main.js
 ```
 
+![](assets/layout.png)
+
 ## Back-end side
 ---
 
