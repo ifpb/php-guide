@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/master.css">
+</head>
+<body>
+  <header>
+    <h1>Host Monitor</h1>
+  </header>
+  <main class="container">
+    <div class="row mb-5 justify-content-center">
+      <section class="tootlbar">
+        <input type="text" id="address" placeholder="host">
+        <input type="text" id="count" placeholder="count" size="5">
+        <button id="pingButton">ping</button>
+        <img src="img/spinner.gif" alt="spinner" id="spinner" class="invisible">
+      </section>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div class="card" id="ping-history">
+          <div class="card-header text-center">
+            <h2>History</h2>
+          </div>
+          <div class="card-body">
+            <table id="pingTable" class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Host</th>
+                  <th>Tx</th>
+                  <th>Rx</th>
+                  <th>Losted</th>
+                  <th>Time (ms)</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="card">
+          <div class="card-header text-center">
+            <h2>Stats</h2>
+          </div>
+          <div class="card-body">
+            <h3 id="addressStatus" class="text-center"></h3>
+            <div class="row">
+              <div class="col-4">
+                <div id="stats-info" class="text-center">
+                  <h4>Received</h4>
+                  <span id="transmittedStatus"></span>
+                  <canvas id="stats-info-chart"></canvas>
+                </div>
+              </div>
+              <div class="col-8">
+                <div id="time-packets">
+                  <h4 class="text-center">Packet Time</h4>
+                  <canvas id="time-packets-chart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.0.0/tablesort.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.0.0/src/sorts/tablesort.number.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

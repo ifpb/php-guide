@@ -1,41 +1,45 @@
-# PS App
+# Ping App
 
 ```
-ps
+monitor-host-simple
 ├── api
 │   └── v1
-│       └── ps.php
+│       └── ping.php
 └── public
     ├── css
     │   └── master.css
+    ├── img
+    │   └── spinner.gif
     ├── index.html
     └── js
         └── main.js
 ```
 
-![](assets/layout.png)
-
 ## Back-end side
 ---
 
 ```
-api
-└── v1
-    └── ps.php
+monitor-host-simple
+└── api
+    └── v1
+        └── ping.php
 ```
 
-[PS API](../..//web-api/codes/command/ps-api/)
+[PS API](../..//web-api/codes/command/ping-api/)
 
 ## Front-end side
 ---
 
 ```
-public
-├── css
-│   └── master.css
-├── index.html
-└── js
-    └── main.js
+monitor-host-simple
+└── public
+    ├── css
+    │   └── master.css
+    ├── img
+    │   └── spinner.gif
+    ├── index.html
+    └── js
+        └── main.js
 ```
 
 [public/index.html](public/index.html):
