@@ -1,6 +1,6 @@
 # Hello API
 
-## Services
+## Back-end side
 ---
 
 ### Hello message
@@ -28,3 +28,6 @@ Olá
 ```
 Olá Alice
 ```
+
+## Front-end side
+---
