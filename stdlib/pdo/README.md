@@ -17,17 +17,17 @@
 
 ### Schema
 
-![](host-crud/assets/schema.png)
+![](codes/host-crud/assets/schema.png)
 
-[host-crud/database/schema.sql](host-crud/database/schema.sql):
+[codes/host-crud/database/schema.sql](codes/host-crud/database/schema.sql):
 ```sql
-{% include_relative host-crud/database/schema.sql %}
+{% include_relative codes/host-crud/database/schema.sql %}
 ```
 
 ### Import
 
 ```
-$ mysql -u root -p < host-crud/database/schema.sql
+$ mysql -u root -p < codes/host-crud/database/schema.sql
 ```
 
 ## Check PDO
@@ -44,42 +44,42 @@ pdo_sqlite
 
 ### Connection
 
-[host-crud/config.php](host-crud/config.php):
+[codes/host-crud/config.php](codes/host-crud/config.php):
 ```php
-{% include_relative host-crud/config.php %}
+{% include_relative codes/host-crud/config.php %}
 ```
 
-[host-crud/database.php](host-crud/database.php):
+[codes/host-crud/database.php](codes/host-crud/database.php):
 ```php
-{% include_relative host-crud/database.php %}
+{% include_relative codes/host-crud/database.php %}
 ```
 
 ### Create Data
 
-[host-crud/create-host.php](host-crud/create-host.php):
+[codes/host-crud/create-host.php](codes/host-crud/create-host.php):
 ```php
-{% include_relative host-crud/create-host.php %}
+{% include_relative codes/host-crud/create-host.php %}
 ```
 
 ### Read Data
 
-[host-crud/read-host.php](host-crud/read-host.php):
+[codes/host-crud/read-host.php](codes/host-crud/read-host.php):
 ```php
-{% include_relative host-crud/read-host.php %}
+{% include_relative codes/host-crud/read-host.php %}
 ```
 
 ### Update Data
 
-[host-crud/update-host.php](host-crud/update-host.php):
+[codes/host-crud/update-host.php](codes/host-crud/update-host.php):
 ```php
-{% include_relative host-crud/update-host.php %}
+{% include_relative codes/host-crud/update-host.php %}
 ```
 
 ### Delete Data
 
-[host-crud/delete-host.php](host-crud/delete-host.php):
+[codes/host-crud/delete-host.php](codes/host-crud/delete-host.php):
 ```php
-{% include_relative host-crud/delete-host.php %}
+{% include_relative codes/host-crud/delete-host.php %}
 ```
 
 ## PDO Model
