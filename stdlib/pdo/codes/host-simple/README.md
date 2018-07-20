@@ -1,4 +1,4 @@
-# Ping Model
+# Host Model
 
 - [Database](#database)
 - [Install](#install)
@@ -33,9 +33,9 @@
 ## PDO Model
 ---
 
-### Database Model
+![](assets/model-host.svg)
 
-![](assets/model-database.svg)
+### Database Model
 
 [database/database.php](database/database.php):
 ```php
@@ -43,8 +43,6 @@
 ```
 
 ### Host Model
-
-![](assets/model-host.svg)
 
 [model/host.php](model/host.php):
 ```php

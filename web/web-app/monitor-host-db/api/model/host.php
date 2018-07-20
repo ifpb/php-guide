@@ -50,7 +50,7 @@ class Host extends Database {
   
   public function update($id, $name, $address) {
     $sql = "UPDATE host
-            SET name=${name}, address=${address}
+            SET name='${name}', address='${address}'
             WHERE id=${id}";
     try {
       return $this->connection->exec($sql);
