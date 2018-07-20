@@ -1,4 +1,4 @@
-# Ping App
+# Host Monitor Simple
 
 ```
 monitor-host-simple
@@ -27,7 +27,7 @@ monitor-host-simple
         └── ping.php
 ```
 
-[PS API](../..//web-api/codes/command/ping-api/)
+[Ping API](../..//web-api/codes/command/ping-api/)
 
 ## Front-end side
 ---

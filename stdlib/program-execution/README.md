@@ -50,7 +50,18 @@ $ curl -I codes/contrab-list-tasks.php
 $ curl -I codes/contrab-add-tasks.php
 ```
 
-#### ping
+#### ping times
+
+[codes/ping-times.php](codes/ping-times.php):
+```php
+{% include_relative codes/ping-times.php %}
+```
+
+```
+$ curl -I codes/ping-times.php
+```
+
+#### ping output
 
 [codes/ping.php](codes/ping.php):
 ```php
@@ -60,6 +71,8 @@ $ curl -I codes/contrab-add-tasks.php
 ```
 $ curl -I codes/ping.php?host=8.8.8.8
 ```
+
+
 
 **Reference**
 - [Other Services - Network - Network Functions](http://php.net/manual/en/ref.network.php): `header()`

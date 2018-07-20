@@ -1,0 +1,12 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam monochrome true
+hide circle
+
+class Database {
+  $connection
+  __construct()
+}
+
+Database -- Host
+@enduml
