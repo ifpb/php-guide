@@ -9,12 +9,12 @@ class Database {
 }
 
 class Host {
-  create(string $name, string $address): int
+  create(string $name, string $address_id): int
   read(int $id): array
-  readByNameAddress(string $name, string $address): array
+  readByName(string $name, string $address_id): array
   readAll(): array
-  readOrCreate(string $name, string $address): array
-  update(int $id, string $name, string $address): int
+  readOrCreate(string $name, string $address_id): array
+  update(int $id, string $name, string $address_id): int
   remove(int $id): int
 }
 

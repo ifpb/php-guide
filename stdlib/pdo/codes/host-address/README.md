@@ -1,4 +1,4 @@
-# Host Simple Model
+# Host Address Model
 
 - [Database](#database)
 - [Install](#install)
@@ -33,9 +33,9 @@
 ## PDO Model
 ---
 
-![](assets/model-host.svg)
-
 ### Database Model
+
+![](assets/model-database.svg)
 
 [database/database.php](database/database.php):
 ```php
@@ -44,12 +44,16 @@
 
 ### Host Model
 
+![](assets/model-host.svg)
+
 [model/host.php](model/host.php):
 ```php
 {% include_relative model/host.php %}
 ```
 
 ### Address Model
+
+![](assets/model-address.svg)
 
 [model/address.php](model/address.php):
 ```php

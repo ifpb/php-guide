@@ -105,8 +105,8 @@ pdo_sqlite
 ## PDO Model
 ---
 
-- [Host Model Simple](codes/host-simple/)
-- [Host Model (1:1)](codes/host-uniq-address/)
-- [Host Model (1:n)](codes/host-multiple-address/)
-- [Host Model (n:m)](codes/host-user/)
+- [Host Simple Model](codes/host-simple/)
+- [Host Address Model (1:1)](codes/host-address/)
+- [Host Interfaces Model (1:n)](codes/host-interface/)
+- [Host DNS Server Model (n:m)](codes/host-dns/)
 - [Ping Model](codes/ping/)
