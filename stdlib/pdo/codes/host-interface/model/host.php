@@ -8,8 +8,8 @@ require_once __DIR__."/../database/database.php";
 
 class Host extends Database {
 
-  public function create($name, $address_id) {
-    $sql = "INSERT INTO host (name, address_id) VALUES ('${name}', ${address_id})";
+  public function create($name) {
+    $sql = "INSERT INTO host (name) VALUES ('${name}')";
     try {
       $this->connection->exec($sql);
       return $this->connection->lastInsertId();
@@ -38,19 +38,19 @@ class Host extends Database {
     return $pdoStm ? $pdoStm->fetchAll(PDO::FETCH_ASSOC) : null;
   }
 
-  public function readOrCreate($name, $address_id) {
+  public function readOrCreate($name) {
     $result = $this->readByName($name);
 
     if ($result) {
       return $result;
     } else {
-      return $this->create($name, $address_id);
+      return $this->create($name);
     }
   }
   
-  public function update($id, $name, $address_id) {
+  public function update($id, $name) {
     $sql = "UPDATE host
-            SET name='${name}', address_id='${address_id}'
+            SET name='${name}'
             WHERE id=${id}";
     try {
       return $this->connection->exec($sql);

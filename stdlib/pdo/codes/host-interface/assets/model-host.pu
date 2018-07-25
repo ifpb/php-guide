@@ -1,0 +1,22 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam monochrome true
+hide circle
+
+class Database {
+  $connection
+  __construct()
+}
+
+class Host {
+  create(string $name): int
+  read(int $id): array
+  readByName(string $name): array
+  readAll(): array
+  readOrCreate(string $name): array
+  update(int $id, string $name): int
+  remove(int $id): int
+}
+
+Database -- Host
+@enduml
