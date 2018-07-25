@@ -10,7 +10,7 @@
   - [Read Data](#read-data)
   - [Update Data](#update-data)
   - [Delete Data](#delete-data)
-- [PDO Model](#PDO Model)
+- [PDO Model](#pdo-model)
 
 ## Database
 ---
@@ -61,11 +61,21 @@ pdo_sqlite
 {% include_relative codes/host-crud/create-host.php %}
 ```
 
+[codes/host-crud/test-create.php](codes/host-crud/test-create.php):
+```php
+{% include_relative codes/host-crud/test-create.php %}
+```
+
 ### Read Data
 
 [codes/host-crud/read-host.php](codes/host-crud/read-host.php):
 ```php
 {% include_relative codes/host-crud/read-host.php %}
+```
+
+[codes/host-crud/test-read.php](codes/host-crud/test-read.php):
+```php
+{% include_relative codes/host-crud/test-read.php %}
 ```
 
 ### Update Data
@@ -75,11 +85,21 @@ pdo_sqlite
 {% include_relative codes/host-crud/update-host.php %}
 ```
 
+[codes/host-crud/test-update.php](codes/host-crud/test-update.php):
+```php
+{% include_relative codes/host-crud/test-update.php %}
+```
+
 ### Delete Data
 
 [codes/host-crud/delete-host.php](codes/host-crud/delete-host.php):
 ```php
 {% include_relative codes/host-crud/delete-host.php %}
+```
+
+[codes/host-crud/test-delete.php](codes/host-crud/test-delete.php):
+```php
+{% include_relative codes/host-crud/test-delete.php %}
 ```
 
 ## PDO Model

@@ -11,7 +11,7 @@
 
 ### $_COOKIE
 
-[codes/cookie-counter/index.php](codes/cookie-counter/index.php)
+[http://localhost:8080/php/web/session/codes/cookie-counter/index.php](http://localhost:8080/php/web/session/codes/cookie-counter/index.php)
 ```php
 {% include_relative codes/cookie-counter/index.php %}
 ```
@@ -26,9 +26,9 @@
 
 ### $_SESSION
 
-[codes/cookie-counter/index.php](codes/cookie-counter/index.php)
+[http://localhost:8080/php/web/session/codes/session-counter/index.php](http://localhost:8080/php/web/session/codes/session-counter/index.php)
 ```php
-{% include_relative codes/cookie-counter/index.php %}
+{% include_relative codes/session-counter/index.php %}
 ```
 
 **References:** 
@@ -44,22 +44,22 @@ auth
 └── logout.php
 ```
 
-[codes/auth/login.html](codes/auth/login.html)
+[http://localhost:8080/php/web/session/codes/auth/login.html](http://localhost:8080/php/web/session/codes/auth/login.html)
 ```html
 {% include_relative codes/auth/login.html %}
 ```
 
-[codes/auth/auth.php](codes/auth/auth.php)
+[http://localhost:8080/php/web/session/codes/auth/auth.php](http://localhost:8080/php/web/session/codes/auth/auth.php)
 ```php
 {% include_relative codes/auth/auth.php %}
 ```
 
-[codes/auth/home.php](codes/auth/home.php)
+[http://localhost:8080/php/web/session/codes/auth/home.php](http://localhost:8080/php/web/session/codes/auth/home.php)
 ```php
 {% include_relative codes/auth/home.php %}
 ```
 
-[codes/auth/logout.php](codes/auth/logout.php)
+[http://localhost:8080/php/web/session/codes/auth/logout.php](http://localhost:8080/php/web/session/codes/auth/logout.php)
 ```php
 {% include_relative codes/auth/logout.php %}
 ```

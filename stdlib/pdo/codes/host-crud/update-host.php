@@ -17,6 +17,3 @@ function update($name, $address, $id) {
     print "Error!: " . $e->getMessage(); 
   } 
 }
-
-var_dump(update('Google DNS', '8.8.8.8', 2)); //=> int(1)
-var_dump(update('Google DNS', '8.8.8.8', 2)); //=> int(0)

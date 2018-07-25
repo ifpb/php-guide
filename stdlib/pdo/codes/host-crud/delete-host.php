@@ -3,7 +3,7 @@ require_once('database.php');
 
 $connection = connect();
 
-function remove($id) {
+function delete($id) {
   global $connection;
 
   $sql = "DELETE FROM host WHERE id=${id}";
@@ -15,6 +15,3 @@ function remove($id) {
     print "Error!: " . $e->getMessage(); 
   }
 }
-
-var_dump(remove(2)); //=> int(1)
-var_dump(remove(2)); //=> int(0)

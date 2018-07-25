@@ -49,6 +49,13 @@
 {% include_relative model/host.php %}
 ```
 
+### Address Model
+
+[model/address.php](model/address.php):
+```php
+{% include_relative model/address.php %}
+```
+
 ## How to CRUD
 ---
 
