@@ -1,11 +1,11 @@
-# Host Address Model
+# Host Interfaces Model
 
 - [Database](#database)
 - [Install](#install)
 - [PDO Model](#pdo-moodel)
   - [Database Model](#database-model)
   - [Host Model](#host-model)
-  - [Address Model](#address-model)
+  - [Dns Model](#dns-model)
 - [How to CRUD](#how-to-crud)
 
 ## Database
@@ -52,13 +52,13 @@
 {% include_relative model/host.php %}
 ```
 
-### Address Model
+### Dns Model
 
-![](assets/model-address.svg)
+![](assets/model-dns.svg)
 
-[model/address.php](model/address.php):
+[model/dns.php](model/dns.php):
 ```php
-{% include_relative model/address.php %}
+{% include_relative model/dns.php %}
 ```
 
 ## How to CRUD

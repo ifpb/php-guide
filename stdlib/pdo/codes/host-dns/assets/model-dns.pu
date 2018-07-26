@@ -1,0 +1,22 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam monochrome true
+hide circle
+
+class Database {
+  $connection
+  __construct()
+}
+
+class Dns {
+  create(string $ip): int
+  read(int $id): array
+  readByIp(string $ip): array
+  readAll(): array
+  readOrCreate(string $ip): array
+  update(int $id, string $ip): int
+  remove(int $id): int
+}
+
+Database -- Dns
+@enduml
