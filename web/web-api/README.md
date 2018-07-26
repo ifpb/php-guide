@@ -15,3 +15,5 @@
   - firewall
   - [samba](codes/service/samba/)
   - [snmp](codes/service/snmp/)
+- Database
+  - [Host Simple](codes/db/host/)

@@ -42,7 +42,7 @@ host-simple-db
     └── host.php
 ```
 
-### [Host Simple API (DB)](../../web-api/db/host/)
+### [Host Simple API (DB)](../../web-api/codes/db/host/)
 
 ![](assets/schema.png)
 
