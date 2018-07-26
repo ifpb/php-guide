@@ -11,9 +11,9 @@ class Database {
 class Host {
 }
 
-class Interface {
+class NetInterface {
 }
 
 Database -- Host
-Database -- Interface
+Database -- NetInterface
 @enduml

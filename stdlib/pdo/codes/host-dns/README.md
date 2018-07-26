@@ -1,4 +1,4 @@
-# Host Interfaces Model
+# Host DNS Model
 
 - [Database](#database)
 - [Install](#install)

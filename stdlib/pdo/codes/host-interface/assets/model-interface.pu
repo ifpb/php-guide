@@ -8,7 +8,7 @@ class Database {
   __construct()
 }
 
-class Interface {
+class NetInterface {
   create(string $name, string $ip, string $mask, string mac, int host_id): int
   read(int $id): array
   readByIp(string $ip): array
@@ -18,5 +18,5 @@ class Interface {
   remove(int $id): int
 }
 
-Database -- Interface
+Database -- NetInterface
 @enduml
