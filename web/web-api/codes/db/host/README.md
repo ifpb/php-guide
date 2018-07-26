@@ -1,14 +1,16 @@
-# Host DB API
+# Host Simple API (DB)
 
 - [Host Simple Model](#host-simple-model)
+- [Install](#install)
 - [Services](#services)
   - [Read all hosts](#read-all-hosts)
   - [Read host by id](#read-host-by-id)
   - [Create host](#create-host)
   - [Update host](#update-host)
   - [Remove host](#remove-host)
+- [API](#api)
 
-## [Host Simple Model](https://ifpb.github.io/php-guide/stdlib/pdo/codes/host-simple/)
+## [Host Simple Model](../../../../../stdlib/pdo/codes/host-simple/)
 ---
 
 ![](assets/schema.png)
@@ -16,6 +18,19 @@
 [database/schema.sql](database/schema.sql):
 ```sql
 {% include_relative database/schema.sql %}
+```
+
+## Install
+---
+
+[http://localhost:8080/php/web/web-api/codes/db/host/install/](http://localhost:8080/php/web/web-api/codes/db/host/install/):
+```php
+{% include_relative install/index.php %}
+```
+
+[database/config.php](database/config.php):
+```php
+{% include_relative database/config.php %}
 ```
 
 ## Services
@@ -69,19 +84,19 @@ http://localhost:8080/php/web/web-api/codes/db/host/api/v1/?a=read&id=:id
 ### Create host
 
 ```
-http://localhost:8080/php/web/web-api/codes/db/host/api/v1/?a=create&host=:host&address=:address
+http://localhost:8080/php/web/web-api/codes/db/host/api/v1/?a=create&name=:name&address=:address
 ```
 
 **Params**
 
 | Name | Type |	Description |
 |-|-|-|
-| :host	| String	| hostname |
+| :name	| String	| hostname |
 | :address	| String	| IP Address |
 
 **Example**
 
-[http://localhost:8080/php/web/web-api/codes/db/host/api/v1/?a=create&host=www.ifpb.edu.br&address=200.129.77.61](http://localhost:8080/php/web/web-api/codes/db/host/api/v1/?a=create&host=www.ifpb.edu.br&address=200.129.77.61)
+[http://localhost:8080/php/web/web-api/codes/db/host/api/v1/?a=create&name=www.ifpb.edu.br&address=200.129.77.61](http://localhost:8080/php/web/web-api/codes/db/host/api/v1/?a=create&name=www.ifpb.edu.br&address=200.129.77.61)
 
 ```json
 {
@@ -92,7 +107,7 @@ http://localhost:8080/php/web/web-api/codes/db/host/api/v1/?a=create&host=:host&
 ### Update host
 
 ```
-http://localhost:8080/php/web/web-api/codes/db/host/api/v1/?a=update&id=:id&host=:host&address=:address
+http://localhost:8080/php/web/web-api/codes/db/host/api/v1/?a=update&id=:id&name=:name&address=:address
 ```
 
 **Params**
@@ -100,12 +115,12 @@ http://localhost:8080/php/web/web-api/codes/db/host/api/v1/?a=update&id=:id&host
 | Name | Type |	Description |
 |-|-|-|
 | :id	| Integer	| host id |
-| :host	| String	| hostname |
+| :name	| String	| hostname |
 | :address	| String	| IP Address |
 
 **Example**
 
-[http://localhost:8080/php/web/web-api/codes/db/host/api/v1/?a=update&id=2&host=www.ifpb.edu.br&address=200.129.77.62](http://localhost:8080/php/web/web-api/codes/db/host/api/v1/?a=update&id=2&host=www.ifpb.edu.br&address=200.129.77.62)
+[http://localhost:8080/php/web/web-api/codes/db/host/api/v1/?a=update&id=2&name=www.ifpb.edu.br&address=200.129.77.62](http://localhost:8080/php/web/web-api/codes/db/host/api/v1/?a=update&id=2&name=www.ifpb.edu.br&address=200.129.77.62)
 
 ```json
 {
@@ -133,4 +148,27 @@ http://localhost:8080/php/web/web-api/codes/db/host/api/v1/?a=remove&id=:id
 {
   "status": "host removed."
 }
+```
+
+## API
+---
+
+```
+host
+├── api
+│   └── v1
+│       └── index.php
+├── database
+│   ├── config.php
+│   ├── database.php
+│   └── schema.sql
+├── install
+│   └── index.php
+└── model
+    └── host.php
+```
+
+[api/v1/index.php](api/v1/index.php):
+```php
+{% include_relative api/v1/index.php %}
 ```

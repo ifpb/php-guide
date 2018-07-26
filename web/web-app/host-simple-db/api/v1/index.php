@@ -15,6 +15,14 @@ if ($action === 'create') {
 } else if ($action === 'read') {
   $id = $_GET['id'] ?? null;
   $json = $hostDB->read($id);
+} else if ($action === 'readByNameAddress') {
+  $name = $_GET['name'] ?? null;
+  $address = $_GET['address'] ?? null;
+  $json = $hostDB->readByNameAddress($name, $address);
+} else if ($action === 'readOrCreate') {
+  $name = $_GET['name'] ?? null;
+  $address = $_GET['address'] ?? null;
+  $json = $hostDB->readOrCreate($name, $address);
 } else if ($action === 'readAll') {
   $json = $hostDB->readAll();
 } else if ($action === 'update') {
