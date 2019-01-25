@@ -19,7 +19,7 @@
 </head>
 <body>
 	<p>A quantidade de vezes que vc acessou esta página é <?php echo $times ?></p>
-	<a href="counter-cookie.php?zerar=true">zerar</a>
-	<a href="counter-cookie.php">+1</a>
+	<a href="index.php?zerar=true">zerar</a>
+	<a href="index.php">+1</a>
 </body>
 </html>

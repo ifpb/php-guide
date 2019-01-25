@@ -21,7 +21,7 @@
 </head>
 <body>
 	<p>A quantidade de vezes que vc acessou esta página é <?php echo $times ?></p>
-	<a href="counter-session.php?zerar=true">zerar</a>
-	<a href="counter-session.php">+1</a>
+	<a href="index.php?zerar=true">zerar</a>
+	<a href="index.php">+1</a>
 </body>
 </html>
