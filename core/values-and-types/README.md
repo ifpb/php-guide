@@ -1,5 +1,9 @@
 # Values & Types
 
+* [Type hierarchy](#type-hierarchy)
+* [Literal Types](#literal-types)
+* [Type Casting](#type-casting)
+
 ## Type hierarchy
 ---
 
