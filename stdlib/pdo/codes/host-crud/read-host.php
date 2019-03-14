@@ -25,8 +25,6 @@ function readByNameAddress($name, $address) {
   return $pdoStm ? $pdoStm->fetch(PDO::FETCH_ASSOC) : null;
 }
 
-var_dump(readByNameAddress("dns google", "8.8.4.4")); //=> bool(false)
-
 /**
  * Read All
  */
