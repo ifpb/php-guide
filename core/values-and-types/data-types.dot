@@ -10,9 +10,8 @@ digraph Types {
   types -> p0;
   p0 -> { Scalar, Special, Compound } [dir=none]
   Special -> Null
-  Scalar -> { Integer, Boolean, Float, String}
-  Boolean -> String [style=invis]
-  Float -> Integer [style=invis]
+  Scalar -> p1
+  p1 -> { Integer, Boolean, Float, String} [dir=none]
   Compound -> p3
   p3 -> { Array, Object } [dir=none]
 }
