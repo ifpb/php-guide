@@ -4,16 +4,6 @@
 ---
 
 - [Values and Types](values-and-types/)
-- [Variable](variable/)
-- [Expression and Operator](expression-and-operator/)
-- [Statement](statements/)
-- [Function](function/)
-- [Namespaces]()
-- [Errors]()
-- [Exceptions]()
-- [Generator]()
-- [References](references/)
-- Types:
   - Scalar:
     - [Boolean](boolean/)
     - [Integer](number/#integer)
@@ -24,6 +14,16 @@
     - [Object](object/)
   - Special:
     - [Null](null/)
+- [Variable](variable/)
+- [Expression and Operator](expression-and-operator/)
+- [Statement](statements/)
+- [Function](function/)
+- [Namespaces]()
+- [Errors]()
+- [Exceptions]()
+- [Generator]()
+- [References](references/)
+  
 
 ## References
 ---
