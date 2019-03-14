@@ -15,8 +15,17 @@ function authenticateFake($user, $pass){
   return $login == 'luiz' && $password == '123';
 }
 
-// addgroup www-data shadow
-// sudo chmod g+x /etc/shadow
+// Access control list (ACL)
+// $ getfacl /etc/passwd
+// # chmod g+x /etc/shadow
+// # addgroup www-data shadow
+
+// Edit the Sudoers File
+// http://www.ethanjoachimeldridge.info/tech-blog/shell_exec-sudo-php-apache
+// https://www.sudo.ws/man/sudoers.man.html
+// https://www.digitalocean.com/community/tutorials/how-to-edit-the-sudoers-file-on-ubuntu-and-centos
+// $ sudo chmod g+x /etc/shadow
+// $ echo "www-data ALL=(ALL) NOPASSWD: /etc/passwd" | sudo tee --append /etc/sudoers
 function authenticateShadow($user, $pass){
   $shadow = `cat /etc/shadow | grep "^$user\:"`;
   $shadow = explode(":",$shadow);

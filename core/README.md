@@ -3,6 +3,7 @@
 ## Contents
 ---
 
+- [Values and Types](values-and-types/)
 - [Variable](variable/)
 - [Expression and Operator](expression-and-operator/)
 - [Statement](statements/)
