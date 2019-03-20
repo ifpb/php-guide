@@ -1,0 +1,5 @@
+{
+    "require-dev": {
+        "kahlan/kahlan": "^4.6"
+    }
+}
