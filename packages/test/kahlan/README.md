@@ -38,7 +38,7 @@ $ tree . -I vendor
 
 function sum($a, $b)
 {
-  return $a + $b;
+  // TODO
 }
 
 ```
