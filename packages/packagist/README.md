@@ -60,10 +60,10 @@
 
 ```
  reuseble-code
-┌─────────────┐
-│lib.js       │
-│package.json │
-└─────────────┘
+┌───────────────┐
+│ lib.php        │
+│ composer.json │
+└───────────────┘
 ```
 
 **composer.json**:
@@ -71,10 +71,7 @@
 ```js
 {
   "name": "reuseble-code",
-  "version": "1.0.0",
-  "require-dev": {
-    "kahlan/kahlan": "^4.1"
-  }
+  "version": "1.0.0"
 }
 ```
 
@@ -115,7 +112,14 @@ $ cd project
 $ composer require phpmailer/phpmailer
 ```
 
-**package.json**:
+```
+$ tree . -I vendor
+.
+├── composer.json
+└── composer.lock
+```
+
+**composer.json**:
 
 ```js
 {
@@ -149,7 +153,7 @@ $ cd project
 $ composer require kahlan/kahlan --dev
 ```
 
-**package.json**:
+**composer.json**:
 
 ```js
 {
@@ -175,7 +179,7 @@ $ cd project
 $ composer require phpmailer/phpmailer psr/log
 ```
 
-**package.json**:
+**composer.json**:
 
 ```js
 {
