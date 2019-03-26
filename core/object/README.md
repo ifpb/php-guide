@@ -12,7 +12,7 @@
 
 ---
 
-<img src="assets/object-post.svg" alt="Point Object" width="200">
+<img src="assets/object-post.svg" alt="Point Object" width="150">
 
 ```php
 {% include_relative code/properties/Post.php %}
@@ -32,7 +32,11 @@
 
 ---
 
-Visibility: `public`, `protected`, `private`
+<!-- https://www.uml-diagrams.org/visibility.html -->
+
+Visibility: `public (+)`, `protected (#)`, `private (-)`
+
+<img src="assets/object-post-tohtml.svg" alt="Point Object" width="300">
 
 ```php
 {% include_relative code/visibility/Post.php %}
@@ -42,7 +46,7 @@ Visibility: `public`, `protected`, `private`
 
 ---
 
-<img src="assets/object-point-distance.svg" alt="Point Object" width="400">
+<img src="assets/object-point-static.svg" alt="Point Object" width="400">
 
 ```php
 {% include_relative code/static/Point.php %}
@@ -62,7 +66,7 @@ Visibility: `public`, `protected`, `private`
 
 ---
 
-<img src="assets/object-util-randomize-calculator.svg" alt="Point Object" width="700">
+<img src="assets/object-util-randomize-calculator.svg" alt="Point Object" width="800">
 
 ```php
 {% include_relative code/traits/Util.php %}
@@ -71,6 +75,8 @@ Visibility: `public`, `protected`, `private`
 ## Object Array Interaction
 
 ---
+
+<img src="assets/object-ip.svg" alt="IP Object" width="300">
 
 ```php
 {% include_relative code/interaction/Address.php %}

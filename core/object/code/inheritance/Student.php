@@ -24,5 +24,4 @@ class Student extends Person
 
 $student = new Student('fulano', 10);
 
-var_dump($student->hello()); 
-
+var_dump($student->hello()); //=> string(13) "Hello: fulano"

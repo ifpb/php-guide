@@ -18,4 +18,6 @@ class Post
 }
 
 $post = new Post('Lorem ipsum dolor', 'Nunc accumsan in ipsum a mattis...');
-var_dump($post->toHMTL()); 
+
+var_dump($post->toHMTL());
+//=> string(78) "<div><h1>Lorem ipsum dolor</h1><p>Nunc accumsan in ipsum a mattis...</p></div>"

@@ -39,4 +39,4 @@ class Util
 $util = new Util();
 
 var_dump($util->randomRange(1, 10));   //=> int(5)
-var_dump($util->subtraction(100, 10)); 
+var_dump($util->subtraction(100, 10)); //=> int(90)

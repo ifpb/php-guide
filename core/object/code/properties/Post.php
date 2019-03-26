@@ -13,6 +13,7 @@ class Post
 }
 
 $post = new Post('Lorem ipsum dolor', 'Nunc accumsan in ipsum a mattis...');
+
 var_dump($post);
 //=>
 // object(Post)#1 (2) {
