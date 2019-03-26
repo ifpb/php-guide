@@ -1,6 +1,10 @@
 # [Function Reference (Stdlib)](http://php.net/manual/en/funcref.php)
 
-- File System Related Extensions 
+## Contents
+
+---
+
+- File System Related Extensions
   - [Filesystem](filesystem/)
 - Database Extensions
   - Abstraction Layers
@@ -9,10 +13,17 @@
   - [JSON](json/)
 - Other Services
   - [SSH2 — Secure Shell2](ssh2/)
-- Process Control Extensions 
+- Process Control Extensions
   - [Program execution](program-execution/)
 - Text Processing
   - [PCRE — Regular Expressions (Perl-Compatible)](pcre/)
   - [Strings](strings/)
 - Variable and Type Related Extensions
   - [Arrays](arrays)
+
+## References
+
+---
+
+- [Manual do php.net](http://php.net/manual/en/)
+  - [Function Reference](http://php.net/manual/en/funcref.php)

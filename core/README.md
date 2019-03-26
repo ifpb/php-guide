@@ -1,20 +1,13 @@
-# PHP
+# [PHP Core](https://www.php.net/manual/en/langref.php)
 
 ## Contents
 
 ---
 
 - [Values and Types](values-and-types/)
-  - Scalar:
-    - [Boolean](boolean/)
-    - [Integer](number/#integer)
-    - [Float](number/#float)
-    - [String](string/)
-  - Compound:
-    - [Array](array/)
-    - [Object](object/)
-  - Special:
-    - [Null](null/)
+  - Scalar: [Boolean](boolean/), [Integer](number/#integer), [Float](number/#float), [String](string/)
+  - Compound: [Array](array/), [Object](object/)
+  - Special: [Null](null/)
 - [Variable](variable/)
 - [Expression and Operator](expression-and-operator/)
 - [Statement](statements/)
