@@ -5,6 +5,7 @@
 - [Function - passing by reference](#function---passing-by-reference)
 
 ## Assignment - passing by value or passing by reference
+
 ---
 
 ### Scalar Types
@@ -20,7 +21,7 @@ $name2 = "new test";
 $name3 = &$name2;
 $name3 = "final test";
 
-print ("name1: $name1, name2: $name2, name3: $name3"); 
+print ("name1: $name1, name2: $name2, name3: $name3");
 //=> name1: test, name2: final test, name3: final test
 ```
 
@@ -32,13 +33,13 @@ $person = ['name' => 'fulano', 'email' => 'fulano@email'];
 // Passing by value
 $person2 = $person;
 $person2['name'] = 'sicrano';
-echo $person['name']; //=> fulano  
+echo $person['name']; //=> fulano
 
 // Passing by reference
 $person3 = &$person;
 $person3['name'] = 'sicrano';
 print_r($person);
-echo $person['name']; //=> sicrano  
+echo $person['name']; //=> sicrano
 ```
 
 ### Compound Types (Object)
@@ -73,6 +74,7 @@ print_r($myCar);
 ```
 
 #### Passing by value (clone)
+
 ```php
 class Car {
   public $engine;
@@ -87,8 +89,8 @@ print_r($myCar);
 // Car Object
 // (
 //   [engine] => Nice Engine
-//   [numberOfDoors] => 
-//   [howFast] => 
+//   [numberOfDoors] =>
+//   [howFast] =>
 // )
 
 $myCar->numberOfDoors = 4;
@@ -130,6 +132,7 @@ print_r($myCar);
 ```
 
 ## Statement - foreach
+
 ---
 
 ```php
@@ -159,6 +162,7 @@ print_r($names);
 ```
 
 ## Function - passing by reference
+
 ---
 
 ```php

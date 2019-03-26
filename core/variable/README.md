@@ -11,6 +11,7 @@
 - [Magic constants](#magic-constants)
 
 ## Definition
+
 ---
 
 ```php
@@ -19,6 +20,7 @@ $variable = 10;
 ```
 
 ## Output
+
 ---
 
 ### Scalar Types
@@ -52,9 +54,11 @@ echo($variable);  //=> Notice: Array to string conversion in php
 ```
 
 ## Pattern
+
 ---
 
 `[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*`
+
 ```php
 $variable;
 $Variable;
@@ -66,6 +70,7 @@ $class;
 ```
 
 ## Dinamic Type
+
 ---
 
 ```php
@@ -77,6 +82,7 @@ echo $variable; //=> fulano
 ```
 
 ## Case Sensitive
+
 ---
 
 ```php
@@ -88,6 +94,7 @@ echo $Variable; //=> fulano
 ```
 
 ## Constant
+
 ---
 
 ```php
@@ -101,6 +108,7 @@ echo VARIABLE; //=> 10
 ```
 
 ## Variable variables
+
 ---
 
 ```php
@@ -113,20 +121,21 @@ echo $name;   //=> fulano
 ```
 
 ## Variable from array
+
 ---
 
 ```php
 $params = ['name' => 'fulano', 'email' => 'fulano@email'];
 print_r($params);
-//=> 
+//=>
 // Array
 // (
 //     [name] => fulano
 //     [email] => fulano@email
 // )
 
-echo $params['name'];  //=> fulano  
-echo $params['email']; //=> fulano@email 
+echo $params['name'];  //=> fulano
+echo $params['email']; //=> fulano@email
 ```
 
 ### Valid extract
@@ -143,7 +152,7 @@ print_r(get_defined_vars());
 //   [email] => fulano@email
 //   ...
 // )
-echo $name;  //=> fulano  
+echo $name;  //=> fulano
 echo $email; //=> fulano@email
 ```
 
@@ -162,6 +171,7 @@ echo $10; //=> PHP Parse error:  syntax error, unexpected '10' (T_LNUMBER), expe
 ```
 
 ## [Predefined Variables](http://php.net/manual/en/reserved.variables.php)
+
 ---
 
 ```php
@@ -191,16 +201,16 @@ print_r($GLOBALS);
 //             ...
 //             [PHP_SELF] => -
 //             [SCRIPT_NAME] => -
-//             [SCRIPT_FILENAME] => 
-//             [PATH_TRANSLATED] => 
-//             [DOCUMENT_ROOT] => 
+//             [SCRIPT_FILENAME] =>
+//             [PATH_TRANSLATED] =>
+//             [DOCUMENT_ROOT] =>
 //             [REQUEST_TIME_FLOAT] => 1516707393.7673
 //             [REQUEST_TIME] => 1516707393
 //             [argv] => Array
 //                 (
 //                     [0] => -
 //                 )
-// 
+//
 //             [argc] => 1
 //         )
 //     [GLOBALS] => Array
@@ -221,9 +231,11 @@ print_r($GLOBALS);
 ```
 
 ## [Magic constants](http://php.net/manual/en/language.constants.predefined.php)
+
 ---
 
 <!-- http://i.imgur.com/YsbKHg1.gif-->
+
 ```php
 print_r(__DIR__); //=> /current_folder
 ```

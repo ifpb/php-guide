@@ -6,6 +6,7 @@
 - [Nowdoc Syntax](#nowdoc-syntax)
 
 ## Single Quoted
+
 ---
 
 ### Literal
@@ -16,6 +17,7 @@ var_dump('lorem ipsum'); //=> string(11) "lorem ipsum"
 ```
 
 ### String Multiline
+
 ```php
 var_dump('lorem
 ipsum');
@@ -24,7 +26,8 @@ ipsum');
 // ipsum"
 ```
 
-### Escape Sequences 
+### Escape Sequences
+
 ```php
 $variable = 'lorem\' ipsum';
 var_dump($variable); //=> string(12) "lorem' ipsum"
@@ -42,14 +45,17 @@ echo $variable;      //=> lorem \n ipsum
 ```
 
 ## Double Quoted
+
 ---
 
 ### Literal
+
 ```php
 var_dump("lorem ipsum"); //=> string(11) "lorem ipsum"
 ```
 
-### Escape Sequences 
+### Escape Sequences
+
 ```php
 var_dump("lorem\nipsum");
 //=>
@@ -57,7 +63,7 @@ var_dump("lorem\nipsum");
 // ipsum"
 ```
 
-### Variable parsing 
+### Variable parsing
 
 ```php
 $name = 'Alice';
@@ -85,9 +91,11 @@ var_dump("result: {$number+1}"); //=> Parse error: syntax error, unexpected '+',
 ```
 
 ## Heredoc Syntax
+
 ---
 
 ### Literal
+
 ```php
 $variable = <<<EOD
 lorem
@@ -100,7 +108,8 @@ var_dump($variable);
 // ipsum"
 ```
 
-### Escape Sequences 
+### Escape Sequences
+
 ```php
 $variable = "lorem
 \tipsum";
@@ -114,16 +123,18 @@ var_dump($variable);
 ```php
 $name = 'Alice';
 
-$variable = <<<EOD 
+$variable = <<<EOD
 Hello $name
 EOD;
 //=> PHP Parse error:  syntax error, unexpected '<<' (T_SL) in php
 ```
 
 ## Nowdoc Syntax
+
 ---
 
 ### Literal
+
 ```php
 
 $variable = <<<'EOD'
@@ -133,11 +144,12 @@ EOD;
 var_dump($variable); //=> string(12) "Hello world!"
 ```
 
-### Escape Sequences 
+### Escape Sequences
+
 ```php
 $name = 'Alice';
 
-$variable = <<<'EOD' 
+$variable = <<<'EOD'
 Hello $name
 EOD;
 //=> Parse error: syntax error, unexpected '<<' (T_SL) in php

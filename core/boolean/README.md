@@ -1,6 +1,7 @@
 # [Boolean](http://php.net/manual/en/language.types.boolean.php)
 
 ## true
+
 ---
 
 ```php
@@ -15,6 +16,7 @@ var_dump($variable); //=> bool(true)
 ```
 
 ## false
+
 ---
 
 ```php

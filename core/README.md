@@ -1,6 +1,7 @@
 # PHP
 
 ## Contents
+
 ---
 
 - [Values and Types](values-and-types/)
@@ -23,9 +24,10 @@
 - [Exceptions]()
 - [Generator]()
 - [References](references/)
-  
 
 ## References
+
 ---
+
 - [Manual do php.net](http://php.net/manual/en/)
   - [Language Reference](http://php.net/manual/en/langref.php)

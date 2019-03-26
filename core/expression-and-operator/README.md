@@ -17,13 +17,15 @@
 - [Operators List](#operators-list)
 
 ## [Operator Precedence](http://php.net/manual/en/language.operators.precedence.php)
+
 ---
 
-<!-- 
+<!--
 \begin{align*}
 C = \frac{F - 32}{1.8}
 \end{align*}
  -->
+
 ![](assets/celsius2fahrenheit.png)
 
 ### Option 1
@@ -32,7 +34,7 @@ C = \frac{F - 32}{1.8}
 $fahrenheit = 50;
 $celsius = $fahrenheit - 32 / 1.8;
 var_dump($celsius);   //=> float(32.222222222222)
-``` 
+```
 
 ![](assets/celsius2fahrenheit1.svg)
 
@@ -47,8 +49,8 @@ var_dump($celsius); //=> float(10)
 
 ![](assets/celsius2fahrenheit2.svg)
 
-
 ## [Arithmetic Operators](http://php.net/manual/en/language.operators.arithmetic.php)
+
 ---
 
 ```php
@@ -101,6 +103,7 @@ var_dump(10 ** 3);            //=> int(1000);  before php 5.6: pow(10, 3)
 ```
 
 ## [Assignment Operators](http://php.net/manual/en/language.operators.assignment.php)
+
 ---
 
 ```js
@@ -110,14 +113,16 @@ var_dump($variable); //=> int(10)
 ```
 
 Shorthand: `+=`, `-=`, `*=`, `**=`, `/=`, `.=`, `%=`, `&=`, `|=`, `^=`, `<<=`, `>>=`
+
 ```js
 // addition assignment operator
-$variable = 10;      
+$variable = 10;
 $variable += 1;      // $variable = $variable + 1
 var_dump($variable;) //=> int(11)
 ```
 
 ## [Bitwise Operators](http://php.net/manual/en/language.operators.bitwise.php)
+
 ---
 
 ```php
@@ -163,6 +168,7 @@ var_dump(-9 >>  2); //=> 11111111111111111111111111111101  -3
 ```
 
 ## [Comparations Operators](http://php.net/manual/en/language.operators.comparison.php)
+
 ---
 
 ```php
@@ -205,9 +211,9 @@ var_dump(1 > 10);     //=> bool(false)
 ```
 
 ```php
-// less than or equal operator 
+// less than or equal operator
 var_dump(1 <= 10);    //=> bool(true)
-```	
+```
 
 ```php
 // greater than or equal operator
@@ -232,9 +238,11 @@ var_dump("1 programador"+"1 computador" === (int)"2 passos paraíso");  //=> boo
 ```
 
 References:
-* [PHP type comparison tables](http://php.net/manual/en/types.comparisons.php)
+
+- [PHP type comparison tables](http://php.net/manual/en/types.comparisons.php)
 
 ## [Ternary Operator](http://php.net/manual/en/language.operators.comparison.php#language.operators.comparison.ternary)
+
 ---
 
 ```php
@@ -244,6 +252,7 @@ var_dump($result);     //=> int(10)
 ```
 
 ## [Null Coalescing Operator](http://php.net/manual/en/language.operators.comparison.php#language.operators.comparison.coalesce)
+
 ---
 
 ```php
@@ -252,6 +261,7 @@ var_dump($result);     //=> int(0)
 ```
 
 ## [Error Control Operators](http://php.net/manual/en/language.operators.errorcontrol.php)
+
 ---
 
 ```php
@@ -266,6 +276,7 @@ var_dump($result);     //=> NULL
 ```
 
 ## [Execution Operators](http://php.net/manual/en/language.operators.execution.php)
+
 ---
 
 ```php
@@ -280,7 +291,7 @@ var_dump(shell_exec('ping -c1 8.8.8.8'));
 //=>
 // string(249) "PING 8.8.8.8 (8.8.8.8): 56 data bytes
 // 64 bytes from 8.8.8.8: icmp_seq=0 ttl=50 time=72.338 ms
-// 
+//
 // --- 8.8.8.8 ping statistics ---
 // 1 packets transmitted, 1 packets received, 0.0% packet loss
 // round-trip min/avg/max/stddev = 72.338/72.338/72.338/0.000 ms
@@ -288,6 +299,7 @@ var_dump(shell_exec('ping -c1 8.8.8.8'));
 ```
 
 ## [Increment and Decrement Operators](http://php.net/manual/en/language.operators.increment.php)
+
 ---
 
 ```php
@@ -315,6 +327,7 @@ var_dump(--$number);      //=> int(9)
 ```
 
 ## [Logical Operators](http://php.net/manual/en/language.operators.logical.php)
+
 ---
 
 ```php
@@ -349,6 +362,7 @@ var_dump(!10);      //=> bool(false)
 ```
 
 ## [String Operators](http://php.net/manual/en/language.operators.string.php)
+
 ---
 
 ```php
@@ -357,11 +371,12 @@ var_dump("Hello ".$name); //=> string(11) "Hello Alice"
 ```
 
 ## [Array Operators](http://php.net/manual/en/language.operators.array.php)
+
 ---
 
 ```php
 // array union operator
-var_dump([1] + [2, 3]);  
+var_dump([1] + [2, 3]);
 //=>
 // array(2) {
 //   [0]=> int(1)
@@ -399,15 +414,17 @@ var_dump([1, 2] !== [3]); //=> bool(true)
 ```
 
 ## [Type Operators](http://php.net/manual/en/language.operators.type.php)
+
 ---
 
 ### [Type casting](http://php.net/manual/en/language.types.type-juggling.php): `(int)`, `(integer)`, `(float)`, `(string)`, `(array)`, `(object)`, `(bool)`, `(boolean)`
 
 ```php
 var_dump((int) "10"); //=> int(10)
-``` 
+```
 
 ### instanceof
+
 ```php
 class MyClass { }
 class OtherClass { }
@@ -415,33 +432,34 @@ class OtherClass { }
 $a = new MyClass;
 var_dump($a instanceof MyClass);    //=> bool(true)
 var_dump($a instanceof OtherClass); //=> bool(false)
-``` 
+```
 
 ## [Operators List](http://php.net/manual/en/language.operators.precedence.php)
+
 ---
 
-| Operator type | Operators |
-|-|-|
-| Grouping | `()` |
-| Clone | `clone` |
-| Instantiation | `new` |
-| Array operators | `[]`, `+`, `==`, `!=`, `<>`, `===`, `!==` |
-| Increment and decrement | `A++`, `A--`, `++A`, `--A` |
-| Arithmetic operators | `+`, `-`, `*`, `/`, `%`, `**` |
-| Type operators | `(int)`, `(float)`, `(string)`, `(array)`, `(object)`, `(bool)`, `instanceof` |
-| Bitwise operators | `~`, `&`, `|`, `^`, `<<`, `>>` |
-| Logical operators | `!`, `&&`, `and`, `||`, `or`, `xor` |
-| Error Control | `@` |
-| String operator | `.` |
-| Execution Operator | <code class="highlighter-rouge">``</code> |
-| Comparison operators | `<`, `<=`, `>`, `>=`, `==`, `!=`, `<>`, `===`, `!==`, `<=>`, `??` |
-| Ternary operators | `?:` |
-| Assignment operators | `=`, `+=`, `-=`, `*=`, `**=`, `/=`, `.=`, `%=`, `&=`, `|=`, `^=`, `<<=`, `>>=` |
+| Operator type           | Operators                                                                      |
+| ----------------------- | ------------------------------------------------------------------------------ |
+| Grouping                | `()`                                                                           |
+| Clone                   | `clone`                                                                        |
+| Instantiation           | `new`                                                                          |
+| Array operators         | `[]`, `+`, `==`, `!=`, `<>`, `===`, `!==`                                      |
+| Increment and decrement | `A++`, `A--`, `++A`, `--A`                                                     |
+| Arithmetic operators    | `+`, `-`, `*`, `/`, `%`, `**`                                                  |
+| Type operators          | `(int)`, `(float)`, `(string)`, `(array)`, `(object)`, `(bool)`, `instanceof`  |
+| Bitwise operators       | `~`, `&`, `|`, `^`, `<<`, `>>`                                                 |
+| Logical operators       | `!`, `&&`, `and`, `||`, `or`, `xor`                                            |
+| Error Control           | `@`                                                                            |
+| String operator         | `.`                                                                            |
+| Execution Operator      | <code class="highlighter-rouge">``</code>                                      |
+| Comparison operators    | `<`, `<=`, `>`, `>=`, `==`, `!=`, `<>`, `===`, `!==`, `<=>`, `??`              |
+| Ternary operators       | `?:`                                                                           |
+| Assignment operators    | `=`, `+=`, `-=`, `*=`, `**=`, `/=`, `.=`, `%=`, `&=`, `|=`, `^=`, `<<=`, `>>=` |
 
-
-### Non-associative 
+### Non-associative
 
 `clone`, `new`, `instanceof`, `<`, `<=`, `>`, `>=`, `==`, `!=`, `===`, `!==`:
+
 ```php
 1 < 2 > 1; //=> PHP Parse error:  syntax error, unexpected '>'
 ```

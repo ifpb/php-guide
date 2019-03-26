@@ -11,7 +11,9 @@
 - [Callback](#callback)
 
 ## Definition
+
 ---
+
 ```php
 function soma($a, $b) {
   return $a+$b;
@@ -23,7 +25,9 @@ var_dump(soma(1, 2, 3)); //=> int(3)
 ```
 
 ## Case insensitive
+
 ---
+
 ```php
 function soma($a, $b) {
   return $a+$b;
@@ -35,6 +39,7 @@ var_dump(SOMA(1, 2)); //=> int(3)
 ```
 
 ## Scope
+
 ---
 
 ```php
@@ -61,6 +66,7 @@ var_dump(hello()); //=> string(12) "Hello fulano"
 ```
 
 ## Override
+
 ---
 
 ```php
@@ -75,7 +81,9 @@ function soma($a, $b, $c) {
 ```
 
 ## Recursion
+
 ---
+
 ```php
 function factorial($n) {
   return $n == 0 ? 1 : $n * factorial($n - 1);
@@ -85,6 +93,7 @@ var_dump(factorial(4)); //=> int(24)
 ```
 
 ## Default argument values
+
 ---
 
 ```php
@@ -97,6 +106,7 @@ var_dump(soma(1, 2, 3)); //=> int(6)
 ```
 
 ## Variable-length argument lists
+
 ---
 
 ```php
@@ -109,6 +119,7 @@ var_dump(somation(1, 2, 3, 4)); //=> int(10)
 ```
 
 ## Scalar type declarations & typed param
+
 ---
 
 ```php
@@ -118,11 +129,12 @@ function somation(int ...$values):int {
 
 var_dump(somation(1, 2));       //=> int(3)
 var_dump(somation(1, 2, 3, 4)); //=> int(10)
-var_dump(somation(1, 'a'));     
+var_dump(somation(1, 'a'));
 //=> PHP Warning:  Uncaught TypeError: Argument 2 passed to somation() must be of the type integer, string given, called in php
 ```
 
 ## Callback
+
 ---
 
 ```php

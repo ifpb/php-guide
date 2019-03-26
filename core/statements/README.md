@@ -16,9 +16,11 @@
   - [include_once](#include_once)
 
 ## Control flow
+
 ---
 
 ### if, else, elseif/else if
+
 ```php
 $number = 10;
 
@@ -33,6 +35,7 @@ if ($number > 0){
 ```
 
 ### switch
+
 ```php
 $number1 = 10;
 $number2 = 10;
@@ -61,6 +64,7 @@ var_dump($result); //=> int(20)
 ```
 
 ## Iterations
+
 ---
 
 ### for
@@ -143,9 +147,11 @@ do {
 ```
 
 ## Alternative syntax
+
 ---
 
 `endif;`, `endwhile;`, `endfor;`, `endforeach;`, or `endswitch;`:
+
 ```php
 $number = 10;
 
@@ -160,6 +166,7 @@ endif;
 ```
 
 ## Includes
+
 ---
 
 ### [require()](http://php.net/manual/en/function.require.php)
@@ -173,11 +180,13 @@ require
 ```
 
 [codes/require/util.php](codes/require/util.php):
+
 ```php
 {% include_relative codes/require/util.php %}
 ```
 
 [codes/require/test.php](codes/require/test.php):
+
 ```php
 {% include_relative codes/require/test.php %}
 ```
@@ -192,11 +201,13 @@ require-path-child
 ```
 
 [codes/require-path-child/lib/util.php](codes/require-path-child/lib/util.php):
+
 ```php
 {% include_relative codes/require-path-child/lib/util.php %}
 ```
 
 [codes/require-path-child/test.php](codes/require-path-child/test.php):
+
 ```php
 {% include_relative codes/require-path-child/test.php %}
 ```
@@ -212,11 +223,13 @@ require-path-parent
 ```
 
 [codes/require-path-parent/lib/util.php](codes/require-path-parent/lib/util.php):
+
 ```php
 {% include_relative codes/require-path-parent/lib/util.php %}
 ```
 
 [codes/require-path-parent/src/test.php](codes/require-path-parent/src/test.php):
+
 ```php
 {% include_relative codes/require-path-parent/src/test.php %}
 ```
@@ -230,11 +243,13 @@ include
 ```
 
 [codes/include/test.php](codes/include/test.php):
+
 ```php
 {% include_relative codes/include/test.php %}
 ```
 
 [codes/include/util.php](codes/include/util.php):
+
 ```php
 {% include_relative codes/include/util.php %}
 ```
@@ -252,16 +267,19 @@ require-error
 ```
 
 [codes/require-error/lib/math.php](codes/require-error/lib/math.php):
+
 ```php
 {% include_relative codes/require-error/lib/math.php %}
 ```
 
 [codes/require-error/lib/util.php](codes/require-error/lib/util.php):
+
 ```php
 {% include_relative codes/require-error/lib/util.php %}
 ```
 
 [codes/require-error/test.php](codes/require-error/test.php):
+
 ```php
 {% include_relative codes/require-error/test.php %}
 ```
@@ -277,17 +295,19 @@ require_once
 ```
 
 [codes/require_once/lib/math.php](codes/require_once/lib/math.php):
+
 ```php
 {% include_relative codes/require_once/lib/math.php %}
 ```
 
 [codes/require_once/lib/util.php](codes/require_once/lib/util.php):
+
 ```php
 {% include_relative codes/require_once/lib/util.php %}
 ```
 
-
 [codes/require_once/test.php](codes/require_once/test.php):
+
 ```php
 {% include_relative codes/require_once/test.php %}
 ```
@@ -303,16 +323,19 @@ include_once
 ```
 
 [codes/include_once/lib/math.php](codes/include_once/lib/math.php):
+
 ```php
 {% include_relative codes/include_once/lib/math.php %}
 ```
 
 [codes/include_once/lib/util.php](codes/include_once/lib/util.php):
+
 ```php
 {% include_relative codes/include_once/lib/util.php %}
 ```
 
 [codes/include_once/test.php](codes/include_once/test.php):
+
 ```php
 {% include_relative codes/include_once/test.php %}
 ```

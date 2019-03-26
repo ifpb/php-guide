@@ -9,6 +9,7 @@
 - [Object Array Interaction](#object-array-interaction)
 
 ## [Property](http://php.net/manual/en/language.oop5.properties.php)
+
 ---
 
 <img src="assets/object-post.svg" alt="Point Object" width="200">
@@ -25,7 +26,7 @@ class Post {
 }
 
 $post = new Post('Lorem ipsum dolor', 'Nunc accumsan in ipsum a mattis...');
-var_dump($post); 
+var_dump($post);
 //=>
 // object(Post)#1 (2) {
 //   ["title"] => string(17) "Lorem ipsum dolor"
@@ -34,6 +35,7 @@ var_dump($post);
 ```
 
 ## [Methods](http://php.net/manual/en/language.oop5.basic.php#language.oop5.basic.properties-methods)
+
 ---
 
 <img src="assets/object-post-tohtml.svg" alt="Point Object" width="300">
@@ -58,6 +60,7 @@ var_dump($post->toHMTL()); //=> string(78) "<div><h1>Lorem ipsum dolor</h1><p>Nu
 ```
 
 ## [Visibility](http://php.net/manual/en/language.oop5.visibility.php)
+
 ---
 
 Visibility: `public`, `protected`, `private`
@@ -97,6 +100,7 @@ $post->title;       //=> Fatal error: Uncaught Error: Cannot access private prop
 ```
 
 ## [Static keyword](http://php.net/manual/en/language.oop5.static.php)
+
 ---
 
 <img src="assets/object-point-distance.svg" alt="Point Object" width="400">
@@ -125,6 +129,7 @@ var_dump(Point::distance($p1, $p2)); //=> float(7.0710678118655)
 ```
 
 ## [Object Inheritance](http://php.net/manual/en/language.oop5.inheritance.php)
+
 ---
 
 <img src="assets/object-person-student.svg" alt="Point Object" width="300">
@@ -153,27 +158,28 @@ var_dump($student->hello()); //=> string(20) tring(13) "Hello: fulano"
 ```
 
 ### [Traits](http://php.net/manual/en/language.oop5.traits.php)
+
 ---
 
 <img src="assets/object-util-randomize-calculator.svg" alt="Point Object" width="700">
 
 ```php
 trait CalculatorMixin {
-  public function addition($a, $b) { 
+  public function addition($a, $b) {
     return $a + $b;
   }
 
-  public function subtraction($a, $b) { 
+  public function subtraction($a, $b) {
     return $a - $b;
   }
 }
 
 trait RandomizerMixin {
-  public function random() { 
+  public function random() {
     return rand();
   }
 
-  public function randomRange($min, $max) { 
+  public function randomRange($min, $max) {
     return rand($min, $max);
   }
 }
@@ -181,7 +187,7 @@ trait RandomizerMixin {
 class Util {
   use CalculatorMixin, RandomizerMixin;
 
-  public function multiplication($a, $b) { 
+  public function multiplication($a, $b) {
     return $a * $b;
   }
 }
@@ -193,6 +199,7 @@ var_dump($util->subtraction(100,10)); //=> int(90)
 ```
 
 ## Object Array Interaction
+
 ---
 
 ```js
