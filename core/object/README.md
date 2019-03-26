@@ -45,7 +45,7 @@ Visibility: `public`, `protected`, `private`
 <img src="assets/object-point-distance.svg" alt="Point Object" width="400">
 
 ```php
-{% include_relative code/visibility/Post.php %}
+{% include_relative code/static/Point.php %}
 ```
 
 ## [Object Inheritance](http://php.net/manual/en/language.oop5.inheritance.php)
