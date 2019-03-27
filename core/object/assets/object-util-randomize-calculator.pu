@@ -4,17 +4,17 @@ skinparam monochrome true
 hide circle
 
 class CalculatorMixin {
-    addition(a: Number, b: Number): Number
-    subtraction(a: Number, b: Number): Number
+    +addition(a: Number, b: Number): Number
+    +subtraction(a: Number, b: Number): Number
 }
 
 class RandomizerMixin {
-    random(): Number
-    randomRange(min: Number, max: Number): Number
+    +random(): Number
+    +randomRange(min: Number, max: Number): Number
 }
 
 class Util {
-    multiplication(a: Number, b: Number): Number
+    +multiplication(a: Number, b: Number): Number
 }
 
 CalculatorMixin <|-- Util

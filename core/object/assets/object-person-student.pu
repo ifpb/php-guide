@@ -4,14 +4,16 @@ skinparam monochrome true
 hide circle
 
 class Person {
-    name: String
-    constructor(name: String)
-    hello(): String
+    +name: String
+    +__constructor(name: String)
+    +hello(): String
 }
 
 class Student {
-    id: String
-    constructor(name: String, id: String)
+    +course: String
+    +__constructor(name: String, course: String)
+    +__toString(): String
+    +hello(): String
 }
 
 Person <|-- Student

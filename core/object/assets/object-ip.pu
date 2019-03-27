@@ -4,8 +4,8 @@ skinparam monochrome true
 hide circle
 
 class Address {
-    ip: String
-    mask: String
-    constructor(name: String, mask: String)
+    +ip: String
+    +mask: String
+    +__constructor(name: String, mask: String)
 }
 @enduml

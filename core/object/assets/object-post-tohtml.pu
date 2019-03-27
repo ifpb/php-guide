@@ -6,7 +6,7 @@ hide circle
 class Post {
     title: String
     text: String
-    constructor(title: String, text: String)
+    __constructor(title: String, text: String)
     toHTML(): String
 }
 @enduml

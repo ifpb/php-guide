@@ -9,19 +9,30 @@ class Person
 
   public function hello()
   {
-    return "Hello: {$this->name}";
+    return "Hello {$this->name}!";
   }
 }
 
 class Student extends Person
 {
-  public function __construct($name, $id)
+  public function __construct($name, $course)
   {
     parent::__construct($name);
-    $this->id = $id;
+    $this->course = $course;
+  }
+
+  public function __toString()
+  {
+    return "Name: {$this->name}, Course: {$this->course}";
+  }
+
+  public function hello()
+  {
+    return parent::hello() . "(Course: {$this->course})";
   }
 }
 
-$student = new Student('fulano', 10);
+$student = new Student('Fulano', 'TSI');
 
-var_dump($student->hello()); //=> string(13) "Hello: fulano"
+var_dump((string)$student);  //=> string(25) "Name: Fulano, Course: TSI"
+var_dump($student->hello()); //=> string(26) "Hello Fulano!(Course: TSI)"

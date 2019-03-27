@@ -12,7 +12,7 @@
 
 ---
 
-<img src="assets/object-post.svg" alt="Point Object" width="150">
+<img src="assets/object-post.svg" alt="Point Object" width="120">
 
 ```php
 {% include_relative code/properties/Post.php %}
@@ -36,7 +36,7 @@
 
 Visibility: `public (+)`, `protected (#)`, `private (-)`
 
-<img src="assets/object-post-tohtml.svg" alt="Point Object" width="300">
+<img src="assets/object-post-visibility.svg" alt="Point Object" width="300">
 
 ```php
 {% include_relative code/visibility/Post.php %}
@@ -46,7 +46,7 @@ Visibility: `public (+)`, `protected (#)`, `private (-)`
 
 ---
 
-<img src="assets/object-point-static.svg" alt="Point Object" width="400">
+<img src="assets/object-point-static.svg" alt="Point Object" width="350">
 
 ```php
 {% include_relative code/static/Point.php %}
