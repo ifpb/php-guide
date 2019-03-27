@@ -12,11 +12,10 @@
 - [Expression and Operator](expression-and-operator/)
 - [Statement](statements/)
 - [Function](function/)
-- [Namespaces]()
-- [Errors]()
-- [Exceptions]()
-- [Generator]()
-- [References](references/)
+- [Namespaces](namespaces/)
+- [Errors](errors/) & [Exceptions](exceptions/)
+- [Generator](generator/)
+- [Values & References](references/)
 
 ## References
 
