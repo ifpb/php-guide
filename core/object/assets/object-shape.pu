@@ -1,0 +1,37 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam monochrome true
+hide circle
+
+abstract class Shape {
+  #name: String
+  +getName(): String
+  +setName(name: String): void
+  {abstract} +area(): Number
+  {abstract} +__toString(): String
+}
+
+class Square {
+  +side: String
+  +__constructor(side: Number)
+  +area(): Number
+  +__toString(): String
+}
+
+class Circle {
+  +radius: String
+  +__constructor(radius: Number)
+  +area(): Number
+  +__toString(): String
+}
+
+class ShapeSet {
+  {static} +shapes: Array<Shape>
+  {static} +add(id: Number, shape: Shape): void
+  {static} +shapes(): Array<Shape>
+}
+
+Shape <|-- Circle
+Shape <|-- Square
+Shape <- ShapeSet
+@enduml

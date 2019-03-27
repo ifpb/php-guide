@@ -5,6 +5,7 @@
 - [Visibility](#visibility)
 - [Static keyword](#static-keyword)
 - [Object Inheritance](#object-inheritance)
+- [Abstract Class](#abstract-class)
 - [Traits](#traits)
 - [Object Array Interaction](#object-array-interaction)
 
@@ -48,6 +49,8 @@ Visibility: `public (+)`, `protected (#)`, `private (-)`
 
 <img src="assets/object-point-static.svg" alt="Point Object" width="350">
 
+Scope Resolution Operator (::) - a token that allows access to static, constant, and overridden properties or methods of a class.
+
 ```php
 {% include_relative code/static/Point.php %}
 ```
@@ -60,6 +63,16 @@ Visibility: `public (+)`, `protected (#)`, `private (-)`
 
 ```php
 {% include_relative code/inheritance/Student.php %}
+```
+
+## [Abstract Class](https://www.php.net/manual/en/language.oop5.abstract.php)
+
+---
+
+<img src="assets/object-shape.svg" alt="Point Object" width="600">
+
+```php
+{% include_relative code/prototype/Shape.php %}
 ```
 
 ### [Traits](http://php.net/manual/en/language.oop5.traits.php)

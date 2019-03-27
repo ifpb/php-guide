@@ -19,7 +19,6 @@ class Point
 
   public static function kind()
   {
-    // return "${self::$dimension} - ${self::SIZE}";
     return '[type: ' . self::$dimension . ', size:' . self::SIZE . ']';
   }
 
@@ -34,11 +33,10 @@ class Point
 $p1 = new Point(5, 5);
 $p2 = new Point(10, 10);
 
-var_dump(Point::distance($p1, $p2)); //=> float(7.0710678118655)
-
 var_dump(Point::SIZE); //=> string(3) "2px"
-
 var_dump(Point::$dimension); //=> string(2) "2D"
+
+var_dump(Point::distance($p1, $p2)); //=> float(7.0710678118655)
 
 var_dump('Point ' . Point::kind() . ' at ' . $p1);
 //=> string(35) "Point [type: 2D, size:2px] at (5,5)"
