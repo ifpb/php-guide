@@ -1,0 +1,44 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam monochrome true
+hide circle
+
+interface Coffee
+{
+  {abstract} +getCost(): Number
+  {abstract} +getDescription(): String
+}
+
+class SimpleCoffee
+{
+  +getCost(): Number
+  +getDescription(): String
+}
+
+class CoffeeDecorator
+{
+  #coffee: Coffee
+  +__construct(coffee: Coffee)
+  +getCost(): Number
+  +getDescription(): String
+}
+
+class MilkCoffee
+{
+  +getCost(): Number
+  +getDescription(): String
+}
+
+class VanillaCoffee
+{
+  +getCost(): Number
+  +getDescription(): String
+}
+
+Coffee <|.. SimpleCoffee
+Coffee -[hidden]- SimpleCoffee
+Coffee <|.. CoffeeDecorator
+Coffee --* CoffeeDecorator
+CoffeeDecorator <|-- MilkCoffee
+CoffeeDecorator <|-- VanillaCoffee
+@enduml

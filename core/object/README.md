@@ -6,6 +6,7 @@
 - [Static keyword](#static-keyword)
 - [Object Inheritance](#object-inheritance)
 - [Abstract Class](#abstract-class)
+- [Interface](#interface)
 - [Traits](#traits)
 - [Object Array Interaction](#object-array-interaction)
 
@@ -75,11 +76,21 @@ Scope Resolution Operator (::) - a token that allows access to static, constant,
 {% include_relative code/prototype/Shape.php %}
 ```
 
+## [Interface](https://www.php.net/manual/en/language.oop5.interfaces.php)
+
+---
+
+<img src="assets/object-coffee.svg" alt="Coffee Object" width="600">
+
+```php
+{% include_relative code/decorator/Coffee.php %}
+```
+
 ### [Traits](http://php.net/manual/en/language.oop5.traits.php)
 
 ---
 
-<img src="assets/object-util-randomize-calculator.svg" alt="Point Object" width="800">
+<img src="assets/object-util-randomize-calculator.svg" alt="Util Object" width="800">
 
 ```php
 {% include_relative code/traits/Util.php %}

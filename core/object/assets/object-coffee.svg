@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="363px" preserveAspectRatio="none" style="width:445px;height:363px;" version="1.1" viewBox="0 0 445 363" width="445px" zoomAndPan="magnify"><defs><filter height="300%" id="fpdp4xud3cx8c" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--class Coffee--><rect fill="#F8F8F8" filter="url(#fpdp4xud3cx8c)" height="66.043" id="Coffee" style="stroke: #383838; stroke-width: 1.5;" width="146" x="102" y="8"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="37" x="156.5" y="24.6016">Coffee</text><line style="stroke: #383838; stroke-width: 1.5;" x1="103" x2="247" y1="32.1328" y2="32.1328"/><line style="stroke: #383838; stroke-width: 1.5;" x1="103" x2="247" y1="40.1328" y2="40.1328"/><text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="108" x="108" y="54.7676">+getCost(): Number</text><text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="134" x="108" y="67.7227">+getDescription(): String</text><!--class SimpleCoffee--><rect fill="#F8F8F8" filter="url(#fpdp4xud3cx8c)" height="66.043" id="SimpleCoffee" style="stroke: #383838; stroke-width: 1.5;" width="146" x="6" y="147"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="75" x="41.5" y="163.6016">SimpleCoffee</text><line style="stroke: #383838; stroke-width: 1.5;" x1="7" x2="151" y1="171.1328" y2="171.1328"/><line style="stroke: #383838; stroke-width: 1.5;" x1="7" x2="151" y1="179.1328" y2="179.1328"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="108" x="12" y="193.7676">+getCost(): Number</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="134" x="12" y="206.7227">+getDescription(): String</text><!--class CoffeeDecorator--><rect fill="#F8F8F8" filter="url(#fpdp4xud3cx8c)" height="91.9531" id="CoffeeDecorator" style="stroke: #383838; stroke-width: 1.5;" width="167" x="187.5" y="134"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="94" x="224" y="150.6016">CoffeeDecorator</text><line style="stroke: #383838; stroke-width: 1.5;" x1="188.5" x2="353.5" y1="158.1328" y2="158.1328"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="81" x="193.5" y="172.7676">#coffee: Coffee</text><line style="stroke: #383838; stroke-width: 1.5;" x1="188.5" x2="353.5" y1="179.0879" y2="179.0879"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="155" x="193.5" y="193.7227">+__construct(coffee: Coffee)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="108" x="193.5" y="206.6777">+getCost(): Number</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="134" x="193.5" y="219.6328">+getDescription(): String</text><!--class MilkCoffee--><rect fill="#F8F8F8" filter="url(#fpdp4xud3cx8c)" height="66.043" id="MilkCoffee" style="stroke: #383838; stroke-width: 1.5;" width="146" x="107" y="286"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="60" x="150" y="302.6016">MilkCoffee</text><line style="stroke: #383838; stroke-width: 1.5;" x1="108" x2="252" y1="310.1328" y2="310.1328"/><line style="stroke: #383838; stroke-width: 1.5;" x1="108" x2="252" y1="318.1328" y2="318.1328"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="108" x="113" y="332.7676">+getCost(): Number</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="134" x="113" y="345.7227">+getDescription(): String</text><!--class VanillaCoffee--><rect fill="#F8F8F8" filter="url(#fpdp4xud3cx8c)" height="66.043" id="VanillaCoffee" style="stroke: #383838; stroke-width: 1.5;" width="146" x="288" y="286"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="75" x="323.5" y="302.6016">VanillaCoffee</text><line style="stroke: #383838; stroke-width: 1.5;" x1="289" x2="433" y1="310.1328" y2="310.1328"/><line style="stroke: #383838; stroke-width: 1.5;" x1="289" x2="433" y1="318.1328" y2="318.1328"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="108" x="294" y="332.7676">+getCost(): Number</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="134" x="294" y="345.7227">+getDescription(): String</text><!--link Coffee to SimpleCoffee--><path d="M128.6071,90.415 C114.7148,109.1817 100.6858,130.0857 90.7674,146.9777 " fill="none" id="Coffee-SimpleCoffee" style="stroke: #383838; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="none" points="123.2272,85.9267,140.9383,74.294,134.3472,94.4325,123.2272,85.9267" style="stroke: #383838; stroke-width: 1.0;"/><!--link Coffee to SimpleCoffee--><!--link Coffee to CoffeeDecorator--><path d="M197.6366,91.6173 C206.5298,105.4206 216.8836,120.2991 227.0317,133.8402 " fill="none" id="Coffee-CoffeeDecorator" style="stroke: #383838; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="none" points="191.4898,94.9865,186.9271,74.294,203.398,87.6248,191.4898,94.9865" style="stroke: #383838; stroke-width: 1.0;"/><!--link Coffee to CoffeeDecorator--><path d="M209.7128,74.294 C221.2885,88.781 233.8373,106.18 244.7005,122.6412 " fill="none" id="Coffee-CoffeeDecorator" style="stroke: #383838; stroke-width: 1.0;"/><polygon fill="#383838" points="251.9191,133.8402,252.0304,126.63,245.4176,123.754,245.3063,130.9643,251.9191,133.8402" style="stroke: #383838; stroke-width: 1.0;"/><!--link CoffeeDecorator to MilkCoffee--><path d="M229.6455,243.1679 C220.0448,257.8327 210.1958,272.8768 201.8275,285.6591 " fill="none" id="CoffeeDecorator-MilkCoffee" style="stroke: #383838; stroke-width: 1.0;"/><polygon fill="none" points="223.887,239.1839,240.6983,226.285,235.6001,246.8522,223.887,239.1839" style="stroke: #383838; stroke-width: 1.0;"/><!--link CoffeeDecorator to VanillaCoffee--><path d="M311.9001,243.1679 C321.3953,257.8327 331.136,272.8768 339.4124,285.6591 " fill="none" id="CoffeeDecorator-VanillaCoffee" style="stroke: #383838; stroke-width: 1.0;"/><polygon fill="none" points="305.9629,246.8777,300.9687,226.285,317.7146,239.2686,305.9629,246.8777" style="stroke: #383838; stroke-width: 1.0;"/><!--
+@startuml
+skinparam classAttributeIconSize 0
+skinparam monochrome true
+hide circle
+
+interface Coffee
+{
+  {abstract} +getCost(): Number
+  {abstract} +getDescription(): String
+}
+
+class SimpleCoffee
+{
+  +getCost(): Number
+  +getDescription(): String
+}
+
+class CoffeeDecorator
+{
+  #coffee: Coffee
+  +__construct(coffee: Coffee)
+  +getCost(): Number
+  +getDescription(): String
+}
+
+class MilkCoffee
+{
+  +getCost(): Number
+  +getDescription(): String
+}
+
+class VanillaCoffee
+{
+  +getCost(): Number
+  +getDescription(): String
+}
+
+Coffee <|.. SimpleCoffee
+Coffee -[hidden]- SimpleCoffee
+Coffee <|.. CoffeeDecorator
+Coffee - -* CoffeeDecorator
+CoffeeDecorator <|- - MilkCoffee
+CoffeeDecorator <|- - VanillaCoffee
+@enduml
+
+PlantUML version 1.2019.03(Sun Mar 10 08:04:44 BRT 2019)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_101-b13
+Operating System: Mac OS X
+OS Version: 10.14.4
+Default Encoding: US-ASCII
+Language: en
+Country: US
+--></g></svg>
