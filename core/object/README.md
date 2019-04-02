@@ -76,7 +76,7 @@ Tips:
 
 Tips:
 
-- Scope Resolution Operator (::) - a token that allows access to static, constant, and overridden properties or methods of a class.
+- Scope Resolution Operator (::): a token that allows access to static, constant, and overridden properties or methods of a class.
 - As of PHP 7.1.0, class constants may be defined as public, private, or protected. Constants declared without any explicit visibility keyword are defined as public.
 
 ## [Object Inheritance](http://php.net/manual/en/language.oop5.inheritance.php)
@@ -144,7 +144,7 @@ Tips:
 
 ---
 
-<img src="code/interaction/assets/Address.svg" alt="IP Object" width="300">
+<img src="code/interaction/assets/Address.svg" alt="IP Object" width="350">
 
 ```php
 {% include_relative code/interaction/Address.php %}
