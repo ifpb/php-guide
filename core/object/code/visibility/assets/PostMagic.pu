@@ -1,0 +1,13 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam monochrome true
+hide circle
+
+class Post {
+  -title: String
+  -text: String
+  +__constructor(title: String, text: String)
+  +__get(name: string): String
+  +__set(name: string, value: String): void
+}
+@enduml

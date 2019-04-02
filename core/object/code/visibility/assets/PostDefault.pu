@@ -1,11 +1,11 @@
 @startuml
-scale max 200 width
 skinparam classAttributeIconSize 0
 skinparam monochrome true
 hide circle
 
-class Point {
-  x: int
-  y: int
+class Post {
+  -title: String
+  -text: String
+  +__constructor(title: String, text: String)
 }
 @enduml

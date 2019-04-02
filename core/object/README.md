@@ -14,7 +14,7 @@
 
 ---
 
-<img src="assets/object-post.svg" alt="Point Object" width="120">
+<img src="code/properties/assets/Post.svg" alt="Post Object" width="120">
 
 ```php
 {% include_relative code/properties/Post.php %}
@@ -24,7 +24,7 @@
 
 ---
 
-<img src="assets/object-post-tohtml.svg" alt="Point Object" width="300">
+<img src="code/methods/assets/Post.svg" alt="Post Object" width="300">
 
 ```php
 {% include_relative code/methods/Post.php %}
@@ -34,21 +34,31 @@
 
 ---
 
-<!-- https://www.uml-diagrams.org/visibility.html -->
+[Visibility](https://www.uml-diagrams.org/visibility.html): `public (+)`, `protected (#)`, `private (-)`
 
-Visibility: `public (+)`, `protected (#)`, `private (-)`
-
-<img src="assets/object-post-visibility.svg" alt="Point Object" width="300">
+<img src="code/visibility/assets/PostDefault.svg" alt="PostDefault Object" width="300">
 
 ```php
-{% include_relative code/visibility/Post.php %}
+{% include_relative code/visibility/PostDefault.php %}
+```
+
+<img src="code/visibility/assets/PostAccessor.svg" alt="PostAccessor Object" width="300">
+
+```php
+{% include_relative code/visibility/PostAccessor.php %}
+```
+
+<img src="code/visibility/assets/PostMagic.svg" alt="PostMagic Object" width="300">
+
+```php
+{% include_relative code/visibility/PostMagic.php %}
 ```
 
 ## [Static keyword](http://php.net/manual/en/language.oop5.static.php)
 
 ---
 
-<img src="assets/object-point-static.svg" alt="Point Object" width="350">
+<img src="code/static/assets/Point.svg" alt="Point Object" width="350">
 
 Scope Resolution Operator (::) - a token that allows access to static, constant, and overridden properties or methods of a class.
 
@@ -60,7 +70,7 @@ Scope Resolution Operator (::) - a token that allows access to static, constant,
 
 ---
 
-<img src="assets/object-person-student.svg" alt="Point Object" width="300">
+<img src="code/inheritance/assets/Student.svg" alt="Student Object" width="300">
 
 ```php
 {% include_relative code/inheritance/Student.php %}
@@ -70,7 +80,7 @@ Scope Resolution Operator (::) - a token that allows access to static, constant,
 
 ---
 
-<img src="assets/object-shape.svg" alt="Point Object" width="600">
+<img src="code/prototype/assets/Shape.svg" alt="Shape Object" width="600">
 
 ```php
 {% include_relative code/prototype/Shape.php %}
@@ -80,17 +90,17 @@ Scope Resolution Operator (::) - a token that allows access to static, constant,
 
 ---
 
-<img src="assets/object-coffee.svg" alt="Coffee Object" width="600">
+<img src="code/interface/assets/Util.svg" alt="Util Object" width="800">
 
 ```php
-{% include_relative code/decorator/Coffee.php %}
+{% include_relative code/interface/Util.php %}
 ```
 
 ### [Traits](http://php.net/manual/en/language.oop5.traits.php)
 
 ---
 
-<img src="assets/object-util-randomize-calculator.svg" alt="Util Object" width="800">
+<img src="code/traits/assets/Util.svg" alt="Util Object" width="800">
 
 ```php
 {% include_relative code/traits/Util.php %}
@@ -100,7 +110,7 @@ Scope Resolution Operator (::) - a token that allows access to static, constant,
 
 ---
 
-<img src="assets/object-ip.svg" alt="IP Object" width="300">
+<img src="code/interaction/assets/Address.svg" alt="IP Object" width="300">
 
 ```php
 {% include_relative code/interaction/Address.php %}

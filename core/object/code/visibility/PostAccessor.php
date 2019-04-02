@@ -34,8 +34,8 @@ class Post
 
 $post = new Post('Lorem ipsum dolor', 'Nunc accumsan in ipsum a mattis...');
 
-$post->title;       //=> Fatal error: Uncaught Error: Cannot access private property Post::$title  
+// $post->title;             //=> Fatal error: Uncaught Error: Cannot access private property Post::$title  
+var_dump($post->getTitle()); //=> string(17) "Lorem ipsum dolor"
 
 $post->setTitle('Dolor');
-$title = $post->getTitle();
-var_dump($title);   //=> string(5) "Dolor"
+var_dump($post->getTitle()); //=> string(5) "Dolor"

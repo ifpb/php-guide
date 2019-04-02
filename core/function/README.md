@@ -19,7 +19,7 @@ function soma($a, $b) {
   return $a+$b;
 }
 
-var_dump(soma(1));       //=> int(1)
+var_dump(soma(1));       //=> Fatal error: Uncaught ArgumentCountError: Too few arguments to function soma(), 1 passed
 var_dump(soma(1, 2));    //=> int(3)
 var_dump(soma(1, 2, 3)); //=> int(3)
 ```

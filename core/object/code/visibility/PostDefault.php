@@ -2,9 +2,6 @@
 
 class Post
 {
-  public $title;
-  public $text;
-
   public function __construct($title, $text)
   {
     $this->title = $title;
@@ -14,10 +11,7 @@ class Post
 
 $post = new Post('Lorem ipsum dolor', 'Nunc accumsan in ipsum a mattis...');
 
-var_dump($post);
-//=>
-// object(Post)#1 (2) {
-//   ["title"] => string(17) "Lorem ipsum dolor"
-//   ["text"]  => string(34) "Nunc accumsan in ipsum a mattis..."
-
 var_dump($post->title); //=> string(17) "Lorem ipsum dolor"
+
+$post->title = 'Dolor';
+var_dump($post->title); //=> string(5) "Dolor"
