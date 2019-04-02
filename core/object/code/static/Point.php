@@ -1,7 +1,7 @@
 <?php
 class Point
 {
-  const SIZE = '2px';
+  public const SIZE = '2px';
   public static $dimension = '2D';
   public $x;
   public $y;
@@ -33,7 +33,7 @@ class Point
 $p1 = new Point(5, 5);
 $p2 = new Point(10, 10);
 
-var_dump(Point::SIZE); //=> string(3) "2px"
+var_dump(Point::SIZE);       //=> string(3) "2px"
 var_dump(Point::$dimension); //=> string(2) "2D"
 
 var_dump(Point::distance($p1, $p2)); //=> float(7.0710678118655)

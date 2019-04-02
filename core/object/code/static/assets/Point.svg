@@ -1,30 +1,49 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="122.7273px" preserveAspectRatio="none" style="width:194px;height:122px;" version="1.1" viewBox="0 0 194 122" width="194.697px" zoomAndPan="magnify"><defs><filter height="300%" id="fynlhy4g640dx" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="1.5151515151515151"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="3.0303030303030303" dy="3.0303030303030303" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--class Point--><rect fill="#F8F8F8" filter="url(#fynlhy4g640dx)" height="108.9193" id="Point" style="stroke: #383838; stroke-width: 1.1363636363636362;" width="181.8182" x="4.5455" y="6.0606"/><text fill="#000000" font-family="sans-serif" font-size="9.0909" lengthAdjust="spacingAndGlyphs" textLength="21.2121" x="84.8485" y="18.6375">Point</text><line style="stroke: #383838; stroke-width: 1.1363636363636362;" x1="5.303" x2="185.6061" y1="24.343" y2="24.343"/><text fill="#000000" font-family="sans-serif" font-size="8.3333" lengthAdjust="spacingAndGlyphs" text-decoration="underline" textLength="16.6667" x="9.0909" y="35.43">SIZE</text><line style="stroke: #000000; stroke-width: 1.0;" x1="9.0909" x2="25.7576" y1="36.9451" y2="36.9451"/><text fill="#000000" font-family="sans-serif" font-size="8.3333" lengthAdjust="spacingAndGlyphs" text-decoration="underline" textLength="49.2424" x="9.0909" y="45.2444">+dimension</text><line style="stroke: #000000; stroke-width: 1.0;" x1="9.0909" x2="58.3333" y1="46.7596" y2="46.7596"/><text fill="#000000" font-family="sans-serif" font-size="8.3333" lengthAdjust="spacingAndGlyphs" textLength="49.2424" x="9.0909" y="55.0589">+x: Number</text><text fill="#000000" font-family="sans-serif" font-size="8.3333" lengthAdjust="spacingAndGlyphs" textLength="48.4848" x="9.0909" y="64.8733">+y: Number</text><line style="stroke: #383838; stroke-width: 1.1363636363636362;" x1="5.303" x2="185.6061" y1="69.6615" y2="69.6615"/><text fill="#000000" font-family="sans-serif" font-size="8.3333" lengthAdjust="spacingAndGlyphs" textLength="159.0909" x="9.0909" y="80.7484">+__constructor(x: Number, y: Number)</text><text fill="#000000" font-family="sans-serif" font-size="8.3333" lengthAdjust="spacingAndGlyphs" textLength="83.3333" x="9.0909" y="90.5629">+__toString(): String</text><text fill="#000000" font-family="sans-serif" font-size="8.3333" lengthAdjust="spacingAndGlyphs" text-decoration="underline" textLength="172.7273" x="9.0909" y="100.3773">+distance(a: Number, b: Number): Number</text><line style="stroke: #000000; stroke-width: 1.0;" x1="9.0909" x2="181.8182" y1="101.8925" y2="101.8925"/><text fill="#000000" font-family="sans-serif" font-size="8.3333" lengthAdjust="spacingAndGlyphs" text-decoration="underline" textLength="59.0909" x="9.0909" y="110.1918">+kind(): String</text><line style="stroke: #000000; stroke-width: 1.0;" x1="9.0909" x2="68.1818" y1="111.7069" y2="111.7069"/><!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="274px" preserveAspectRatio="none" style="width:579px;height:274px;" version="1.1" viewBox="0 0 579 274" width="579px" zoomAndPan="magnify"><defs><filter height="300%" id="f6pnno8mhti19" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--class Shape--><rect fill="#F8F8F8" filter="url(#f6pnno8mhti19)" height="103.9922" id="Shape" style="stroke: #383838; stroke-width: 1.5;" width="185" x="117" y="8"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="40" x="189.5" y="24.1387">Shape</text><line style="stroke: #383838; stroke-width: 1.5;" x1="118" x2="301" y1="31.9688" y2="31.9688"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="83" x="123" y="46.1792">#name: String</text><line style="stroke: #383838; stroke-width: 1.5;" x1="118" x2="301" y1="52.7734" y2="52.7734"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="110" x="123" y="66.9839">+getName(): String</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="173" x="123" y="79.7886">+setName(name: String): void</text><text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="96" x="123" y="92.5933">+area(): Number</text><text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="114" x="123" y="105.3979">+__toString(): String</text><!--class Square--><rect fill="#F8F8F8" filter="url(#f6pnno8mhti19)" height="91.1875" id="Square" style="stroke: #383838; stroke-width: 1.5;" width="183" x="6" y="172"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="45" x="75" y="188.1387">Square</text><line style="stroke: #383838; stroke-width: 1.5;" x1="7" x2="188" y1="195.9688" y2="195.9688"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="75" x="12" y="210.1792">+side: String</text><line style="stroke: #383838; stroke-width: 1.5;" x1="7" x2="188" y1="216.7734" y2="216.7734"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="171" x="12" y="230.9839">+__constructor(side: Number)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="96" x="12" y="243.7886">+area(): Number</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="116" x="12" y="256.5933">+__toString(): String</text><!--class Circle--><rect fill="#F8F8F8" filter="url(#f6pnno8mhti19)" height="91.1875" id="Circle" style="stroke: #383838; stroke-width: 1.5;" width="195" x="224" y="172"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="34" x="304.5" y="188.1387">Circle</text><line style="stroke: #383838; stroke-width: 1.5;" x1="225" x2="418" y1="195.9688" y2="195.9688"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="87" x="230" y="210.1792">+radius: String</text><line style="stroke: #383838; stroke-width: 1.5;" x1="225" x2="418" y1="216.7734" y2="216.7734"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="183" x="230" y="230.9839">+__constructor(radius: Number)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="96" x="230" y="243.7886">+area(): Number</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="116" x="230" y="256.5933">+__toString(): String</text><!--class ShapeSet--><rect fill="#F8F8F8" filter="url(#f6pnno8mhti19)" height="78.3828" id="ShapeSet" style="stroke: #383838; stroke-width: 1.5;" width="231" x="337" y="21"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="61" x="422" y="37.1387">ShapeSet</text><line style="stroke: #383838; stroke-width: 1.5;" x1="338" x2="567" y1="44.9688" y2="44.9688"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" text-decoration="underline" textLength="143" x="343" y="59.1792">+shapes: Array&lt;Shape&gt;</text><line style="stroke: #383838; stroke-width: 1.5;" x1="338" x2="567" y1="65.7734" y2="65.7734"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" text-decoration="underline" textLength="219" x="343" y="79.9839">+add(id: Number, shape: Shape): void</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" text-decoration="underline" textLength="151" x="343" y="92.7886">+shapes(): Array&lt;Shape&gt;</text><!--link Shape to Circle--><path d="M258.193,128.605 C268.77,143.29 279.701,158.467 289.442,171.9904 " fill="none" id="Shape-Circle" style="stroke: #383838; stroke-width: 1.0;"/><polygon fill="none" points="252.492,132.667,246.483,112.347,263.852,124.485,252.492,132.667" style="stroke: #383838; stroke-width: 1.0;"/><!--link Shape to Square--><path d="M160.807,128.605 C150.23,143.29 139.299,158.467 129.558,171.9904 " fill="none" id="Shape-Square" style="stroke: #383838; stroke-width: 1.0;"/><polygon fill="none" points="155.148,124.485,172.517,112.347,166.508,132.667,155.148,124.485" style="stroke: #383838; stroke-width: 1.0;"/><!--link Shape to ShapeSet--><path d="M315.052,60 C322.275,60 329.499,60 336.723,60 " fill="none" id="Shape-ShapeSet" style="stroke: #383838; stroke-width: 1.0;"/><polygon fill="#FFFFFF" points="302.049,60,308.049,64,314.049,60,308.049,56,302.049,60" style="stroke: #383838; stroke-width: 1.0;"/><!--
 @startuml
-scale max 200 width
 skinparam classAttributeIconSize 0
 skinparam monochrome true
 hide circle
 
-class Point {
-  {static} SIZE
-  {static} +dimension
-  +x: Number
-  +y: Number
-  +__constructor(x: Number, y: Number)
-  +__toString(): String
-  {static} +distance(a: Number, b: Number): Number
-  {static} +kind(): String
+abstract class Shape {
+  #name: String
+  +getName(): String
+  +setName(name: String): void
+  {abstract} +area(): Number
+  {abstract} +__toString(): String
 }
+
+class Square {
+  +side: String
+  +__constructor(side: Number)
+  +area(): Number
+  +__toString(): String
+}
+
+class Circle {
+  +radius: String
+  +__constructor(radius: Number)
+  +area(): Number
+  +__toString(): String
+}
+
+class ShapeSet {
+  {static} +shapes: Array<Shape>
+  {static} +add(id: Number, shape: Shape): void
+  {static} +shapes(): Array<Shape>
+}
+
+Shape <|- - Circle
+Shape <|- - Square
+Shape o- ShapeSet
 @enduml
 
-PlantUML version 1.2019.03(Sun Mar 10 08:04:44 BRT 2019)
+PlantUML version 1.2019.05beta2(Unknown compile time)
 (GPL source distribution)
 Java Runtime: Java(TM) SE Runtime Environment
 JVM: Java HotSpot(TM) 64-Bit Server VM
-Java Version: 1.8.0_101-b13
-Operating System: Mac OS X
-OS Version: 10.14.4
-Default Encoding: US-ASCII
+Java Version: 1.7.0_25-b15
+Operating System: Linux
+Default Encoding: UTF-8
 Language: en
 Country: US
 --></g></svg>

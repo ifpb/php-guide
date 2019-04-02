@@ -33,5 +33,5 @@ class ShapeSet {
 
 Shape <|-- Circle
 Shape <|-- Square
-Shape <- ShapeSet
+Shape o- ShapeSet
 @enduml

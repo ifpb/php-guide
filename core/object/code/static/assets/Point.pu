@@ -5,7 +5,7 @@ skinparam monochrome true
 hide circle
 
 class Point {
-  {static} SIZE
+  {static} +SIZE
   {static} +dimension
   +x: Number
   +y: Number

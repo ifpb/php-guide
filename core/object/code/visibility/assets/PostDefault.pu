@@ -4,8 +4,8 @@ skinparam monochrome true
 hide circle
 
 class Post {
-  -title: String
-  -text: String
+  +title: String
+  +text: String
   +__constructor(title: String, text: String)
 }
 @enduml
