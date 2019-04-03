@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="274px" height="163px" contentScriptType="application/ecmascript" contentStyleType="text/css" preserveAspectRatio="none" style="width:274px;height:163px" version="1.1" viewBox="0 0 274 163" zoomAndPan="magnify">
+    <defs>
+        <filter id="f1qm2t2wtrcqaq" width="300%" height="300%" x="-1" y="-1">
+            <feGaussianBlur result="blurOut" stdDeviation="2.0"/>
+            <feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/>
+            <feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/>
+            <feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/>
+        </filter>
+    </defs>
+    <g>
+        <rect width="111" height="60.8906" x="6" y="92" fill="#F8F8F8" filter="url(#f1qm2t2wtrcqaq)" style="stroke:#383838;stroke-width:1.5"/>
+        <text x="51" y="105.1387" fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="21">
+            Car
+        </text>
+        <line x1="7" x2="116" y1="109.9688" y2="109.9688" style="stroke:#383838;stroke-width:1.5"/>
+        <text x="12" y="123.251" fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="99">
+            numberOfDoors = 4
+        </text>
+        <text x="12" y="134.8916" fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="73">
+            howFast = 150
+        </text>
+        <text x="12" y="146.5322" fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="62">
+            power = 200
+        </text>
+        <rect width="111" height="60.8906" x="152" y="92" fill="#F8F8F8" filter="url(#f1qm2t2wtrcqaq)" style="stroke:#383838;stroke-width:1.5"/>
+        <text x="193" y="105.1387" fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="21">
+            Car
+        </text>
+        <line x1="153" x2="262" y1="109.9688" y2="109.9688" style="stroke:#383838;stroke-width:1.5"/>
+        <text x="158" y="123.251" fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="99">
+            numberOfDoors = 4
+        </text>
+        <text x="158" y="134.8916" fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="73">
+            howFast = 400
+        </text>
+        <text x="158" y="146.5322" fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="62">
+            power = 200
+        </text>
+<!--class myCar-->
+        <rect id="myCar" width="44" height="23.9688" x="39.5" y="8" fill="#F8F8F8" filter="url(#f1qm2t2wtrcqaq)" style="stroke:#383838;stroke-width:1.5"/>
+        <text x="42.5" y="24.1387" fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="38">
+            myCar
+        </text>
+<!--class myCar2-->
+        <rect id="myCar2" width="52" height="23.9688" x="181.5" y="8" fill="#F8F8F8" filter="url(#f1qm2t2wtrcqaq)" style="stroke:#383838;stroke-width:1.5"/>
+        <text x="184.5" y="24.1387" fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="46">
+            myCar2
+        </text>
+<!--link myCar to Car-->
+        <path id="myCar-Car" fill="none" d="M61.5,32.139 C61.5,45.219 61.5,67.5517 61.5,86.6181 " style="stroke:#383838;stroke-width:1.0"/>
+        <polygon fill="#383838" points="61.5,91.8987,65.5,82.8987,61.5,86.8987,57.5,82.8987,61.5,91.8987" style="stroke:#383838;stroke-width:1.0"/>
+<!--link myCar2 to Car2-->
+        <path id="myCar2-Car2" fill="none" d="M207.5,32.139 C207.5,45.219 207.5,67.5517 207.5,86.6181 " style="stroke:#383838;stroke-width:1.0"/>
+        <polygon fill="#383838" points="207.5,91.8987,211.5,82.8987,207.5,86.8987,203.5,82.8987,207.5,91.8987" style="stroke:#383838;stroke-width:1.0"/>
+<!--@startuml skinparam classAttributeIconSize 0 skinparam monochrome true hide circle object Car Car : numberOfDoors = 4 Car : howFast = 150 Car : power = 200 object Car2 Car2 : numberOfDoors = 4 Car2 : howFast = 400 Car2 : power = 200 hide myCar members hide myCar2 members "myCar" - -> Car "myCar2" - -> Car2 @enduml PlantUML version 1.2019.05beta2(Unknown compile time) (GPL source distribution) Java Runtime: Java(TM) SE Runtime Environment JVM: Java HotSpot(TM) 64-Bit Server VM Java Version: 1.7.0_25-b15 Operating System: Linux Default Encoding: UTF-8 Language: en Country: US-->
+    </g>
+</svg>

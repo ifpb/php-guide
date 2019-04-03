@@ -1,0 +1,16 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam monochrome true
+hide circle
+
+object Car
+Car : numberOfDoors = 4
+Car : howFast = 150
+Car : power = 200
+
+hide myCar members
+hide myCar2 members
+
+"myCar" --> Car
+"myCar2" --> Car
+@enduml
