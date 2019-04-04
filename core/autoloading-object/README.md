@@ -1,0 +1,141 @@
+# [Autoloading Classes](https://www.php.net/manual/en/language.oop5.autoload.php)
+
+- [Autoload](#autoload)
+- [SPL Autoload](#spl-autoload)
+- [Autoload File](#autoload-file)
+
+## Autoload
+
+```
+tree .
+.
+├── ArrayUtil
+│   └── ArrayUtil.php
+├── Hello.php
+└── index.php
+
+1 directory, 3 files
+```
+
+[ArrayUtil/ArrayUtil.php](code/autoload/ArrayUtil/ArrayUtil.php)
+
+```php
+{% include_relative code/autoload/ArrayUtil/ArrayUtil.php %}
+```
+
+[Hello.php](code/autoload/Hello.php)
+
+```php
+{% include_relative code/autoload/Hello.php %}
+```
+
+[index.php](code/autoload/index.php)
+
+```php
+{% include_relative code/autoload/index.php %}
+```
+
+Tips:
+
+- PHP can load class files automatically on demand (No explicit require statements are needed);
+- The file name must match the case of the terminating class name (each class in a separate file);
+- The directory name must match the case of the namespace names.
+
+REFERENCES
+
+- [autoload](https://www.php.net/manual/en/function.autoload.php)
+
+## SPL Autoload
+
+```
+tree .
+.
+├── ArrayUtil
+│   └── ArrayUtil.php
+├── Hello.php
+└── index.php
+
+1 directory, 3 files
+```
+
+[ArrayUtil/ArrayUtil.php](code/spl-autoload-hello/ArrayUtil/ArrayUtil.php)
+
+```php
+{% include_relative code/spl-autoload-hello/ArrayUtil/ArrayUtil.php %}
+```
+
+[Hello.php](code/spl-autoload-hello/Hello.php)
+
+```php
+{% include_relative code/spl-autoload-hello/Hello.php %}
+```
+
+[index.php](code/spl-autoload-hello/index.php)
+
+```php
+{% include_relative code/spl-autoload-hello/index.php %}
+```
+
+REFERENCES
+
+- [SPL Functions](https://www.php.net/manual/en/ref.spl.php)
+  - [spl_autoload_register](https://www.php.net/manual/en/function.spl-autoload-register.php)
+  - [spl_autoload_extensions](https://www.php.net/manual/en/function.spl-autoload-extensions.php)
+- [Fazendo autoload de classes no PHP](https://medium.com/weyes/fazendo-autoload-de-classes-no-php-c802623adeaf)
+
+## Autoload File
+
+```
+tree .
+.
+├── ArrayUtil
+│   ├── Arithmetic
+│   │   └── Arithmetic.php
+│   ├── ArrayUtil.php
+│   └── Stats
+│       └── Stats.php
+├── autoload.php
+└── index.php
+
+3 directories, 5 files
+```
+
+<img src="code/spl-autoload-arrayutil/assets/ArrayUtil.svg" alt="ArrayUtil Object" width="400px">
+
+[ArrayUtil/ArrayUtil.php](code/spl-autoload-arrayutil/ArrayUtil/ArrayUtil.php)
+
+```php
+{% include_relative code/spl-autoload-arrayutil/ArrayUtil/ArrayUtil.php %}
+```
+
+[autoload.php](code/spl-autoload-arrayutil/autoload.php)
+
+```php
+{% include_relative code/spl-autoload-arrayutil/autoload.php %}
+```
+
+[index.php](code/spl-autoload-arrayutil/index.php)
+
+```php
+{% include_relative code/spl-autoload-arrayutil/index.php %}
+```
+
+## References
+
+- [Autoloading Classes](https://www.php.net/manual/en/language.oop5.autoload.php)
+- [PHP Standards Recommendations](https://www.php-fig.org/psr/)
+  - Autoloading: [PSR-0: Autoloading Standard](https://www.php-fig.org/psr/psr-0/), [PSR-4: Autoloader](https://www.php-fig.org/psr/psr-4/)
+- [Usando namespace e autoload no PHP](https://www.youtube.com/watch?v=UeCVTTtRmGE)
+
+<!-- TODO
+[Simple PHP Class Autoloading Function and Tutorial](https://www.shayanderson.com/php/simple-php-class-autoloading-function-and-tutorial.htm)
+[Autoloading in PHP and the PSR-0 Standard](https://www.sitepoint.com/autoloading-and-the-psr-0-standard/)
+[Battle of the Autoloaders: PSR-0 vs. PSR-4](https://www.sitepoint.com/battle-autoloaders-psr-0-vs-psr-4/)
+[Batalha dos Autoloaders: PSR-0 x PSR-4](https://rogerioadris.wordpress.com/2014/07/29/batalha-dos-autoloaders-psr-0-x-psr-4/)
+[Difference between PSR-0 and PSR-4](https://medium.com/@udhavsarvaiya/difference-between-psr-0-and-psr-4-5cec7b0eb8d8)
+[PHP-FIG e as PSR: Parte 4](https://davidlima.com.br/post/php-fig-e-as-psr-parte-4/)
+[PHP Composer … The Autoloader](https://medium.com/tech-tajawal/php-composer-the-autoloader-d676a2f103aa)
+[Composer - autoload](https://getcomposer.org/doc/01-basic-usage.md#autoloading)
+[PHP Autoload PSR-4/PSR-0 com composer](http://www.douglaspasqua.com/2015/01/26/php-autoload-psr-4psr-0-com-composer/)
+[Composer - Autoload e PSR-0 vs PSR-4](https://pt.stackoverflow.com/questions/19200/composer-autoload-e-psr-0-vs-psr-4)
+-->

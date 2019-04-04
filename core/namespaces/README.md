@@ -1,5 +1,11 @@
 # [Namespaces](https://www.php.net/manual/en/language.namespaces.php)
 
+- [Defining namespaces](#defining-namespaces)
+- [External namespace](#external-namespace)
+- [Sub-namespaces](#sub-namespaces)
+- [Multiple Namespaces](#multiple-namespaces)
+- [Aliasing/Importing](#aliasingimporting)
+
 ## [Defining namespaces](https://www.php.net/manual/en/language.namespaces.rationale.php)
 
 ---
@@ -98,3 +104,4 @@ arrayutil
 - [Namespaces](https://www.php.net/manual/en/language.namespaces.php)
   - [Name resolution rules](https://www.php.net/manual/en/language.namespaces.rules.php)
   - [Using namespaces: Aliasing/Importing ](https://www.php.net/manual/en/language.namespaces.importing.php)
+- [PHP The Right Way: Namescpaces](https://phptherightway.com/#namespaces)

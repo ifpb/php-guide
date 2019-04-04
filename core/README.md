@@ -14,6 +14,7 @@
 - [Statement](statements/)
 - [Function](function/)
 - [Namespaces](namespaces/)
+- [Autoloading Object](autoloading-object/)
 - [Errors](errors/) & [Exceptions](exceptions/)
 - [Generator](generator/)
 
@@ -23,3 +24,5 @@
 
 - [Manual do php.net](http://php.net/manual/en/)
   - [Language Reference](http://php.net/manual/en/langref.php)
+  - [PHP The Right Way](https://phptherightway.com/)
+  - [Learn X in Y minutes: PHP](https://learnxinyminutes.com/docs/php/)
