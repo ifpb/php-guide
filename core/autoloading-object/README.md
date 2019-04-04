@@ -4,8 +4,8 @@
 - [SPL Autoload](#spl-autoload)
 - [Autoload File](#autoload-file)
 - [Composer](#composer)
-  - [PSR-4](#psr4)
-  - [PSR-0](#psr0)
+  - [PSR-4](#psr-4)
+  - [PSR-0](#psr-0)
   - [Classmap](#classmap)
 
 ## Autoload
@@ -224,7 +224,8 @@ $ tree . -I 'vendor|assets'
 
 - [Autoloading Classes](https://www.php.net/manual/en/language.oop5.autoload.php)
 - [PHP Standards Recommendations](https://www.php-fig.org/psr/)
-  - Autoloading: [PSR-0: Autoloading Standard](https://www.php-fig.org/psr/psr-0/), [PSR-4: Autoloader](https://www.php-fig.org/psr/psr-4/)
+  - [PSR-0: Autoloading Standard](https://www.php-fig.org/psr/psr-0/)
+  - [PSR-4: Autoloader](https://www.php-fig.org/psr/psr-4/)
 - [Usando namespace e autoload no PHP](https://www.youtube.com/watch?v=UeCVTTtRmGE)
 
 <!-- TODO
