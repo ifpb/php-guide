@@ -1,0 +1,19 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam monochrome true
+hide circle
+
+class ArrayUtil\ArrayUtil\Arithmetic {
+    {static} +sum(array: Array): Float
+}
+
+class ArrayUtil\ArrayUtil\Stats {
+    {static} +min(): Float
+}
+
+class ArrayUtil\ArrayUtil {
+}
+
+ArrayUtil\ArrayUtil\Arithmetic <|-- ArrayUtil\ArrayUtil
+ArrayUtil\ArrayUtil\Stats <|-- ArrayUtil\ArrayUtil
+@enduml

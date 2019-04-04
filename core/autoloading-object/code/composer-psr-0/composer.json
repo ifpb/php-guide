@@ -1,0 +1,9 @@
+{
+  "name": "lucachaves/composer-psr-4",
+  "require": {},
+  "autoload": {
+    "psr-0": {
+      "ArrayUtil\\": "ArrayUtil/"
+    }
+  }
+}
