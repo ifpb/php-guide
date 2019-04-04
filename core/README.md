@@ -8,6 +8,7 @@
   - Scalar: [Boolean](boolean/), [Integer](number/#integer), [Float](number/#float), [String](string/)
   - Compound: [Array](array/), [Object](object/)
   - Special: [Null](null/)
+  - [Values and References](references/)
 - [Variable](variable/)
 - [Expression and Operator](expression-and-operator/)
 - [Statement](statements/)
@@ -15,7 +16,6 @@
 - [Namespaces](namespaces/)
 - [Errors](errors/) & [Exceptions](exceptions/)
 - [Generator](generator/)
-- [Values & References](references/)
 
 ## References
 
