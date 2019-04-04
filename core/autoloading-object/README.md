@@ -39,7 +39,8 @@ Tips:
 
 - PHP can load class files automatically on demand (No explicit require statements are needed);
 - The file name must match the case of the terminating class name (each class in a separate file);
-- The directory name must match the case of the namespace names.
+- The directory name must match the case of the namespace names;
+- `__autoload()` has been DEPRECATED as of PHP 7.2.0. Relying on this feature is highly discouraged.
 
 REFERENCES
 
@@ -100,7 +101,7 @@ tree .
 3 directories, 5 files
 ```
 
-<img src="code/spl-autoload-arrayutil/assets/ArrayUtil.svg" alt="ArrayUtil Object" width="400px">
+<img src="code/spl-autoload-arrayutil/assets/ArrayUtil.svg" alt="ArrayUtil Object" width="450px">
 
 [ArrayUtil/ArrayUtil.php](code/spl-autoload-arrayutil/ArrayUtil/ArrayUtil.php)
 
