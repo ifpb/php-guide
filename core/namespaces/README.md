@@ -14,7 +14,7 @@ Tips:
 
 - Namespace must be the first statement in the script
 
-## [Namespace name](https://www.php.net/manual/en/language.namespaces.rules.php)
+## [External namespace](https://www.php.net/manual/en/language.namespaces.rules.php)
 
 ---
 
@@ -33,10 +33,10 @@ tree .
 {% include_relative code/basic-two-files/arrayutil.php %}
 ```
 
-[arrayutil.php](code/basic-two-files/arrayutil.php):
+[main.php](code/basic-two-files/main.php):
 
 ```php
-{% include_relative code/basic-two-files/arrayutil.php %}
+{% include_relative code/basic-two-files/main.php %}
 ```
 
 ## [Sub-namespaces](https://www.php.net/manual/en/language.namespaces.nested.php)
@@ -87,8 +87,14 @@ arrayutil
 
 ---
 
+[ArrayUtil.php](code/sub-namespaces/ArrayUtil.php):
+
+```php
+{% include_relative code/use/ArrayUtil.php %}
+```
+
 ## References
 
 - [Namespaces](https://www.php.net/manual/en/language.namespaces.php)
   - [Name resolution rules](https://www.php.net/manual/en/language.namespaces.rules.php)
-  - [Aliasing/Importing](https://www.php.net/manual/en/language.namespaces.importing.php)
+  - [Using namespaces: Aliasing/Importing ](https://www.php.net/manual/en/language.namespaces.importing.php)
