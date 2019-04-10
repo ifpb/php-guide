@@ -192,6 +192,7 @@ echo $10; //=> PHP Parse error:  syntax error, unexpected '10' (T_LNUMBER), expe
 | [\$argc](https://www.php.net/manual/en/reserved.variables.argc.php)                               | The number of arguments passed to script                                    |
 | [\$argv](https://www.php.net/manual/en/reserved.variables.argv.php)                               | Array of arguments passed to script                                         |
 
+<br>
 ```php
 print_r($GLOBALS);
 //=>
@@ -203,36 +204,8 @@ print_r($GLOBALS);
 //     [_POST] => Array
 //         (
 //         )
-//     [_COOKIE] => Array
-//         (
-//         )
-//     [_FILES] => Array
-//         (
-//         )
-//     [argv] => Array
-//         (
-//             [0] => -
-//         )
-//     [argc] => 1
-//     [_SERVER] => Array
-//         (
-//             ...
-//             [PHP_SELF] => -
-//             [SCRIPT_NAME] => -
-//             [SCRIPT_FILENAME] =>
-//             [PATH_TRANSLATED] =>
-//             [DOCUMENT_ROOT] =>
-//             [REQUEST_TIME_FLOAT] => 1516707393.7673
-//             [REQUEST_TIME] => 1516707393
-//             [argv] => Array
-//                 (
-//                     [0] => -
-//                 )
-//
-//             [argc] => 1
-//         )
-//     [GLOBALS] => Array
-//  *RECURSION*
+
+// ...
 // )
 
 $x = 10;
@@ -240,32 +213,52 @@ print_r($GLOBALS);
 //=>
 // Array
 // (
-//     [_GET] => Array
-//     ...
-//     [GLOBALS] => Array
-//  *RECURSION*
-//     [x] => 10
+// [_GET] => Array
+// ...
+// [GLOBALS] => Array
+// _RECURSION_
+// [x] => 10
 // )
-```
+
+````
 
 ## [Magic constants](http://php.net/manual/en/language.constants.predefined.php)
 
 ---
 
-|              |                  |               |                   |                  |
+<!-- |              |                  |               |                   |                  |
 | ------------ | ---------------- | ------------- | ----------------- | ---------------- |
 | \_\_LINE\_\_ | \_\_DIR\_\_      | \_\_CLASS\_\_ | \_\_METHOD\_\_    | ClassName::class |
-| \_\_FILE\_\_ | \_\_FUNCTION\_\_ | \_\_TRAIT\_\_ | \_\_NAMESPACE\_\_ |                  |
+| \_\_FILE\_\_ | \_\_FUNCTION\_\_ | \_\_TRAIT\_\_ | \_\_NAMESPACE\_\_ |                  | -->
+
+<table>
+  <tbody>
+    <tr>
+      <td>__LINE__</td>
+      <td>__DIR__</td>
+      <td>__CLASS__</td>
+      <td>__METHOD__</td>
+      <td>ClassName::class</td>
+    </tr>
+    <tr>
+      <td>__FILE__</td>
+      <td>__FUNCTION__</td>
+      <td>__TRAIT__</td>
+      <td>__NAMESPACE__</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
 
 <!-- http://i.imgur.com/YsbKHg1.gif-->
-
+<br>
 ```php
 print_r(__DIR__); //=> /current_folder
-```
+````
 
 ## [Predefined Constants](https://www.php.net/manual/en/reserved.constants.php)
 
-|                     |                   |                      |                          |                     |
+<!-- |                     |                   |                      |                          |                     |
 | ------------------- | ----------------- | -------------------- | ------------------------ | ------------------- |
 | PHP_VERSION         | PHP_OS_FAMILY     | DEFAULT_INCLUDE_PATH | PHP_SYSCONFDIR           | E_CORE_WARNING      |
 | PHP_MAJOR_VERSION   | PHP_SAPI          | PEAR_INSTALL_DIR     | PHP_LOCALSTATEDIR        | E_COMPILE_ERROR     |
@@ -276,4 +269,79 @@ print_r(__DIR__); //=> /current_folder
 | PHP_ZTS             | PHP_FLOAT_DIG     | PHP_BINARY           | E_WARNING                | E_RECOVERABLE_ERROR |
 | PHP_DEBUG           | PHP_FLOAT_EPSILON | PHP_MANDIR           | E_PARSE                  | E_DEPRECATED        |
 | PHP_MAXPATHLEN      | PHP_FLOAT_MIN     | PHP_LIBDIR           | E_NOTICE                 | E_USER_DEPRECATED   |
-| PHP_OS              | PHP_FLOAT_MAX     | PHP_DATADIR          | E_CORE_ERROR             | E_ALL               |
+| PHP_OS              | PHP_FLOAT_MAX     | PHP_DATADIR          | E_CORE_ERROR             | E_ALL               | -->
+
+<table>
+  <tbody>
+    <tr>
+      <td>PHP_VERSION</td>
+      <td>PHP_OS_FAMILY</td>
+      <td>DEFAULT_INCLUDE_PATH</td>
+      <td>PHP_SYSCONFDIR</td>
+      <td>E_CORE_WARNING</td>
+    </tr>
+    <tr>
+      <td>PHP_MAJOR_VERSION</td>
+      <td>PHP_SAPI</td>
+      <td>PEAR_INSTALL_DIR</td>
+      <td>PHP_LOCALSTATEDIR</td>
+      <td>E_COMPILE_ERROR</td>
+    </tr>
+    <tr>
+      <td>PHP_MINOR_VERSION</td>
+      <td>PHP_EOL</td>
+      <td>PEAR_EXTENSION_DIR</td>
+      <td>PHP_CONFIG_FILE_PATH</td>
+      <td>E_COMPILE_WARNING</td>
+    </tr>
+    <tr>
+      <td>PHP_RELEASE_VERSION</td>
+      <td>PHP_INT_MAX</td>
+      <td>PHP_EXTENSION_DIR</td>
+      <td>PHP_CONFIG_FILE_SCAN_DIR</td>
+      <td>E_USER_ERROR</td>
+    </tr>
+    <tr>
+      <td>PHP_VERSION_ID</td>
+      <td>PHP_INT_MIN</td>
+      <td>PHP_PREFIX</td>
+      <td>PHP_SHLIB_SUFFIX</td>
+      <td>E_USER_WARNING</td>
+    </tr>
+    <tr>
+      <td>PHP_EXTRA_VERSION</td>
+      <td>PHP_INT_SIZE</td>
+      <td>PHP_BINDIR</td>
+      <td>E_ERROR</td>
+      <td>E_USER_NOTICE</td>
+    </tr>
+    <tr>
+      <td>PHP_ZTS</td>
+      <td>PHP_FLOAT_DIG</td>
+      <td>PHP_BINARY</td>
+      <td>E_WARNING</td>
+      <td>E_RECOVERABLE_ERROR</td>
+    </tr>
+    <tr>
+      <td>PHP_DEBUG</td>
+      <td>PHP_FLOAT_EPSILON</td>
+      <td>PHP_MANDIR</td>
+      <td>E_PARSE</td>
+      <td>E_DEPRECATED</td>
+    </tr>
+    <tr>
+      <td>PHP_MAXPATHLEN</td>
+      <td>PHP_FLOAT_MIN</td>
+      <td>PHP_LIBDIR</td>
+      <td>E_NOTICE</td>
+      <td>E_USER_DEPRECATED</td>
+    </tr>
+    <tr>
+      <td>PHP_OS</td>
+      <td>PHP_FLOAT_MAX</td>
+      <td>PHP_DATADIR</td>
+      <td>E_CORE_ERROR</td>
+      <td>E_ALL</td>
+    </tr>
+  </tbody>
+</table>
