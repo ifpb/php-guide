@@ -250,13 +250,15 @@ print_r($GLOBALS);
   </tbody>
 </table>
 
-<!-- http://i.imgur.com/YsbKHg1.gif-->
+<!-- http://i.imgur.com/YsbKHg1.gif -->
 <br>
 ```php
 print_r(__DIR__); //=> /current_folder
 ````
 
 ## [Predefined Constants](https://www.php.net/manual/en/reserved.constants.php)
+
+---
 
 <!-- |                     |                   |                      |                          |                     |
 | ------------------- | ----------------- | -------------------- | ------------------------ | ------------------- |
