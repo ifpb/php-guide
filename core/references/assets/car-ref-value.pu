@@ -6,7 +6,7 @@ hide circle
 object Car
 Car : numberOfDoors = 4
 Car : howFast = 150
-Car : power = 200
+Car : power = 110
 
 hide myCar members
 hide myCar2 members

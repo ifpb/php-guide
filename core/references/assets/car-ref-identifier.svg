@@ -1,28 +1,44 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="163px" preserveAspectRatio="none" style="width:181px;height:163px;" version="1.1" viewBox="0 0 181 163" width="181px" zoomAndPan="magnify"><defs><filter height="300%" id="fvfedeq7rjfg0" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#F8F8F8" filter="url(#fvfedeq7rjfg0)" height="60.8906" style="stroke: #383838; stroke-width: 1.5;" width="111" x="59.5" y="92"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="21" x="104.5" y="105.1387">Car</text><line style="stroke: #383838; stroke-width: 1.5;" x1="60.5" x2="169.5" y1="109.9688" y2="109.9688"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="99" x="65.5" y="123.251">numberOfDoors = 4</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="73" x="65.5" y="134.8916">howFast = 150</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="62" x="65.5" y="146.5322">power = 200</text><!--class myCar--><rect fill="#F8F8F8" filter="url(#fvfedeq7rjfg0)" height="23.9688" id="myCar" style="stroke: #383838; stroke-width: 1.5;" width="44" x="93" y="8"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="38" x="96" y="24.1387">myCar</text><!--class myCar2--><rect fill="#F8F8F8" filter="url(#fvfedeq7rjfg0)" height="23.9688" id="myCar2" style="stroke: #383838; stroke-width: 1.5;" width="52" x="6" y="8"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="46" x="9" y="24.1387">myCar2</text><!--link myCar to Car--><path d="M115,32.139 C115,45.219 115,67.5517 115,86.6181 " fill="none" id="myCar-Car" style="stroke: #383838; stroke-width: 1.0;"/><polygon fill="#383838" points="115,91.8987,119,82.8987,115,86.8987,111,82.8987,115,91.8987" style="stroke: #383838; stroke-width: 1.0;"/><!--link myCar2 to myCar--><path d="M58.2617,20 C68.0759,20 77.8902,20 87.7044,20 " fill="none" id="myCar2-myCar" style="stroke: #383838; stroke-width: 1.0;"/><polygon fill="#383838" points="92.8366,20,83.8366,16,87.8366,20,83.8366,24,92.8366,20" style="stroke: #383838; stroke-width: 1.0;"/><!--
-@startuml
-skinparam classAttributeIconSize 0
-skinparam monochrome true
-hide circle
-
-object Car
-Car : numberOfDoors = 4
-Car : howFast = 150
-Car : power = 200
-
-hide myCar members
-hide myCar2 members
-
-"myCar" - -> Car
-"myCar2" -> "myCar"
-@enduml
-
-PlantUML version 1.2019.05beta2(Unknown compile time)
-(GPL source distribution)
-Java Runtime: Java(TM) SE Runtime Environment
-JVM: Java HotSpot(TM) 64-Bit Server VM
-Java Version: 1.7.0_25-b15
-Operating System: Linux
-Default Encoding: UTF-8
-Language: en
-Country: US
---></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="181px" height="163px" contentScriptType="application/ecmascript" contentStyleType="text/css" preserveAspectRatio="none" style="width:181px;height:163px" version="1.1" viewBox="0 0 181 163" zoomAndPan="magnify">
+    <defs>
+        <filter id="fvfedeq7rjfg0" width="300%" height="300%" x="-1" y="-1">
+            <feGaussianBlur result="blurOut" stdDeviation="2.0"/>
+            <feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/>
+            <feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/>
+            <feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/>
+        </filter>
+    </defs>
+    <g>
+        <rect width="111" height="60.8906" x="59.5" y="92" fill="#F8F8F8" filter="url(#fvfedeq7rjfg0)" style="stroke:#383838;stroke-width:1.5"/>
+        <text x="104.5" y="105.1387" fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="21">
+            Car
+        </text>
+        <line x1="60.5" x2="169.5" y1="109.9688" y2="109.9688" style="stroke:#383838;stroke-width:1.5"/>
+        <text x="65.5" y="123.251" fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="99">
+            numberOfDoors = 4
+        </text>
+        <text x="65.5" y="134.8916" fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="73">
+            howFast = 150
+        </text>
+        <text x="65.5" y="146.5322" fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="62">
+            power = 100
+        </text>
+<!--class myCar-->
+        <rect id="myCar" width="44" height="23.9688" x="93" y="8" fill="#F8F8F8" filter="url(#fvfedeq7rjfg0)" style="stroke:#383838;stroke-width:1.5"/>
+        <text x="96" y="24.1387" fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="38">
+            myCar
+        </text>
+<!--class myCar2-->
+        <rect id="myCar2" width="52" height="23.9688" x="6" y="8" fill="#F8F8F8" filter="url(#fvfedeq7rjfg0)" style="stroke:#383838;stroke-width:1.5"/>
+        <text x="9" y="24.1387" fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="46">
+            myCar2
+        </text>
+<!--link myCar to Car-->
+        <path id="myCar-Car" fill="none" d="M115,32.139 C115,45.219 115,67.5517 115,86.6181 " style="stroke:#383838;stroke-width:1.0"/>
+        <polygon fill="#383838" points="115,91.8987,119,82.8987,115,86.8987,111,82.8987,115,91.8987" style="stroke:#383838;stroke-width:1.0"/>
+<!--link myCar2 to myCar-->
+        <path id="myCar2-myCar" fill="none" d="M58.2617,20 C68.0759,20 77.8902,20 87.7044,20 " style="stroke:#383838;stroke-width:1.0"/>
+        <polygon fill="#383838" points="92.8366,20,83.8366,16,87.8366,20,83.8366,24,92.8366,20" style="stroke:#383838;stroke-width:1.0"/>
+<!--@startuml skinparam classAttributeIconSize 0 skinparam monochrome true hide circle object Car Car : numberOfDoors = 4 Car : howFast = 150 Car : power = 110 hide myCar members hide myCar2 members "myCar" - -> Car "myCar2" -> "myCar" @enduml PlantUML version 1.2019.05beta2(Unknown compile time) (GPL source distribution) Java Runtime: Java(TM) SE Runtime Environment JVM: Java HotSpot(TM) 64-Bit Server VM Java Version: 1.7.0_25-b15 Operating System: Linux Default Encoding: UTF-8 Language: en Country: US-->
+    </g>
+</svg>

@@ -175,7 +175,7 @@ print_r($myCar);
 // )
 ```
 
-<img src="assets/car-ref-identifier.svg" alt="ref object" width="250px">
+<img src="assets/car-ref-value.svg" alt="ref object" width="200px">
 
 ```php
 $myCar = new stdClass;
@@ -222,7 +222,7 @@ print_r($myCar);
 // )
 ```
 
-<img src="assets/car-ref-value.svg" alt="ref object" width="200px">
+<img src="assets/car-ref-identifier.svg" alt="ref object" width="250px">
 
 ```php
 $myCar = new stdClass;
