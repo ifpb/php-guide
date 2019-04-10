@@ -1,7 +1,7 @@
 # [Errors in PHP](https://www.php.net/manual/en/language.errors.basics.php)
 
 - [Error hierarchy](#error-hierarchy)
-- [Throwing a error](#throwing-a-error)
+- [Throwing an error](#throwing-an-error)
 - [Handling errors](#handling-errors)
 - [Custom Error Types](#custom-error-types)
 
@@ -21,7 +21,7 @@
   - [Exception](https://www.php.net/manual/en/class.exception.php)
     - [ErrorException](https://www.php.net/manual/en/class.errorexception.php)
 
-## Throwing a error
+## Throwing an error
 
 ---
 
