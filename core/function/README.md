@@ -144,3 +144,9 @@ $helloWorld = function($name){
 
 var_dump($helloWorld('fulano'));  //=> string(12) "Hello fulano"
 ```
+
+## References
+
+- [List of Function Aliases](https://www.php.net/manual/en/aliases.php)
+- [Function and Method listing](https://www.php.net/manual/en/indexes.functions.php)
+- [Function References](https://www.php.net/manual/en/funcref.php)

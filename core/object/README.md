@@ -157,6 +157,9 @@ Tips:
 - [Classes and Objects](https://www.php.net/manual/en/language.oop5.php)
   - [Final Keyworkd](https://www.php.net/manual/en/language.oop5.final.php)
   - [OOP Changelog](https://www.php.net/manual/en/language.oop5.changelog.php)
+  - [Predefined Interfaces and Classes](https://www.php.net/manual/en/reserved.interfaces.php)
+  - [Predefined Classes](https://www.php.net/manual/en/reserved.classes.php)
+  - [Predefined SPL Interfaces](https://www.php.net/manual/en/spl.interfaces.php)
 
 <!-- TODO
 - Trait (Precedence, Conflict Resolution, Changing Method Visibility, Traits Composed from Traits)

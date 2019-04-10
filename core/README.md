@@ -15,8 +15,12 @@
 - [Function](function/)
 - [Namespaces](namespaces/)
 - [Autoloading Object](autoloading-object/)
-- [Errors](errors/) & [Exceptions](exceptions/)
+- [Errors & Exceptions](errors/)
+
+<!--
+TODO
 - [Generator](generator/)
+ -->
 
 ## References
 
@@ -24,5 +28,8 @@
 
 - [Manual do php.net](http://php.net/manual/en/)
   - [Language Reference](http://php.net/manual/en/langref.php)
+    - [History of PHP and Related Projects](https://www.php.net/manual/en/history.php)
+    - [List of Keywords](https://www.php.net/manual/en/reserved.keywords.php), [List of Parser Tokens](https://www.php.net/manual/en/tokens.php)
+    - [Changelog](https://www.php.net/manual/en/doc.changelog.php)
   - [PHP The Right Way](https://phptherightway.com/)
   - [Learn X in Y minutes: PHP](https://learnxinyminutes.com/docs/php/)

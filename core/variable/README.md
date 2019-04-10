@@ -174,6 +174,24 @@ echo $10; //=> PHP Parse error:  syntax error, unexpected '10' (T_LNUMBER), expe
 
 ---
 
+| Variable                                                                                          | Description                                                                 |
+| ------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| [Superglobals](https://www.php.net/manual/en/language.variables.superglobals.php)                 | Superglobals are built-in variables that are always available in all scopes |
+| [\$GLOBALS](https://www.php.net/manual/en/reserved.variables.globals.php)                         | References all variables available in global scope                          |
+| [\$\_SERVER](https://www.php.net/manual/en/reserved.variables.server.php)                         | Server and execution environment information                                |
+| [\$\_GET](https://www.php.net/manual/en/reserved.variables.get.php)                               | HTTP GET variables                                                          |
+| [\$\_POST](https://www.php.net/manual/en/reserved.variables.post.php)                             | HTTP POST variables                                                         |
+| [\$\_FILES](https://www.php.net/manual/en/reserved.variables.files.php)                           | HTTP File Upload variables                                                  |
+| [\$\_REQUEST](https://www.php.net/manual/en/reserved.variables.request.php)                       | HTTP Request variables                                                      |
+| [\$\_SESSION](https://www.php.net/manual/en/reserved.variables.session.php)                       | Session variables                                                           |
+| [\$\_ENV](https://www.php.net/manual/en/reserved.variables.environment.php)                       | Environment variables                                                       |
+| [\$\_COOKIE](https://www.php.net/manual/en/reserved.variables.cookies.php)                        | HTTP Cookies                                                                |
+| [\$php_errormsg](https://www.php.net/manual/en/reserved.variables.phperrormsg.php)                | The previous error message                                                  |
+| [\$HTTP_RAW_POST_DATA](https://www.php.net/manual/en/reserved.variables.httprawpostdata.php)      | Raw POST data                                                               |
+| [\$http_response_header](https://www.php.net/manual/en/reserved.variables.httpresponseheader.php) | HTTP response headers                                                       |
+| [\$argc](https://www.php.net/manual/en/reserved.variables.argc.php)                               | The number of arguments passed to script                                    |
+| [\$argv](https://www.php.net/manual/en/reserved.variables.argv.php)                               | Array of arguments passed to script                                         |
+
 ```php
 print_r($GLOBALS);
 //=>
@@ -234,8 +252,28 @@ print_r($GLOBALS);
 
 ---
 
+|              |                  |               |                   |                  |
+| ------------ | ---------------- | ------------- | ----------------- | ---------------- |
+| \_\_LINE\_\_ | \_\_DIR\_\_      | \_\_CLASS\_\_ | \_\_METHOD\_\_    | ClassName::class |
+| \_\_FILE\_\_ | \_\_FUNCTION\_\_ | \_\_TRAIT\_\_ | \_\_NAMESPACE\_\_ |                  |
+
 <!-- http://i.imgur.com/YsbKHg1.gif-->
 
 ```php
 print_r(__DIR__); //=> /current_folder
 ```
+
+## [Predefined Constants](https://www.php.net/manual/en/reserved.constants.php)
+
+|                     |                   |                      |                          |                     |
+| ------------------- | ----------------- | -------------------- | ------------------------ | ------------------- |
+| PHP_VERSION         | PHP_OS_FAMILY     | DEFAULT_INCLUDE_PATH | PHP_SYSCONFDIR           | E_CORE_WARNING      |
+| PHP_MAJOR_VERSION   | PHP_SAPI          | PEAR_INSTALL_DIR     | PHP_LOCALSTATEDIR        | E_COMPILE_ERROR     |
+| PHP_MINOR_VERSION   | PHP_EOL           | PEAR_EXTENSION_DIR   | PHP_CONFIG_FILE_PATH     | E_COMPILE_WARNING   |
+| PHP_RELEASE_VERSION | PHP_INT_MAX       | PHP_EXTENSION_DIR    | PHP_CONFIG_FILE_SCAN_DIR | E_USER_ERROR        |
+| PHP_VERSION_ID      | PHP_INT_MIN       | PHP_PREFIX           | PHP_SHLIB_SUFFIX         | E_USER_WARNING      |
+| PHP_EXTRA_VERSION   | PHP_INT_SIZE      | PHP_BINDIR           | E_ERROR                  | E_USER_NOTICE       |
+| PHP_ZTS             | PHP_FLOAT_DIG     | PHP_BINARY           | E_WARNING                | E_RECOVERABLE_ERROR |
+| PHP_DEBUG           | PHP_FLOAT_EPSILON | PHP_MANDIR           | E_PARSE                  | E_DEPRECATED        |
+| PHP_MAXPATHLEN      | PHP_FLOAT_MIN     | PHP_LIBDIR           | E_NOTICE                 | E_USER_DEPRECATED   |
+| PHP_OS              | PHP_FLOAT_MAX     | PHP_DATADIR          | E_CORE_ERROR             | E_ALL               |
