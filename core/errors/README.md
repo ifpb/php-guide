@@ -21,7 +21,7 @@
   - [Exception](https://www.php.net/manual/en/class.exception.php)
     - [ErrorException](https://www.php.net/manual/en/class.errorexception.php)
 
-## Throwing a error
+## Throwing an error
 
 ---
 
