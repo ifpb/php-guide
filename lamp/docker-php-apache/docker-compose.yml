@@ -1,0 +1,36 @@
+version: "3"
+networks:
+  app-tier:
+    driver: bridge
+services:
+  web:
+    container_name: web
+    build:
+      context: .
+      dockerfile: ./docker/php/Dockerfile
+    image: php:apache-plus
+    networks:
+      - app-tier
+    ports:
+      - 8080:80
+    volumes:
+      - ./src/:/var/www/html/
+    depends_on:
+      - mysql
+  mysql:
+    container_name: mysql
+    image: mysql:latest
+    command: 
+      - --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    networks:
+      - app-tier
+    ports:
+      - 3306:3306
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+      - ./logs/mysql:/var/log/mysql
