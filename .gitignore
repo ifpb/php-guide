@@ -2,3 +2,4 @@
 **/vendor/
 **/composer.lock
 lamp/vagrant/*.log
+lamp/docker-php-apache/data/mysql/*
