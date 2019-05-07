@@ -4,5 +4,5 @@
 - [Function Reference (Stdlib)](stdlib/)
 - [Packages](packages/)
 - Web
-  - Servidor: LAMP [(vagrant)](lamp/)
+  - [Servidor LAMP](lamp/)
   - [Web Features](web/)

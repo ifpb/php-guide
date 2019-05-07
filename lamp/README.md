@@ -1,97 +1,211 @@
 # LAMP Server
 
+- [Stack](#stack)
+- [Docker](#docker)
+  - [References](#references)
+  - [Files](#files)
+  - [docker-compose.yml](#docker-compose.yml)
+  - [Dockerfile](#dockerfile)
+  - [Creating LAMP](#creating-lamp)
+  - [Checking PHP](#checking-php)
+  - [Running PHP code (Interactive shell)](#running-php-code-interactive-shell)
+  - [Running PHP code (File)](#running-php-code-file)
+  - [Connecting to Mysql](#connecting-to-mysql)
+  - [Docker commands](#docker-commands)
+- [Vagrant](#vagrant)
+  - [References](#references)
+  - [Files](#files)
+  - [Vagrantfile](#vagrantfile)
+  - [Provision](#provision)
+  - [Creating LAMP](#creating-lamp)
+  - [Checking PHP](#checking-php)
+  - [Connecting to VM via SSH and running PHP code (Interactive shell)](#connecting-to-vm-via-ssh-and-running-php-code-interactive-shell)
+  - [Connecting to VM via SSH and running PHP code (File)](#connecting-to-vm-via-ssh-and-running-php-code-file)
+  - [Vagrant commands](#vagrant-commands)
+
 ## Stack
+
 ---
 
-* Linux
-* Apache
-* MySQL
-* PHP
+- Linux
+- Apache
+- MySQL
+- PHP
+
+## Docker
+
+---
+
+### References
+
+- [Docker](https://www.docker.com/)
+- [Docker Hub](https://hub.docker.com/)
+
+### Files
+
+```sh
+$ tree docker-php-apache/
+docker-php-apache/
+├── configs
+│   └── mysql
+├── data
+│   └── mysql
+├── docker
+│   └── php
+│       └── Dockerfile
+├── docker-compose.yml
+├── logs
+│   └── mysql
+└── src
+    └── index.php
+
+9 directories, 3 files
+```
+
+### docker-compose.yml
+
+**docker-php-apache/docker-compose.yml:**
+
+```yaml
+{% include_relative docker-php-apache/docker-compose.yml %}
+```
+
+### Dockerfile
+
+**docker-php-apache/docker/php/Dockerfile:**
+
+```yaml
+{% include_relative docker-php-apache/docker/php/Dockerfile %}
+```
+
+### Creating LAMP
+
+```bash
+$ cd docker-php-apache
+
+$ docker-compose up -d
+
+$ docker-compose ps
+
+$ curl -i http://localhost:8080/
+
+$ docker-compose down
+```
+
+### Checking PHP
+
+```sh
+$ docker exec -it web bash
+
+$ php -i
+
+$ php -m
+```
+
+### Running PHP code (Interactive shell)
+
+```
+$ docker run -it --rm --name php -v "$PWD":/usr/src/app -w /usr/src/app php:alpine php
+$ php -a
+Interactive shell
+
+php > $x = 10;
+php > echo $x;
+10
+php > exit
+```
+
+### Running PHP code (File)
+
+```
+$ echo '<?php echo 'Hello world!'; ?>' > hello.php
+$ docker run -it --rm --name php -v "$PWD":/usr/src/app -w /usr/src/app php:alpine php -f hello.php
+Hello world!
+```
+
+### Connecting to Mysql
+
+```
+$ docker exec -it mysql bash
+# mysql -u root -p
+mysql> SHOW DATABASES;
+```
+
+### Docker commands
+
+- `docker exec -it <name> bash`
+- `docker exec -it <name> bash`
+- `docker ps`
+- `docker-compose down`
+- `docker-compose up -d`
+- `docker-comppose ps`
 
 ## Vagrant
+
 ---
 
-* Provider: [Virtual Box](https://www.virtualbox.org)
-* [Vagrant](https://www.vagrantup.com) ([Vagrant Cloud](https://app.vagrantup.com/boxes/search))
+### References
+
+- [Vagrant](https://www.vagrantup.com)
+- [Vagrant Cloud](https://app.vagrantup.com/boxes/search))
+- Provider: [Virtual Box](https://www.virtualbox.org)
+
+### Files
+
+```bash
+$ tree vagrant/
+vagrant/
+├── Vagrantfile
+├── install
+│   └── lamp.sh
+└── src
+    └── index.php
+
+2 directories, 3 files
+```
 
 ### Vagrantfile
 
+**vagrant/Vagrantfile:**
+
 ```rb
-Vagrant.configure(2) do |config|
-  config.vm.box = "ubuntu/trusty64"
-  config.vm.network "forwarded_port", guest: 80, host: 8080
-  config.vm.network "forwarded_port", guest: 3306, host: 3306
-  config.vm.synced_folder ".", "/var/www/html/php", mount_options: ["dmode=775,fmode=777"]
-  config.vm.provider "virtualbox" do |vb|
-    vb.name = "LAMP VM"
-  end
-  config.vm.provision "shell", path: "install/lampserver.sh"
-end
+{% include_relative vagrant/Vagrantfile %}
 ```
 
 ### Provision
 
-[../install/lampserver.sh](https://github.com/ifpb/php-guide/blob/master/install/lampserver.sh)
+**vagrant/install/lamp.sh:**
 
-## How to use LAMP VM
----
-
-### Downloading Lamp Vagrantfile
-
-[https://github.com/ifpb/php-guide/blob/master/lamp/lamp.zip?raw=true](https://github.com/ifpb/php-guide/blob/master/lamp/lamp.zip?raw=true):
-```sh
-$ wget https://github.com/ifpb/php-guide/blob/master/lamp/lamp.zip?raw=true
-$ curl https://github.com/ifpb/php-guide/blob/master/lamp/lamp.zip?raw=true --output lamp.zip
+```rb
+{% include_relative vagrant/install/lamp.sh %}
 ```
 
-### Extracting files
-```sh
-$ unzip lamp.zip
-$ cd lamp
-```
+### Creating LAMP
 
-### Creating VM
-```sh
+```bash
+$ cd vagrant
+
 $ vagrant up
-```
 
-### Outputing status of the VM
-```sh
 $ vagrant status
+
+$ curl -i http://localhost:8080/
+
+$ vagrant suspend
 ```
 
-### Connecting to VM via SSH
-```sh
-$ vagrant ssh
-$ uname -a
-$ exit
-```
-
-### Checking PHP and Apache Configuration
+### Checking PHP
 
 ```sh
 $ vagrant ssh
+
 $ php -i
+
 $ php -m
-$ ls /var/www/html/php/phpinfo/
-```
-
-[http://localhost:8080/php/phpinfo/](http://localhost:8080/php/phpinfo/) ([phpinfo()](http://php.net/manual/en/function.phpinfo.php)):
-```sh
-$ curl -i http://localhost:8080/php/phpinfo/
-```
-
-```sh
-$ cd /var/www/html/php/phpinfo/
-$ php -S localhost:8090 -t .
-```
-
-[http://localhost:8090/](http://localhost:8090/) ([phpinfo()](http://php.net/manual/en/function.phpinfo.php)):
-```sh
-$ curl -i http://localhost:8090/
 ```
 
 ### Connecting to VM via SSH and running PHP code (Interactive shell)
+
 ```
 $ vagrant ssh
 $ php -a
@@ -104,6 +218,7 @@ php > exit
 ```
 
 ### Connecting to VM via SSH and running PHP code (File)
+
 ```
 $ vagrant ssh
 $ echo '<?php echo 'Hello world!'; ?>' > hello.php
@@ -111,27 +226,16 @@ $ php -f hello.php
 Hello world!
 ```
 
-### Display errors
-```
-$ vagrant ssh
-$ sudo sed -i -r -e 's/display_errors = Off/display_errors = On/g' /etc/php/7.1/apache2/php.ini
-$ sudo service apache2 start
-```
-<!-- 
-sed -i -r -e 's/error_reporting = E_ALL & ~E_DEPRECATED/error_reporting = E_ALL | E_STRICT/g' /etc/php5/fpm/php.ini 
--->
-
-### Suspending the VM
-```sh
-$ vagrant suspend
-```
-
 ### Vagrant commands
 
-* `vagrant up`
-* `vagrant ssh`
-* `vagrant ssh lampserver`
-* `vagrant suspend`
-* `vagrant destroy`
-* `vagrant status`
-* `vagrant box list`
+- `vagrant box add <image>`
+- `vagrant box list`
+- `vagrant destroy`
+- `vagrant ssh`
+- `vagrant status`
+- `vagrant suspend`
+- `vagrant up`
+
+<!--
+sed -i -r -e 's/error_reporting = E_ALL & ~E_DEPRECATED/error_reporting = E_ALL | E_STRICT/g' /etc/php5/fpm/php.ini
+-->
