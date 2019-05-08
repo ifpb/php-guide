@@ -135,13 +135,13 @@ $ curl 'http://localhost:8080/php/web/http/codes/post-hello/hello.php' \
 
 [codes/simple-form/index.php](codes/simple-form/index.php):
 
-```html
+```php
 {% include_relative codes/simple-form/index.php %}
 ```
 
 [codes/simple-form/review.php](codes/simple-form/review.php):
 
-```html
+```php
 {% include_relative codes/simple-form/review.php %}
 ```
 
