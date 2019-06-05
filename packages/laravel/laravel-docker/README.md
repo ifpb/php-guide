@@ -36,31 +36,31 @@ $ tree .docker/
 **.docker/mysql/my.cnf**
 
 ```yml
-{ % include_relative project/.docker/mysql/my.cnf % }
+{% include_relative project/.docker/mysql/my.cnf %}
 ```
 
 **.docker/nginx/conf.d/app.conf**
 
 ```yml
-{ % include_relative project/.docker/nginx/conf.d/app.conf % }
+{% include_relative project/.docker/nginx/conf.d/app.conf %}
 ```
 
 **.docker/php/local.ini**
 
 ```yml
-{ % include_relative project/.docker/php/local.ini % }
+{% include_relative project/.docker/php/local.ini %}
 ```
 
 **docker-compose.yml**
 
 ```yml
-{ % include_relative project/docker-compose.yml % }
+{% include_relative project/docker-compose.yml %}
 ```
 
 **Dockerfile**
 
 ```yml
-{ % include_relative project/Dockerfile % }
+{% include_relative project/Dockerfile %}
 ```
 
 ## Modifying Environment Settings
