@@ -87,6 +87,7 @@ DB_PASSWORD=secret
 ---
 
 ```
+$ docker-compose exec --user root app chmod -R 777 storage/
 $ docker-compose up -d
 $ docker-compose ps
 ```
