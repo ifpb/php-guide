@@ -19,7 +19,8 @@ $ docker run --rm -v $(pwd):/app composer:latest composer create-project --prefe
 ---
 
 ```sh
-$ unzip docker-config.zip -d project/
+$ wget -O docker-config.zip https://github.com/ifpb/php-guide/blob/master/packages/laravel/laravel-docker/docker-config.zip?raw=true
+$ docker run --rm -v $(pwd):/app composer:latest unzip docker-config.zip -d project/
 $ cd project
 $ tree .docker/
 .docker/
@@ -30,6 +31,36 @@ $ tree .docker/
 │       └── app.conf
 └── php
     └── local.ini
+```
+
+**.docker/mysql/my.cnf**
+
+```yml
+{ % include_relative project/.docker/mysql/my.cnf % }
+```
+
+**.docker/nginx/conf.d/app.conf**
+
+```yml
+{ % include_relative project/.docker/nginx/conf.d/app.conf % }
+```
+
+**.docker/php/local.ini**
+
+```yml
+{ % include_relative project/.docker/php/local.ini % }
+```
+
+**docker-compose.yml**
+
+```yml
+{ % include_relative project/docker-compose.yml % }
+```
+
+**Dockerfile**
+
+```yml
+{ % include_relative project/Dockerfile % }
 ```
 
 ## Modifying Environment Settings
@@ -65,5 +96,6 @@ $ docker-compose ps
 ---
 
 ```
+$ docker-compose exec app php artisan list
 $ docker-compose exec app php artisan migrate
 ```
