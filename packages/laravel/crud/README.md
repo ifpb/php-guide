@@ -7,7 +7,7 @@
 **routes/web.php**
 
 ```php
-Route::resource('alumnus', 'AlumnusController');
+{% include_relative project/routes/web.php %}
 ```
 
 ```
@@ -35,10 +35,10 @@ $ php artisan route:list
 $ php artisan make:controller AlumniController --resource --model=Alumnus
 ```
 
-**app/Http/Controllers/AlumnusController.php**
+**app/Http/Controllers/AlumniController.php**
 
 ```php
-{% include_relative project/app/Http/Controllers/AlumnusController.php %}
+{% include_relative project/app/Http/Controllers/AlumniController.php %}
 ```
 
 ## Model
