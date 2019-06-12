@@ -3,13 +3,24 @@
 - [Router](#router)
 - [Controller](#controller)
 - [View](#view)
+  - [Index view](#index-view)
+  - [Layout view](#layout-view)
 - [Model](#model)
+  - [Migration](#migration)
+  - [Tinker](#tinker)
+  - [DB Facade](#db-facade)
+    - [DB::table('alumni')->insert()](#dbtablealumni-insert)
+    - [DB::insert('insert ...')](#dbinsertinsert...)
+    - [DB::table('alumni')->get()](#dbtablealumni-get)
+    - [DB::select('select \* from alumni')](#dbselectselect--from-alumni)
+  - [Seed](#seed)
+  - [Eloquent Model](#eloquent-model)
 
 ## Router
 
 **routes/web.php**
 
-```phpa
+```php
 Route::get('/', function () {
     return view('welcome');
 });
@@ -22,13 +33,15 @@ Route::get('/alumni', 'AlumniController@index');
 ```
 
 ```
-$ docker-compose exec app php artisan route:list
+$ bash
+$ php artisan migrate
+$ php artisan route:list
 ```
 
 ## Controller
 
 ```
-$ docker-compose exec app php artisan make:controller AlumniController
+$ php artisan make:controller AlumniController
 ```
 
 **app/Http/Controllers/AlumniController.php**
@@ -56,6 +69,8 @@ class AlumniController extends Controller
 
 ## View
 
+### Index view
+
 **resources/views/alumni/index.blade.php**
 
 ```php
@@ -72,6 +87,8 @@ class AlumniController extends Controller
     </ul>
 @endsection
 ```
+
+### Layout view
 
 **resources/views/layout.blade.php**
 
@@ -106,11 +123,13 @@ class AlumniController extends Controller
 
 ## Model
 
+### Migration
+
 ```
-$ php artisan make:migration create_users_table --create=alumni
+$ php artisan make:migration create_alumni_table --create=alumni
 ```
 
-**database/migrations/2019_06_05_185508_create_users_table.php**
+**database/migrations/2019_06_05_185508_create_alumni_table.php**
 
 ```php
 <?php
@@ -150,10 +169,12 @@ class CreateUsersTable extends Migration
 ```
 
 ```
-$ docker-compose exec app php artisan migrate
+$ php artisan migrate
 Migrating: 2019_06_05_185508_create_users_table
 Migrated:  2019_06_05_185508_create_users_table
 ```
+
+<!-- ### Tinker
 
 ```
 $ php artisan tinker
@@ -236,6 +257,37 @@ Psy Shell v0.9.9 (PHP 7.3.6 — cli) by Justin Hileman
 ```
 
 ```
+laravel=# \dt
+             List of relations
+ Schema |      Name       | Type  |  Owner
+--------+-----------------+-------+---------
+ public | alumni          | table | laravel
+ public | migrations      | table | laravel
+ public | password_resets | table | laravel
+ public | users           | table | laravel
+(4 rows)
+```
+
+```
+laravel=# \d alumni
+                                          Table "public.alumni"
+   Column   |              Type              | Collation | Nullable |              Default
+------------+--------------------------------+-----------+----------+------------------------------------
+ id         | bigint                         |           | not null | nextval('alumni_id_seq'::regclass)
+ name       | character varying(255)         |           | not null |
+ email      | character varying(255)         |           | not null |
+ linkedin   | character varying(255)         |           | not null |
+ created_at | timestamp(0) without time zone |           |          |
+ updated_at | timestamp(0) without time zone |           |          |
+Indexes:
+    "alumni_pkey" PRIMARY KEY, btree (id)
+``` -->
+
+### DB Facade
+
+#### DB::table('alumni')->insert()
+
+```
 $ php artisan tinker
 Psy Shell v0.9.9 (PHP 7.3.6 — cli) by Justin Hileman
 >>> $luiz = [
@@ -251,6 +303,8 @@ Psy Shell v0.9.9 (PHP 7.3.6 — cli) by Justin Hileman
 >>> DB::table('alumni')->insert($luiz);
 => true
 ```
+
+#### DB::insert('insert ...')
 
 ```
 $ php artisan tinker
@@ -268,6 +322,8 @@ Psy Shell v0.9.9 (PHP 7.3.6 — cli) by Justin Hileman
 >>> DB::insert('insert into alumni (name, email, linkedin) values (?, ?, ?)', $leandro);
 => true
 ```
+
+#### DB::table('alumni')->get()
 
 ```
 $ php artisan tinker
@@ -295,6 +351,8 @@ Psy Shell v0.9.9 (PHP 7.3.6 — cli) by Justin Hileman
    }
 ```
 
+#### DB::select('select \* from alumni')
+
 ```
 >>> DB::select('select * from alumni')
 => [
@@ -317,22 +375,56 @@ Psy Shell v0.9.9 (PHP 7.3.6 — cli) by Justin Hileman
    ]
 ```
 
-**resources/views/alumni/index.blade.php**
+### Seed
+
+```
+$ php artisan make:seeder AlumniTableSeeder
+```
+
+**database/seeds/AlumniTableSeeder.php**
 
 ```php
-<ul>
-@foreach ($alumni as $a)
-    <li>{{ $a->name }}</li>
-@endforeach
-</ul>
+<?php
+
+use App\Alumnus;
+use Illuminate\Database\Seeder;
+
+class AlumniTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $alumnus = new Alumnus;
+        $alumnus->name = 'Luiz Chaves';
+        $alumnus->email = 'luiz.chaves@ifpb.edu.br';
+        $alumnus->linkedin = 'https://www.linkedin.com/in/luizcrchaves/';
+        $alumnus->save();
+
+        $alumnus = new Alumnus;
+        $alumnus->name = 'Leandro Almeida';
+        $alumnus->email = 'leandro.almeida@ifpb.edu.br';
+        $alumnus->linkedin = 'https://www.linkedin.com/in/leandro-almeida-2601a611/';
+        $alumnus->save();
+    }
+}
 ```
 
 ```
-$ docker-compose exec app php artisan make:model Alumnus
+$ php artisan db:seed --class=UsersTableSeeder
+```
+
+### Eloquent Model
+
+```
+$ php artisan make:model Alumnus
 ```
 
 ```
-$ docker-compose exec app php artisan make:model Alumnus -m
+$ php artisan make:model Alumnus -m
 ```
 
 **app/Alumnus.php**
@@ -378,4 +470,33 @@ Psy Shell v0.9.9 (PHP 7.3.6 — cli) by Justin Hileman
        },
      ],
    }
+```
+
+**app/Http/Controllers/AlumniController.php**
+
+```php
+namespace App\Http\Controllers;
+
+use App\Alumnus;
+use Illuminate\Http\Request;
+
+class AlumniController extends Controller
+{
+    public function index() {
+        $alumni = Alumnus::all();
+        return view('alumni.index', [
+            'alumni' =>  $alumni
+        ]);
+    }
+}
+```
+
+**resources/views/alumni/index.blade.php**
+
+```php
+<ul>
+@foreach ($alumni as $a)
+    <li>{{ $a->name }}</li>
+@endforeach
+</ul>
 ```
