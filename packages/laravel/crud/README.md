@@ -1,5 +1,12 @@
 # CRUD
 
+- [Route](#route)
+- [Controller](#controller)
+- [Model](#model)
+- [Migration](#migration)
+- [Seeder](#seeder)
+- [View](#view)
+
 ## Route
 
 ---
@@ -82,32 +89,32 @@ $ php artisan make:seeder AlumniTableSeeder
 ```
 
 ```
-$ php artisan db:seed --class=UsersTableSeeder
+$ php artisan db:seed --class=AlumniTableSeeder
 ```
 
 ## View
 
 ---
 
-**resources/views/layout.blade.php**
+[resources/views/layout.blade.php](https://github.com/ifpb/php-guide/tree/master/packages/laravel/crud/project/resources/views/layout.blade.php)
 
 ```php
 {% include_relative project/resources/views/layout.blade.php %}
 ```
 
-**resources/views/alumni/index.blade.php**
+[resources/views/alumni/index.blade.php](https://github.com/ifpb/php-guide/tree/master/packages/laravel/crud/project/resources/views/alumni/index.blade.php)
 
 ```php
 {% include_relative project/resources/views/alumni/index.blade.php %}
 ```
 
-**resources/views/alumni/create.blade.php**
+[resources/views/alumni/create.blade.php](https://github.com/ifpb/php-guide/tree/master/packages/laravel/crud/project/resources/views/alumni/create.blade.php)
 
 ```php
 {% include_relative project/resources/views/alumni/create.blade.php %}
 ```
 
-**resources/views/alumni/edit.blade.php**
+[resources/views/alumni/edit.blade.php](https://github.com/ifpb/php-guide/tree/master/packages/laravel/crud/project/resources/views/alumni/edit.blade.php)
 
 ```php
 {% include_relative project/resources/views/alumni/edit.blade.php %}
