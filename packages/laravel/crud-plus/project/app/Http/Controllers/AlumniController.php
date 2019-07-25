@@ -83,6 +83,7 @@ class AlumniController extends Controller
     public function edit(Alumnus $alumnus)
     {
         $alumnus = Alumnus::findOrFail($alumnus->id);
+
         return view('alumni.edit', compact('alumnus'));
     }
 
@@ -95,14 +96,21 @@ class AlumniController extends Controller
      */
     public function update(Request $request, Alumnus $alumnus)
     {
-        $validatedData = $request->validate([
+        $validator = Validator::make($request->all(), [
             'name' => 'required|max:255',
             'email' => 'required|email',
             'linkedin' => 'required|url',
         ]);
-        Alumnus::whereId($alumnus->id)->update($validatedData);
 
-        return redirect(route('alumni.index'))->with('success', 'Alumnus is successfully saved');
+        if ($validator->fails()) {
+            return redirect()
+                ->back()
+                ->withInput()
+                ->withErrors($validator);
+        } else {
+            $alumnus->update($request->only('name', 'email', 'linkedin'));
+            return redirect(route('alumni.index'))->with('success', 'Alumnus is successfully saved');
+        }
     }
 
     /**
