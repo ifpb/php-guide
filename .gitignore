@@ -1,6 +1,7 @@
 **/.vagrant/
 **/vendor/
 **/composer.lock
+!packages/laravel/**/composer.lock
 **/.DS_Store
 lamp/vagrant/*.log
 lamp/docker-php-apache/data/mysql/*
