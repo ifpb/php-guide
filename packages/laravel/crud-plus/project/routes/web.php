@@ -12,22 +12,14 @@
 */
 
 
-Auth::routes();
+// Auth::routes();
 
-// Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/', 'AlumniController@index');
 
 // Route::resource('alumni', 'AlumniController');
 
-Route::get('/', 'AlumniController@index');
-
-Route::resource('alumni', 'AlumniController');
-
-Route::middleware(['auth'])->group(function () {
-    Route::resource('alumni', 'AlumniController')->only([
-        'create', 'store', 'edit', 'update', 'destroy'
-    ]);
-});
-
-// Route::resource('alumni', 'AlumniController')->only([
-//     'create', 'store', 'edit', 'update', 'destroy'
-// ])->middleware('guest');
+// Route::middleware(['auth'])->group(function () {
+//     Route::resource('alumni', 'AlumniController')->only([
+//         'create', 'store', 'edit', 'update', 'destroy'
+//     ]);
+// });
