@@ -35,10 +35,11 @@ $ php artisan key:generate --ansi
 
 **Docker Example**
 
-[https://github.com/ifpb/php-guide/tree/master/packages/laravel/create-project/docker-composer-laravel.zip](docker-composer-laravel.zip)
+[https://github.com/ifpb/php-guide/tree/master/packages/laravel/create-project/docker-composer-laravel.zip?raw=true](docker-composer-laravel.zip)
 
 ```
-$ wget https://github.com/ifpb/php-guide/tree/master/packages/laravel/create-project/docker-composer-laravel.zip
+$ wget https://github.com/ifpb/php-guide/tree/master/packages/laravel/create-project/docker-composer-laravel.zip?raw=true
+$ unzip docker-composer-laravel.zip
 $ cd docker-composer-laravel
 $ docker-compose up -d
 $ docker-compose ps
