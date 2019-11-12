@@ -126,3 +126,4 @@ $ php artisan db:seed --class=AlumniTableSeeder
 
 - [Laravel 5.8 CRUD Tutorial With Example For Beginners](https://appdividend.com/2019/03/08/laravel-5-8-crud-tutorial-with-example-for-beginners/)
 - [Laravel 5.7 CRUD Example Tutorial For Beginners From Scratch](https://appdividend.com/2018/09/06/laravel-5-7-crud-example-tutorial/)
+- [Laravel 5 Cheat Sheet](https://learninglaravel.net/cheatsheet/)

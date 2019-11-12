@@ -3,7 +3,7 @@ version: "3"
 services:
   web:
     container_name: web
-    image: php:apache-pdo
+    image: php-pdo:7.3-apache
     build: .
     networks:
       - app-tier
@@ -15,7 +15,7 @@ services:
       - mysql
   mysql:
     container_name: mysql
-    image: mysql:latest
+    image: mysql:5.6
     command:
       - --default-authentication-plugin=mysql_native_password
     environment:
