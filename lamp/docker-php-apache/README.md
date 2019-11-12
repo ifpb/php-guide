@@ -2,8 +2,6 @@
 
 - [References](#references)
 - [Files](#files)
-- [docker-compose.yml](#docker-compose.yml)
-- [Dockerfile](#dockerfile)
 - [Creating LAMP](#creating-lamp)
 - [Checking PHP](#checking-php)
 - [Running PHP code (Interactive shell)](#running-php-code-interactive-shell)
@@ -21,34 +19,37 @@
 
 ---
 
+[https://ifpb.github.io/php-guide/lamp/docker-php-apache.zip](../docker-php-apache.zip)
+
 ```sh
-$ tree .
+$ tree . -a
+.
+├── .env
 ├── Dockerfile
+├── README.md
 ├── docker-compose.yml
 └── src
     └── index.php
 
-1 directory, 3 files
+1 directory, 5 file
 ```
 
-## docker-compose.yml
+**.env:**
 
----
+```yaml
+{ % include_relative .env % }
+```
 
 **docker-compose.yml:**
 
 ```yaml
-{% include_relative docker-compose.yml %}
+{ % include_relative docker-compose.yml % }
 ```
-
-## Dockerfile
-
----
 
 **Dockerfile:**
 
 ```yaml
-{% include_relative Dockerfile %}
+{ % include_relative Dockerfile % }
 ```
 
 ## Creating LAMP
@@ -78,7 +79,15 @@ $ php -m
 
 ```
 $ docker run -it --rm --name php -v "$PWD":/usr/src/app -w /usr/src/app php:alpine php
+# php --version
+```
+
+```
 $ alias php= 'docker run -it --rm --name php -v "$PWD":/usr/src/app -w /usr/src/app php:alpine php'
+$ php --version
+```
+
+```
 $ php -a
 Interactive shell
 
