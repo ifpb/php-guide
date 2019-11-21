@@ -74,6 +74,7 @@ class AlumniController extends Controller
 **resources/views/alumni/index.blade.php**
 
 ```php
+{% raw %}
 @extends('layout')
 
 @section('title', 'Alumni')
@@ -86,6 +87,7 @@ class AlumniController extends Controller
     @endforeach
     </ul>
 @endsection
+{% endraw %}
 ```
 
 ### Layout view
@@ -494,9 +496,11 @@ class AlumniController extends Controller
 **resources/views/alumni/index.blade.php**
 
 ```php
+{% raw %}
 <ul>
 @foreach ($alumni as $a)
     <li>{{ $a->name }}</li>
 @endforeach
 </ul>
+{% endraw %}
 ```
