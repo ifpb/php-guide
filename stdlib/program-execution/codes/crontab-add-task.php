@@ -1,3 +1,4 @@
+<pre>
 <?php
 
 $crontab = shell_exec("crontab -l");
@@ -8,4 +9,5 @@ ${crontab}
 ${command}
 EOF");
 
+echo shell_exec("crontab -l");
 ?>

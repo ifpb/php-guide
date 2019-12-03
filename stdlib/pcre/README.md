@@ -5,10 +5,15 @@
   - [Repetition](#repetition)
   - [Capturing group](#capturing-group)
   - [Alternation](#alternation)
-- [preg_match()](#preg_match)
-- [preg_match_all()](#preg_match_all)
+- [Functions](#functions)
+  - [preg_match()](#preg_match)
+    - [Top](#top)
+    - [Crontab](#crontab)
+  - [preg_match_all()](#preg_match_all)
+    - [Ping API](#ping-api)
 
 ## [PCRE Patterns](http://php.net/manual/en/pcre.pattern.php)
+
 ---
 
 ```sh
@@ -52,40 +57,47 @@ var_dump($matches);
 
 ### Alternation
 
-Mac OS:
+**Mac OS:**
+
 ```sh
 $ top -l3 -n1 | head -n 4 | tail -n 1
 CPU usage: 14.79% user, 20.91% sys, 64.28% idle
 ```
 
-Linux:
+**Linux:**
+
 ```sh
 top -n1 -b | head -n 3 | tail -n 1
 %Cpu(s):  1.2 us,  0.6 sy,  0.1 ni, 98.0 id,  0.1 wa,  0.0 hi,  0.1 si,  0.0 st
 ```
 
-CPU User:
+**CPU User:**
+
 ```php
 $message = "%Cpu(s):  1.2 us,  0.6 sy,  0.1 ni, 98.0 id,  0.1 wa,  0.0 hi,  0.1 si,  0.0 st";
 $pattern = "/Cpu\(s\):  (.+) us|CPU usage: (.+)% user/";
 preg_match($pattern, $message, $matches);
-var_dump($matches); 
-//=> 
+var_dump($matches);
+//=>
 // array(2) {
 //  [0]=>string(15) "Cpu(s):  1.2 us"
 //  [1]=>string(3) "1.2"
 // }
 ```
 
-References: 
-* [PHP Patterns](patterns.md)
-* [JS Syntax](https://ifpb.github.io/javascript-guide/ecma/regexp/syntax.html)
-* [JS Patterns](https://ifpb.github.io/javascript-guide/ecma/regexp/pattern.html)
+**References:**
 
-## preg_match()
+- [PHP Patterns](patterns.md)
+- [JS Syntax](https://ifpb.github.io/javascript-guide/ecma/regexp/syntax.html)
+- [JS Patterns](https://ifpb.github.io/javascript-guide/ecma/regexp/pattern.html)
+
+## Functions
+
 ---
 
-### Top
+### preg_match()
+
+#### Top
 
 ```sh
 $ top -n1 -b
@@ -103,17 +115,30 @@ KiB Swap:        0 total,        0 used,        0 free.   281204 cached
 17914 vagrant   20   0   23528   1396   1048 R  0.0  0.3   0:00.00
 ```
 
-[Regular Expression](https://regex101.com/r/g3xxdN/1):
+> [Regular Expression (Tool)](https://regex101.com/r/g3xxdN/1):
+
 ```
-/Tasks:  (\d+) total,   (\d+) running,  (\d+) sleeping,   (\d+) stopped,   (\d+) zombie/
+/Tasks:\s+(\d+) total,\s+(\d+) running,\s+(\d+) sleeping,\s+(\d+) stopped,\s+(\d+) zombie/
 ```
 
-[codes/top.php](codes/top.php):
+> [codes/top.php](codes/top.php):
+
 ```php
 {% include_relative codes/top.php %}
 ```
 
+> [http://localhost:8080/pcre/codes/top.php](http://localhost:8080/pcre/codes/top.php):
+
 ```
+$ curl -i http://localhost:8080/pcre/codes/top.php
+HTTP/1.1 200 OK
+Server: Apache/2.4.38 (Debian)
+X-Powered-By: PHP/7.3.12
+Vary: Accept-Encoding
+Content-Length: 233
+Content-Type: text/html; charset=UTF-8
+
+<pre>
 array(6) {
   [0]=>string(68) "Tasks:  86 total,   1 running,  85 sleeping,   0 stopped,   0 zombie"
   [1]=>string(2) "86"
@@ -124,88 +149,105 @@ array(6) {
 }
 ```
 
-### Crontab
+#### Crontab
 
-[codes/crontab.txt](codes/crontab.txt):
+> [codes/crontab.txt](codes/crontab.txt):
+
 ```
 {% include_relative codes/crontab.txt %}
 ```
 
-[Regular Expression](https://regex101.com/r/I4VKwF/1):
+> [Regular Expression (Tool)](https://regex101.com/r/I4VKwF/1):
+
 ```
 (@yearly|@monthly|@daily|@reboot) (.+)|([^ ]+) ([^ ]+) ([^ ]+) ([^ ]+) ([^ ]+) (.+)
 ```
 
-[codes/crontab.php](codes/crontab.php):
+> [codes/crontab.php](codes/crontab.php):
+
 ```php
 {% include_relative codes/crontab.php %}
+```
+
+> [http://localhost:8080/pcre/codes/crontab.php](http://localhost:8080/pcre/codes/crontab.php):
+
+```
+$ curl -i http://localhost:8080/pcre/codes/crontab.php
+HTTP/1.1 200 OK
+Date: Wed, 04 Dec 2019 12:29:18 GMT
+Server: Apache/2.4.38 (Debian)
+X-Powered-By: PHP/7.3.12
+Access-Control-Allow-Origin: *
+Content-Length: 606
+Content-Type: application/json; charset=UTF-8
+
+[{"minute":"","hour":"","day":"30","month":"08","weekDay":"10","task":"06"},{"minute":"","hour":"","day":"00","month":"11,16","weekDay":"*","task":"*"},{"minute":"","hour":"","day":"00","month":"09-18","weekDay":"*","task":"*"},{"minute":"","hour":"","day":"00","month":"09-18","weekDay":"*","task":"*"},{"minute":"","hour":"","day":"*\/10","month":"*","weekDay":"*","task":"*"},{"keyword":"@yearly","task":"\/scripts\/annual-maintenance"},{"keyword":"@monthly","task":"\/scripts\/tape-backup"},{"keyword":"@daily","task":"\/scripts\/cleanup-logs"},{"keyword":"@reboot","task":"\/script\/start-service-x"}]
 ```
 
 ```js
 [
   {
-    "minute":"",
-    "hour":"",
-    "day":"30",
-    "month":"08",
-    "weekDay":"10",
-    "task":"06"
+    minute: "",
+    hour: "",
+    day: "30",
+    month: "08",
+    weekDay: "10",
+    task: "06"
   },
   {
-    "minute":"",
-    "hour":"",
-    "day":"00",
-    "month":"11,16",
-    "weekDay":"*",
-    "task":"*"
+    minute: "",
+    hour: "",
+    day: "00",
+    month: "11,16",
+    weekDay: "*",
+    task: "*"
   },
   {
-    "minute":"",
-    "hour":"",
-    "day":"00",
-    "month":"09-18",
-    "weekDay":"*",
-    "task":"*"
+    minute: "",
+    hour: "",
+    day: "00",
+    month: "09-18",
+    weekDay: "*",
+    task: "*"
   },
   {
-    "minute":"",
-    "hour":"",
-    "day":"00",
-    "month":"09-18",
-    "weekDay":"*",
-    "task":"*"
+    minute: "",
+    hour: "",
+    day: "00",
+    month: "09-18",
+    weekDay: "*",
+    task: "*"
   },
   {
-    "minute":"",
-    "hour":"",
-    "day":"*/10",
-    "month":"*",
-    "weekDay":"*",
-    "task":"*"
+    minute: "",
+    hour: "",
+    day: "*/10",
+    month: "*",
+    weekDay: "*",
+    task: "*"
   },
   {
-    "keyword":"@yearly",
-    "task":"/scripts/annual-maintenance"
+    keyword: "@yearly",
+    task: "/scripts/annual-maintenance"
   },
   {
-    "keyword":"@monthly",
-    "task":"/scripts/tape-backup"
+    keyword: "@monthly",
+    task: "/scripts/tape-backup"
   },
   {
-    "keyword":"@daily",
-    "task":"/scripts/cleanup-logs"
+    keyword: "@daily",
+    task: "/scripts/cleanup-logs"
   },
   {
-    "keyword":"@reboot",
-    "task":"/script/start-service-x"
+    keyword: "@reboot",
+    task: "/script/start-service-x"
   }
-]
+];
 ```
 
-## preg_match_all()
----
+### preg_match_all()
 
-### Ping API
+#### Ping API
 
 ```
 $ ping -c2 8.8.8.8
@@ -218,21 +260,57 @@ PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
 rtt min/avg/max/mdev = 144.691/146.669/148.648/2.015 ms
 ```
 
-#### Shell script mode
+##### Shell script mode
 
-[codes/ping.sh](codes/ping.sh):
+> [codes/ping.sh](codes/ping.sh):
+
 ```php
 {% include_relative codes/ping.sh %}
 ```
 
-[codes/ping-sh.php](codes/ping-sh.php):
+```
+# chmod +x ping.sh
+# ./ping.sh 8.8.8.8 3
+[
+        {
+                "bytes":64,
+                "ip":8.8.8.8,
+                "icmp_seq":2,
+                "ttl":37,
+                "time":84.5
+        }
+]
+```
+
+> [codes/ping-sh.php](codes/ping-sh.php):
+
 ```php
 {% include_relative codes/ping-sh.php %}
 ```
 
-> [http://localhost:8080/php/stdlib/pcre/codes/ping-sh.php?host=8.8.8.8](http://localhost:8080/php/stdlib/pcre/codes/ping-sh.php?host=8.8.8.8)
+> [http://localhost:8080/pcre/codes/ping-sh.php?host=8.8.8.8](http://localhost:8080/pcre/codes/ping-sh.php?host=8.8.8.8)
 
-#### PCRE mode
+```
+$ curl -i http://localhost:8080/pcre/codes/ping-sh.php\?host\=8.8.8.8
+HTTP/1.1 200 OK
+Server: Apache/2.4.38 (Debian)
+X-Powered-By: PHP/7.3.12
+Access-Control-Allow-Origin: *
+Content-Length: 82
+Content-Type: application/json; charset=UTF-8
+
+[
+        {
+                "bytes":64,
+                "ip":8.8.8.8,
+                "icmp_seq":1,
+                "ttl":37,
+                "time":77.5
+        }
+]
+```
+
+##### PCRE mode
 
 ```
 /\(([\d\.]+)\)/
@@ -244,18 +322,20 @@ rtt min/avg/max/mdev = 144.691/146.669/148.648/2.015 ms
 /min\/avg\/max\/(stddev|mdev) = ([\d\.]+)\/([\d\.]+)\/([\d\.]+)\/([\d\.]+)/
 ```
 
-[codes/ping.php](codes/ping.php):
+> [codes/ping.php](codes/ping.php):
+
 ```php
 {% include_relative codes/ping.php %}
 ```
 
-[http://localhost:8090/ping.php](http://localhost:8090/ping.php):
+> [http://localhost:8080/pcre/codes/ping.php](http://localhost:8080/pcre/codes/ping.php):
+
 ```
-$ curl -I http://localhost:8090/ping.php
+$ curl -i http://localhost:8080/pcre/codes/ping.php
 HTTP/1.1 500 Internal Server Error
 Host: localhost:8090
 Connection: close
-X-Powered-By: PHP/7.0.6
+X-Powered-By: PHP/7.3.12
 Content-type: application/json; charset=UTF-8
 Access-Control-Allow-Origin: *
 
@@ -264,13 +344,14 @@ Access-Control-Allow-Origin: *
 }
 ```
 
-[http://localhost:8090/ping.php?host=test](http://localhost:8090/ping.php?host=test):
+> [http://localhost:8080/pcre/codes/ping.php?host=test](http://localhost:8080/pcre/codes/ping.php?host=test):
+
 ```
-$ curl -I http://localhost:8090/ping.php?host=test
+$ curl -i http://localhost:8080/pcre/codes/ping.php?host=test
 HTTP/1.1 500 Internal Server Error
 Host: localhost:8090
 Connection: close
-X-Powered-By: PHP/7.0.6
+X-Powered-By: PHP/7.3.12
 Content-type: application/json; charset=UTF-8
 Access-Control-Allow-Origin: *
 
@@ -279,13 +360,14 @@ Access-Control-Allow-Origin: *
 }
 ```
 
-[http://localhost:8090/ping.php?host=8.8.8.8](http://localhost:8090/ping.php?host=8.8.8.8):
+> [http://localhost:8080/pcre/codes/ping.php?host=8.8.8.8](http://localhost:8080/pcre/codes/ping.php?host=8.8.8.8):
+
 ```
-$ curl -I http://localhost:8090/ping.php?host=8.8.8.8
+$ curl -i http://localhost:8080/pcre/codes/ping.php?host=8.8.8.8
 HTTP/1.1 200 OK
 Host: localhost:8090
 Connection: close
-X-Powered-By: PHP/7.0.6
+X-Powered-By: PHP/7.3.12
 Content-type: application/json; charset=UTF-8
 Access-Control-Allow-Origin: *
 
@@ -311,13 +393,14 @@ Access-Control-Allow-Origin: *
 }
 ```
 
-[http://localhost:8090/ping.php?host=8.8.8.8&count=2](http://localhost:8090/ping.php?host=8.8.8.8&count=2):
+> [http://localhost:8080/pcre/codes/ping.php?host=8.8.8.8&count=2](http://localhost:8080/pcre/codes/ping.php?host=8.8.8.8&count=2):
+
 ```
-$ curl -I http://localhost:8090/ping.php?host=8.8.8.8&count=2
+$ curl -i http://localhost:8080/pcre/codes/ping.php?host=8.8.8.8&count=2
 HTTP/1.1 200 OK
 Host: localhost:8090
 Connection: close
-X-Powered-By: PHP/7.0.6
+X-Powered-By: PHP/7.3.12
 Content-type: application/json; charset=UTF-8
 Access-Control-Allow-Origin: *
 

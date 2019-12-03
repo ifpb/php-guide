@@ -7,40 +7,14 @@
   - [Remove shared folder](#remove-shared-folder)
 
 ## Architecture
+
 ---
 
-![](assets/architecture.svg)
-
-[Vagrantfile](Vagrantfile):
-```ruby
-{% include_relative Vagrantfile %}
-```
-
-[install/smbserver.sh](install/smbserver.sh):
-```sh
-{% include_relative install/smbserver.sh %}
-```
-
-[install/smbclient.sh](install/smbclient.sh):
-```sh
-{% include_relative install/smbclient.sh %}
-```
-
-[install/smb.conf](install/smb.conf):
-```
-{% include_relative install/smb.conf %}
-```
-
-```
-[vagrant]
-  comment = public folder of vagrant
-  path = /home/vagrant/shared
-  valid users = vagrant
-  writeable = yes
-  browseable = yes
-```
+- [Docker](docker/)
+- [Vagrant VirtualBox](vagrant-virtualbox/)
 
 **References:**
+
 - [Ubuntu - What is Samba?](https://help.ubuntu.com/community/Samba)
 - [Ubuntu Samba](https://help.ubuntu.com/lts/serverguide/samba.html.en)
   - [File Server](https://help.ubuntu.com/lts/serverguide/samba-fileserver.html.en)
@@ -51,6 +25,7 @@
 - [How to Create a Network Share Via Samba Via CLI](https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20%28Command-line%20interface/Linux%20Terminal%29%20-%20Uncomplicated,%20Simple%20and%20Brief%20Way!)
 
 ## Services
+
 ---
 
 ### Show samba config
@@ -75,6 +50,7 @@
 **Command**
 
 vagrant@smbclient:
+
 ```
 $ cat /etc/samba/smb.conf
 [global]
@@ -90,13 +66,13 @@ $ cat /etc/samba/smb.conf
 
 **Params**
 
-| Name | Type | Description |
-|-|-|-|
-| :section | String | section |
-| :user | String | user |
-| :path | String | path |
-| :validUsers | String | validUsers |
-| :comment | String | comment |
+| Name        | Type   | Description |
+| ----------- | ------ | ----------- |
+| :section    | String | section     |
+| :user       | String | user        |
+| :path       | String | path        |
+| :validUsers | String | validUsers  |
+| :comment    | String | comment     |
 
 **Example**
 
@@ -111,6 +87,7 @@ $ cat /etc/samba/smb.conf
 **Command**
 
 vagrant@smbserver:
+
 ```
 $ mkdir /home/vagrant/shared
 
@@ -166,6 +143,7 @@ $ cat /etc/samba/smb.conf
 ```
 
 vagrant@smbclient:
+
 ```
 $ smbclient //192.168.1.2/vagrant -U vagrant%vagrant
 WARNING: The "syslog" option is deprecated
@@ -186,7 +164,7 @@ smb: \> ls
                 41251136 blocks of size 1024. 37763792 blocks available
 ```
 
-<!-- 
+<!--
 TODO
 Connect to Server > 192.168.1.2
 smb://192.168.1.2/vagrant
@@ -227,8 +205,8 @@ $ mount -t cifs -o <username>,<password> //<servername>/<sharename> /mnt/point/
 
 **Params**
 
-| Name | Type | Description |
-|-|-|-|
+| Name     | Type   | Description  |
+| -------- | ------ | ------------ |
 | :section | String | section name |
 
 **Example**
@@ -244,6 +222,7 @@ $ mount -t cifs -o <username>,<password> //<servername>/<sharename> /mnt/point/
 **Command**
 
 vagrant@smbserver:
+
 ```
 $ mkdir /home/vagrant/shared
 
@@ -259,6 +238,7 @@ $ cat /etc/samba/smb.conf
 ```
 
 vagrant@smbclient:
+
 ```
 $ smbclient -L 192.168.1.2
 ??

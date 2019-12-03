@@ -1,3 +1,4 @@
+<pre>
 <?php
 require_once('read-host.php');
 
@@ -37,3 +38,5 @@ var_dump(readOrCreate("dns google", "8.8.8.8"));
 //   ["address"]=>  string(7) "8.8.8.8"
 // }
 var_dump(readOrCreate("dns google", "8.8.4.4")); //=> string(1) "3"
+?>
+</pre>

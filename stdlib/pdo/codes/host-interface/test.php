@@ -1,4 +1,6 @@
+<pre>
 <?php
+
 use Model\Host;
 use Model\NetInterface;
 
@@ -36,3 +38,4 @@ var_dump($host->remove($hostId)); //=> int(1)
 var_dump($host->read($hostId));   //=> bool(false)
 var_dump($host->read($ethId));    //=> bool(false)
 ?>
+</pre>

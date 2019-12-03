@@ -2,5 +2,7 @@
 **/vendor/
 **/composer.lock
 **/.DS_Store
+**/supervisord.pid
+**/supervisord.log
 lamp/vagrant/*.log
 lamp/docker-php-apache/data/mysql/*

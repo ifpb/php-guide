@@ -4,7 +4,7 @@ body {
 }
 
 header {
-  padding: .2rem 0;
+  padding: 0.2rem 0;
   text-align: center;
   background: #fafafa;
   border-bottom: 1px solid #ccc;
@@ -12,11 +12,11 @@ header {
 }
 
 #lostedStatus {
-  color: #FF6384;
+  color: #ff6384;
 }
 
 #receivedStatus {
-  color: #36A2EB;
+  color: #36a2eb;
 }
 
 tr:hover {
@@ -24,5 +24,5 @@ tr:hover {
 }
 
 tr.selected {
-  background-color: rgba(0, 0, 0, .075);
+  background-color: rgba(0, 0, 0, 0.075);
 }

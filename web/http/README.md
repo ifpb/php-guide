@@ -14,11 +14,13 @@
 
 ### Back-end
 
-[codes/get-hello/hello.php](codes/get-hello/hello.php):
+> [codes/get-hello/hello.php](codes/get-hello/hello.php):
 
 ```php
 {% include_relative codes/get-hello/hello.php %}
 ```
+
+> [http://localhost:8080/php/web/http/codes/get-hello/hello.php?name=Alice](http://localhost:8080/php/web/http/codes/get-hello/hello.php?name=Alice):
 
 ```
 $ curl 'http://localhost:8080/php/web/http/codes/get-hello/hello.php?name=Alice' \
@@ -51,15 +53,15 @@ $ curl 'http://localhost:8080/php/web/http/codes/get-hello/hello.php?name=Alice'
 
 ### Front-end
 
-> [http://localhost:8080/php/web/http/codes/get-hello/](http://localhost:8080/php/web/http/codes/get-hello/)
-
-[codes/get-hello/index.html](codes/get-hello/index.html):
+> [codes/get-hello/index.html](codes/get-hello/index.html):
 
 ```html
 {% include_relative codes/get-hello/index.html %}
 ```
 
-### References
+> [http://localhost:8080/php/web/http/codes/get-hello/](http://localhost:8080/php/web/http/codes/get-hello/)
+
+**References**
 
 - [\$\_GET](http://php.net/manual/en/reserved.variables.get.php)
 - [Predefined Variables](http://php.net/manual/en/reserved.variables.php)
@@ -70,11 +72,13 @@ $ curl 'http://localhost:8080/php/web/http/codes/get-hello/hello.php?name=Alice'
 
 ### Back-end
 
-[codes/post-hello/hello.php](codes/post-hello/hello.php):
+> [codes/post-hello/hello.php](codes/post-hello/hello.php):
 
 ```php
 {% include_relative codes/post-hello/hello.php %}
 ```
+
+> [http://localhost:8080/php/web/http/codes/post-hello/hello.php](http://localhost:8080/php/web/http/codes/post-hello/hello.php):
 
 ```
 $ curl 'http://localhost:8080/php/web/http/codes/post-hello/hello.php' \
@@ -116,15 +120,15 @@ $ curl 'http://localhost:8080/php/web/http/codes/post-hello/hello.php' \
 
 ### Front-end
 
-> [http://localhost:8080/php/web/http/codes/post-hello/](http://localhost:8080/php/web/http/codes/post-hello/)
-
-[codes/post-hello/index.html](codes/post-hello/index.html):
+> [codes/post-hello/index.html](codes/post-hello/index.html):
 
 ```html
 {% include_relative codes/post-hello/index.html %}
 ```
 
-### References
+> [http://localhost:8080/php/web/http/codes/post-hello/](http://localhost:8080/php/web/http/codes/post-hello/)
+
+**References**
 
 - [\$\_POST](http://php.net/manual/en/reserved.variables.post.php)
 - [Predefined Variables](http://php.net/manual/en/reserved.variables.php)
@@ -133,17 +137,19 @@ $ curl 'http://localhost:8080/php/web/http/codes/post-hello/hello.php' \
 
 ---
 
-[codes/simple-form/index.php](codes/simple-form/index.php):
+> [codes/simple-form/index.php](codes/simple-form/index.php):
 
 ```php
 {% include_relative codes/simple-form/index.php %}
 ```
 
-[codes/simple-form/review.php](codes/simple-form/review.php):
+> [codes/simple-form/review.php](codes/simple-form/review.php):
 
 ```php
 {% include_relative codes/simple-form/review.php %}
 ```
+
+> [http://localhost:8080/php/web/http/codes/simple-form/](http://localhost:8080/php/web/http/codes/simple-form/)
 
 <!--
 TODO

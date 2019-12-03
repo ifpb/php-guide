@@ -1,4 +1,6 @@
+<pre>
 <?php
+
 use Model\Host;
 use Model\Dns;
 
@@ -37,7 +39,7 @@ var_dump($host->read($hostId));   //=> bool(false)
 var_dump($host->read($dnsId));    //=> bool(false)
 
 $host2 = $host->readOrCreate('pc02');
-$allDns = $host->getDns($host2["id"]); 
+$allDns = $host->getDns($host2["id"]);
 var_dump($allDns);
 //=>
 // array(1) {
@@ -82,3 +84,4 @@ var_dump($allDns);
 //   }
 // }
 ?>
+</pre>

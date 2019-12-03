@@ -1,0 +1,51 @@
+version: "3"
+
+services:
+  smb-server:
+    container_name: smb-server
+    image: php:7.3-apache-smb-server
+    build:
+      context: .
+      dockerfile: ./samba-server/Dockerfile
+    networks:
+      - samba-network
+    ports:
+      - 8080:80
+    volumes:
+      - ./samba-server/src:/var/www/html/
+    depends_on:
+      - mysql
+
+  smb-client:
+    container_name: smb-client
+    image: php:7.3-apache-smb-client
+    build:
+      context: .
+      dockerfile: ./samba-client/Dockerfile
+    networks:
+      - samba-network
+    ports:
+      - 8081:80
+    volumes:
+      - ./samba-client/src:/var/www/html/
+    depends_on:
+      - smb-server
+
+  mysql:
+    container_name: mysql
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    restart: unless-stopped
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    networks:
+      - samba-network
+
+networks:
+  samba-network:
+    driver: bridge

@@ -7,7 +7,7 @@ COPY composer.lock composer.json /var/www/
 WORKDIR /var/www
 
 # Install dependencies
-RUN apt-get update && apt-get install -y \
+RUN apt update && apt install -y \
   build-essential \
   libpq-dev \
   locales \
@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y \
   curl
 
 # Clear cache
-RUN apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN apt clean && rm -rf /var/lib/apt/lists/*
 
 # Install extensions
 RUN docker-php-ext-install pdo pdo_pgsql

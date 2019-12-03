@@ -1,4 +1,6 @@
+<pre>
 <?php
+
 use Model\Host;
 use Model\Address;
 
@@ -38,3 +40,4 @@ var_dump($host->remove($hostId)); //=> int(1)
 var_dump($host->read($hostId));   //=> bool(false)
 var_dump($host->read($addId));    //=> bool(false)
 ?>
+</pre>

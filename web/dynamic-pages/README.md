@@ -10,35 +10,45 @@
   - [Hello POST](#hello-post)
 
 ## Server-side rendering
+
 ---
 
 ### Heroes Page
 
-[codes/heroes/heroes.php](codes/heroes/heroes.php):
+> [codes/heroes/heroes.php](codes/heroes/heroes.php):
+
 ```php
 {% include_relative codes/heroes/heroes.php %}
 ```
 
-[codes/heroes/index.php](codes/heroes/index.php):
+> [codes/heroes/index.php](codes/heroes/index.php):
+
 ```php
 {% include_relative codes/heroes/index.php %}
 ```
 
+> [http://localhost:8080/php/web/dynamic-pages/codes/heroes/](http://localhost:8080/php/web/dynamic-pages/codes/heroes/)
+
 ### Heroes JSON
 
-[codes/heroes-json/heroes.json](codes/heroes-json/heroes.json):
+> [codes/heroes-json/heroes.json](codes/heroes-json/heroes.json):
+
 ```json
 {% include_relative codes/heroes-json/heroes.json %}
 ```
 
-[codes/heroes-json/index.php](codes/heroes-json/index.php):
+> [codes/heroes-json/index.php](codes/heroes-json/index.php):
+
 ```php
 {% include_relative codes/heroes-json/index.php %}
 ```
 
+> [http://localhost:8080/php/web/dynamic-pages/codes/heroes-json/](http://localhost:8080/php/web/dynamic-pages/codes/heroes-json/)
+
 ### Hello Compact
 
-[codes/post-hello-compact/index.php](codes/post-hello-compact/index.php):
+> [codes/post-hello-compact/index.php](codes/post-hello-compact/index.php):
+
 ```php
 {% include_relative codes/post-hello-compact/index.php %}
 ```
@@ -54,37 +64,46 @@ layout
 └── page2.php
 ```
 
-[codes/layout/index.php](codes/layout/index.php)
+> [codes/layout/index.php](codes/layout/index.php):
+
 ```php
 {% include_relative codes/layout/index.php %}
 ```
 
-[codes/layout/page1.html](codes/layout/page1.html)
+> [codes/layout/page1.html](codes/layout/page1.html):
+
 ```html
 {% include_relative codes/layout/page1.html %}
 ```
 
-[codes/layout/page2.html](codes/layout/page2.html)
+> [codes/layout/page2.html](codes/layout/page2.html):
+
 ```html
 {% include_relative codes/layout/page2.html %}
 ```
 
+> [http://localhost:8080/php/web/dynamic-pages/codes/layout/](http://localhost:8080/php/web/dynamic-pages/codes/layout/)
+
 ## Client-side rendering
+
 ---
 
 ### Hello GET
 
-[codes/get-hello-fetch/public/index.html](codes/get-hello-fetch/public/index.html):
+> [codes/get-hello-fetch/public/index.html](codes/get-hello-fetch/public/index.html):
+
 ```html
 {% include_relative codes/get-hello-fetch/public/index.html %}
 ```
 
-[codes/get-hello-fetch/public/js/main.js](codes/get-hello-fetch/public/js/main.js):
+> [codes/get-hello-fetch/public/js/main.js](codes/get-hello-fetch/public/js/main.js):
+
 ```js
 {% include_relative codes/get-hello-fetch/public/js/main.js %}
 ```
 
-[codes/get-hello-fetch/api/hello.php](codes/get-hello-fetch/api/hello.php):
+> [codes/get-hello-fetch/api/hello.php](codes/get-hello-fetch/api/hello.php):
+
 ```php
 {% include_relative codes/get-hello-fetch/api/hello.php %}
 ```
@@ -93,17 +112,20 @@ layout
 
 ### Hello POST
 
-[codes/post-hello-fetch/public/index.html](codes/post-hello-fetch/public/index.html):
+> [codes/post-hello-fetch/public/index.html](codes/post-hello-fetch/public/index.html):
+
 ```html
 {% include_relative codes/post-hello-fetch/public/index.html %}
 ```
 
-[codes/post-hello-fetch/public/js/main.js](codes/post-hello-fetch/public/js/main.js):
+> [codes/post-hello-fetch/public/js/main.js](codes/post-hello-fetch/public/js/main.js):
+
 ```js
 {% include_relative codes/post-hello-fetch/public/js/main.js %}
 ```
 
-[codes/post-hello-fetch/api/hello.php](codes/post-hello-fetch/api/hello.php):
+> [codes/post-hello-fetch/api/hello.php](codes/post-hello-fetch/api/hello.php):
+
 ```php
 {% include_relative codes/post-hello-fetch/api/hello.php %}
 ```

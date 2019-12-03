@@ -1,4 +1,6 @@
+<pre>
 <?php
+
 use Model\Icmp;
 use Model\Packet;
 use Model\Host;
@@ -37,3 +39,5 @@ $packet->create(1, 63, 104, $icmpId);
 
 // Print all ICMPs
 print_r($icmp->readJoinAll());
+?>
+<pre>

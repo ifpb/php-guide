@@ -8,7 +8,7 @@ WORKDIR /var/www
 
 # Install dependencies
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
-RUN apt-get update && apt-get install -y \
+RUN apt update && apt install -y \
   build-essential \
   mariadb-client \
   locales \
@@ -20,7 +20,7 @@ RUN apt-get update && apt-get install -y \
   nodejs
 
 # Clear cache
-RUN apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN apt clean && rm -rf /var/lib/apt/lists/*
 
 # Install extensions
 RUN docker-php-ext-install pdo_mysql

@@ -4,7 +4,7 @@ body {
 }
 
 header {
-  padding: .2rem 0;
+  padding: 0.2rem 0;
   text-align: center;
   background: #fafafa;
   border-bottom: 1px solid #ccc;
@@ -23,14 +23,14 @@ main {
   margin-bottom: 1rem;
 }
 
-table.tablesorter tbody.refreshUp td {
+/* table.tablesorter tbody.refreshUp td {
   color: #fafafa;
-}
+} */
 
 table.tablesorter tbody tr:hover td {
   background-color: #ccc;
 }
 
-table.tablesorter thead tr th:nth-child(n+2) {
+table.tablesorter thead tr th:nth-child(n + 2) {
   padding-right: 20px;
 }

