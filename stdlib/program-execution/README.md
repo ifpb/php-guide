@@ -126,7 +126,7 @@ PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
 rtt min/avg/max/mdev = 68.650/68.650/68.650/0.000 ms
 ```
 
-**Reference**
+**References**
 
 - [Process Control Extensions - Program execution](https://www.php.net/manual/en/ref.exec.php): `shell_exec()`
 - [Other Services - Network](http://php.net/manual/en/ref.network.php): `header()`

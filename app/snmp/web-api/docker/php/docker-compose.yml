@@ -1,0 +1,36 @@
+version: "3"
+
+services:
+  # monitor
+  snmp-server:
+    container_name: snmp-server
+    image: ifpb/php:7.3-apache-snmp-server
+    build:
+      context: .
+      dockerfile: ./snmp-server/Dockerfile
+    networks:
+      - snmp-network
+    ports:
+      - 8080:80
+    volumes:
+      - ./snmp-server/src:/var/www/html/
+
+  # agent
+  snmp-client:
+    container_name: snmp-client
+    image: ifpb/php:7.3-apache-snmp-client
+    build:
+      context: .
+      dockerfile: ./snmp-client/Dockerfile
+    networks:
+      - snmp-network
+    ports:
+      - 8081:80
+    volumes:
+      - ./snmp-client/src:/var/www/html/
+    depends_on:
+      - snmp-server
+
+networks:
+  snmp-network:
+    driver: bridge

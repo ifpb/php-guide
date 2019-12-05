@@ -105,19 +105,143 @@ $ php artisan db:seed --class=AlumniTableSeeder
 [resources/views/alumni/index.blade.php](https://github.com/ifpb/php-guide/tree/master/packages/laravel/crud/project/resources/views/alumni/index.blade.php)
 
 ```php
-{% include_relative project/resources/views/alumni/index.blade.php %}
+{% raw %}
+@extends('layout')
+
+@section('title', 'Alumnus')
+
+@section('content')
+@if(session()->get('success'))
+<div class="alert alert-success">
+  {{ session()->get('success') }}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div><br />
+@endif
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <td>ID</td>
+      <td>Name</td>
+      <td>Email</td>
+      <td>Linkedin</td>
+      <td colspan="2">Action</td>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach($alumni as $alumni)
+    <tr>
+      <td>{{$alumni->id}}</td>
+      <td>{{$alumni->name}}</td>
+      <td>{{$alumni->email}}</td>
+      <td>{{$alumni->linkedin}}</td>
+      <td><a href="{{ route('alumni.edit', $alumni->id) }}" class="btn btn-primary" role="button">Edit</a></td>
+      <td>
+        <form action="{{ route('alumni.destroy', $alumni->id)}}" method="post">
+          @csrf
+          @method('DELETE')
+          <button class="btn btn-danger" type="submit">Delete</button>
+        </form>
+      </td>
+    </tr>
+    @endforeach
+  </tbody>
+</table>
+<a href="{{ route('alumni.create') }}" class="btn btn-primary" role="button">Add alumnus</a>
+@endsection
+{% endraw %}
 ```
 
 [resources/views/alumni/create.blade.php](https://github.com/ifpb/php-guide/tree/master/packages/laravel/crud/project/resources/views/alumni/create.blade.php)
 
 ```php
-{% include_relative project/resources/views/alumni/create.blade.php %}
+{% raw %}
+@extends('layout')
+
+@section('title', 'Create Alumnus')
+
+@section('content')
+<div class="card">
+  <div class="card-header">
+    Add Alumnus
+  </div>
+  <div class="card-body">
+    @if ($errors->any())
+    <div class="alert alert-danger">
+      <ul>
+        @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+      </ul>
+    </div>
+    @endif
+    <form method="post" action="{{ route('alumni.store') }}">
+      <div class="form-group">
+        @csrf
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" name="name" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="text" class="form-control" id="email" name="email" />
+      </div>
+      <div class="form-group">
+        <label for="linkedin">Linkedin:</label>
+        <input type="text" class="form-control" id="linkedin" name="linkedin" />
+      </div>
+      <button type="submit" class="btn btn-primary">Create Alumnus</button>
+    </form>
+  </div>
+</div>
+@endsection
+{% endraw %}
 ```
 
 [resources/views/alumni/edit.blade.php](https://github.com/ifpb/php-guide/tree/master/packages/laravel/crud/project/resources/views/alumni/edit.blade.php)
 
 ```php
-{% include_relative project/resources/views/alumni/edit.blade.php %}
+{% raw %}
+@extends('layout')
+
+@section('title', 'Edit Alumnus')
+
+@section('content')
+<div class="card">
+  <div class="card-header">
+    Edit Alumnus
+  </div>
+  <div class="card-body">
+    @if ($errors->any())
+    <div class="alert alert-danger">
+      <ul>
+        @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+      </ul>
+    </div>
+    @endif
+    <form method="post" action="{{ route('alumni.update', $alumnus) }}">
+      <div class="form-group">
+        @csrf
+        @method('PATCH')
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" name="name" value="{{ $alumnus->name }}" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="text" class="form-control" id="email" name="email" value="{{ $alumnus->email }}" />
+      </div>
+      <div class="form-group">
+        <label for="linkedin">Linkedin:</label>
+        <input type="text" class="form-control" id="linkedin" name="linkedin" value="{{ $alumnus->linkedin }}" />
+      </div>
+      <button type="submit" class="btn btn-primary">Update Alumnus</button>
+    </form>
+  </div>
+</div>
+@endsection
+{% endraw %}
 ```
 
 ## References

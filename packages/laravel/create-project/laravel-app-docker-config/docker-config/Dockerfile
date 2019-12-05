@@ -9,7 +9,7 @@ WORKDIR /var/www
 # Install dependencies
 RUN apt update && apt install -y \
   build-essential \
-  mysql-client \
+  mariadb-client \
   locales \
   zip \
   vim \

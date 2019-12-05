@@ -1,0 +1,34 @@
+version: "3"
+
+services:
+  smb-server:
+    container_name: smb-server
+    image: ifpb/php:7.3-apache-smb-server
+    build:
+      context: .
+      dockerfile: ./samba-server/Dockerfile
+    networks:
+      - samba-network
+    ports:
+      - 8080:80
+    volumes:
+      - ./samba-server/src:/var/www/html/
+
+  smb-client:
+    container_name: smb-client
+    image: ifpb/php:7.3-apache-smb-client
+    build:
+      context: .
+      dockerfile: ./samba-client/Dockerfile
+    networks:
+      - samba-network
+    ports:
+      - 8081:80
+    volumes:
+      - ./samba-client/src:/var/www/html/
+    depends_on:
+      - smb-server
+
+networks:
+  samba-network:
+    driver: bridge

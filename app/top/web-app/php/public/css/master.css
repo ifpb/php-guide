@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  padding: 0.2rem 0;
+  text-align: center;
+  background: #fafafa;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 3rem;
+}
+
+main {
+  width: 80%;
+  min-width: 960px;
+  margin: auto;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+table tbody tr:hover td {
+  background-color: #ccc;
+}
+
+table thead tr th:nth-child(n + 2) {
+  padding-right: 20px;
+}
+
+table thead tr th {
+  outline: none;
+}

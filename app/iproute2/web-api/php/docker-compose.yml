@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  web:
+    container_name: web
+    image: ifpb/php:7.3-apache-iproute2
+    build: .
+    ports:
+      - 8080:80
+    volumes:
+      - ./:/var/www/html/

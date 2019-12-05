@@ -54,10 +54,10 @@ rtt min/avg/max/mdev = 66.715/66.715/66.715/0.000 ms
 {% include_relative codes/ping-log.php %}
 ```
 
-> [http://localhost:8080/filesystem/codes/ping-log.php\?host\=8.8.8.8](http://localhost:8080/filesystem/codes/ping-log.php?host=8.8.8.8)
+> [http://localhost:8080/filesystem/codes/ping-log.php?host=8.8.8.8](http://localhost:8080/filesystem/codes/ping-log.php?host=8.8.8.8)
 
 ```
-$ curl -i http://localhost:8080/filesystem/codes/ping-log.php\?host\=8.8.8.8
+$ curl -i http://localhost:8080/filesystem/codes/ping-log.php?host=8.8.8.8
 HTTP/1.1 200 OK
 Server: Apache/2.4.38 (Debian)
 X-Powered-By: PHP/7.3.12

@@ -3,7 +3,7 @@ version: "3"
 services:
   web:
     container_name: web
-    image: php:7.3-apache-pdo
+    image: ifpb/php:7.3-apache-pdo
     build: .
     networks:
       - app-tier

@@ -5,7 +5,7 @@ RUN apt -y update \
   libssh2-1-dev \
   libssh2-1 \
   mariadb-client \
-  iputils-ping \
+  inetutils-ping \
   cron \
   git \
   vim \

