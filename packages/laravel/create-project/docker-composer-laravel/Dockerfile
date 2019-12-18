@@ -4,7 +4,7 @@ COPY ./src/ /var/www
 
 WORKDIR /var/www
 
-RUN apk update && apk add mysql-client zip libzip-dev
+RUN apk update && apk add mysql-client zip libzip-dev nodejs npm
 
 RUN docker-php-ext-install pdo pdo_mysql zip
 

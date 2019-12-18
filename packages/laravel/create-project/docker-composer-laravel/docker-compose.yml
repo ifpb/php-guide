@@ -41,7 +41,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: php-pdo:7.3-fpm-alpine
+    image: ifpb/php:7.3-fpm-alpine-pdo
     container_name: php
     volumes:
       - ./src:/var/www
