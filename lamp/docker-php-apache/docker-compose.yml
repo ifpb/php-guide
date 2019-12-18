@@ -13,6 +13,7 @@ services:
       - ./src/:/var/www/html/
     depends_on:
       - mysql
+
   mysql:
     container_name: mysql
     image: mysql:8.0
@@ -27,6 +28,16 @@ services:
       - app-tier
     ports:
       - 3306:3306
+
+  adminer:
+    image: adminer:4.7.5
+    restart: always
+    networks:
+      - app-tier
+    ports:
+      - 8081:8080
+    depends_on:
+      - mysql
 
 networks:
   app-tier:
