@@ -45,6 +45,17 @@ services:
     networks:
       - app-network
 
+  adminer:
+    container_name: adminer
+    image: adminer:4.7.5
+    restart: always
+    networks:
+      - app-tier
+    ports:
+      - 8081:8080
+    depends_on:
+      - mysql
+
 networks:
   app-network:
     driver: bridge

@@ -12,7 +12,7 @@ sudo sed -i -r -e 's/display_errors = Off/display_errors = On/g' /etc/php/7.2/ap
 sudo systemctl restart apache2 > /dev/null
 
 echo "Installing MySQL"
-DBPASSWD=abc123
+DBPASSWD=secret
 echo "mysql-server mysql-server/root_password password $DBPASSWD" | sudo debconf-set-selections  > /dev/null
 echo "mysql-server mysql-server/root_password_again password $DBPASSWD" | sudo debconf-set-selections  > /dev/null
 sudo apt-get -y install mysql-server  > /dev/null

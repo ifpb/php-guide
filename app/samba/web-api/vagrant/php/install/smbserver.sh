@@ -22,7 +22,7 @@ echo -e "\n\n[ssh2]\nextension=ssh2.so" | sudo tee --append /etc/php/7.1/apache2
 sudo service apache2 restart > /dev/null
 
 echo "Installing MySQL"
-DBPASSWD=abc123
+DBPASSWD=secret
 echo "mysql-server mysql-server/root_password password $DBPASSWD" | sudo debconf-set-selections  > /dev/null
 echo "mysql-server mysql-server/root_password_again password $DBPASSWD" | sudo debconf-set-selections  > /dev/null
 sudo apt-get -y install mysql-server  > /dev/null

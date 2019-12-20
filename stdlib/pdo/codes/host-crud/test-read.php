@@ -1,6 +1,6 @@
 <pre>
 <?php
-require_once('read-host.php');
+require_once('host.php');
 
 var_dump(read(2));
 //=>
