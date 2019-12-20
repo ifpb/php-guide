@@ -1,6 +1,8 @@
 **/.vagrant/
 **/vendor/
 **/composer.lock
+**/node_modules/
+**/package-lock.json
 **/.DS_Store
 **/supervisord.pid
 **/supervisord.log

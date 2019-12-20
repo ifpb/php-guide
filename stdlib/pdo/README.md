@@ -1,10 +1,11 @@
 # [PDO — PHP Data Objects](http://php.net/manual/en/book.pdo.php)
 
+- [Code](#code)
 - [Database](#database)
   - [Schema](#schema)
   - [Import](#import)
-- [Check PDO](#check-pdo)
 - [PDO CRUD](#pdo-crud)
+  - [Check PDO](#check-pdo)
   - [Connection](#connection)
   - [Host Model](#host-model)
   - [Create Data](#create-data)
@@ -14,6 +15,8 @@
 - [PDO Model](#pdo-model)
 
 ## Code
+
+---
 
 ```
 host-crud
@@ -47,7 +50,10 @@ host-crud
 > [codes/host-crud/.env](codes/host-crud/.env):
 
 ```
-{% include_relative codes/host-crud/.env %}
+MYSQL_ROOT_PASSWORD=secret
+MYSQL_DATABASE=example
+MYSQL_USER=devuser
+MYSQL_PASSWORD=devpass
 ```
 
 ## Database
@@ -71,9 +77,11 @@ $ docker-compose exec web bash
 # mysql -h mysql -u root -p < pdo/codes/host-crud/database/schema.sql
 ```
 
-## Check PDO
+## PDO CRUD
 
 ---
+
+### Check PDO
 
 ```
 $ docker-compose exec web bash
@@ -82,19 +90,15 @@ pdo_mysql
 pdo_sqlite
 ```
 
-## PDO CRUD
-
----
-
 ### Connection
 
-> [codes/host-crud/config.php](hostcodes/-crud/config.php):
+> [codes/host-crud/config.php](codes/host-crud/config.php):
 
 ```php
 {% include_relative codes/host-crud/config.php %}
 ```
 
-> [codes/host-crud/database.php](hostcodes/-crud/database.php):
+> [codes/host-crud/database.php](codes/host-crud/database.php):
 
 ```php
 {% include_relative codes/host-crud/database.php %}
@@ -110,35 +114,43 @@ pdo_sqlite
 
 ### Create Data
 
-> [http://localhost:8080/test-create.php](http://localhost:8080/test-create.php):
+> [codes/host-crud/test-create.php](codes/host-crud/test-create.php):
 
 ```php
 {% include_relative codes/host-crud/test-create.php %}
 ```
 
+> [http://localhost:8080/test-create.php](http://localhost:8080/test-create.php)
+
 ### Read Data
 
-> [http://localhost:8080/test-read.php](http://localhost:8080/test-read.php):
+> [codes/host-crud/test-read.php](codes/host-crud/test-read.php):
 
 ```php
 {% include_relative codes/host-crud/test-read.php %}
 ```
 
+> [http://localhost:8080/test-read.php](http://localhost:8080/test-read.php)
+
 ### Update Data
 
-> [http://localhost:8080/test-update.php](http://localhost:8080/test-update.php):
+> [codes/host-crud/test-update.php](codes/host-crud/test-update.php):
 
 ```php
 {% include_relative codes/host-crud/test-update.php %}
 ```
 
+> [http://localhost:8080/test-update.php](http://localhost:8080/test-update.php)
+
 ### Delete Data
 
-> [http://localhost:8080/test-delete.php](http://localhost:8080/test-delete.php):
+> [codes/host-crud/test-delete.php](codes/host-crud/test-delete.php):
 
 ```php
 {% include_relative codes/host-crud/test-delete.php %}
 ```
+
+> [http://localhost:8080/test-delete.php](http://localhost:8080/test-delete.php)
 
 ## PDO Model
 

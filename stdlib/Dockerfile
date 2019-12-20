@@ -4,7 +4,6 @@ RUN apt -y update \
   && apt install -y \
   libssh2-1-dev \
   libssh2-1 \
-  mariadb-client \
   inetutils-ping \
   cron \
   git \
@@ -24,9 +23,6 @@ RUN sed -i 's/\#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh
 RUN cd /tmp && git clone https://git.php.net/repository/pecl/networking/ssh2.git && cd /tmp/ssh2 \
   && phpize && ./configure && make && make install \
   && docker-php-ext-enable ssh2
-
-# pdo_mysql package
-RUN docker-php-ext-install pdo_mysql
 
 ## supervisord
 RUN apt -y install supervisor
