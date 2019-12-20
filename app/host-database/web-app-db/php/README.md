@@ -51,7 +51,7 @@ host-simple-db
 
 ---
 
-> [Code](../../web-api-db/php/)
+> [Code](../../web-api-db/php/):
 
 ```
 host-simple-db

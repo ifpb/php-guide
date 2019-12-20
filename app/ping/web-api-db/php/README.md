@@ -2,7 +2,10 @@
 
 - [Code](#code)
 - [Database](#database)
-- [Back-end side](#back-end-side)
+  - [Schema](#schema)
+  - [Install](#install)
+  - [Model](#model)
+- [API](#api)
 
 ## Code
 
@@ -52,6 +55,8 @@
 
 ---
 
+### Schema
+
 > [api/database/schema.png](api/database/schema.png):
 
 ![](api/database/schema.png)
@@ -61,6 +66,8 @@
 ```
 {% include_relative api/database/schema.sql %}
 ```
+
+### Install
 
 > [api/install/index.php](api/install/index.php):
 
@@ -74,9 +81,7 @@
 {% include_relative api/database/config.php %}
 ```
 
-## Back-end side
-
----
+### Model
 
 > [api/database/database.php](api/database/database.php):
 
@@ -102,14 +107,18 @@
 {% include_relative api/model/packet.php %}
 ```
 
-> [api/util/Ping.php](api/util/Ping.php):
+## API
 
-```php
-{% include_relative api/util/Ping.php %}
-```
+---
 
 > [api/v1/index.php](api/v1/index.php):
 
 ```php
 {% include_relative api/v1/index.php %}
+```
+
+> [api/util/Ping.php](api/util/Ping.php):
+
+```php
+{% include_relative api/util/Ping.php %}
 ```
